@@ -1,0 +1,52 @@
+Case,Preconditions,Steps (text),Expected,Folder
+Filter dropdown interaction,Given I am on the Listing page,When I click on a filter dropdown,Then the + icon should smoothly transition to a - icon and the filter options should be revealed,Frontend
+Filter dropdown height - minimum,Given I am on the Listing page,When I open a filter dropdown with few options,Then the dropdown height should match the height of its content,Frontend
+Filter dropdown height - maximum,Given I am on the Listing page,When I open a filter dropdown with many options,Then the dropdown should have a maximum height and a scrollbar should be available for additional options,Frontend
+Filter selection display,Given I am on the Listing page,When I select a filter option,Then the selected option should replace the filter title in the dropdown,Frontend
+Initial filter state - no filters applied,Given I am on the Listing page without any filters applied,When the page loads,Then Primary filter should be active but unselected; secondary and tertiary filters should be inactive and not preselected,Frontend
+Initial filter state - with locale/filter,Given I am on the Listing page with a locale/filter applied,When the page loads,Then Primary and secondary filters should be active and preselected; tertiary filter should be active but unselected,Frontend
+Initial filter state - incognito mode,Given I am visiting the Listing Page using an incognito browser,When the page loads,Then Primary filter should be active but unselected; secondary and tertiary filters should be inactive and unselected,Frontend
+Filter options alphabetical order,Given I am on the Listing page,When I open any filter dropdown,Then the options should be listed in alphabetical order,Frontend
+Primary filter selection - secondary options,Given I am on the Listing page,When I select a primary filter option,Then the secondary filter options should update to show only items within the selected primary category,Frontend
+Primary filter selection - clear dependent filters,Given I have selected a secondary and tertiary filter,When I update the primary filter selection,Then the secondary and tertiary filter selections should be cleared and their dropdowns should become inactive,Frontend
+Secondary filter selection - tertiary options,Given I have selected a primary filter,When I select a secondary filter option,Then the tertiary filter options should update to show only items within the selected secondary category,Frontend
+Secondary filter selection - clear tertiary filter,Given I have selected a tertiary filter,When I update the secondary filter selection,Then the tertiary filter selection should be cleared,Frontend
+Filter selection - URL update,Given I am on the Listing page,When I select any filter option,Then the URL query string should update with the selected filter,Frontend
+Filter selection - Listing update,Given I am on the Listing page,When I select any filter option,Then the listings should update to match the selected filter,Frontend
+Filter selection - Map update,Given I am on the Listing page,When I select any filter option,Then the map should update to match the selected filter,Frontend
+Filter persistence on reload,Given I have applied filters to the Listing page,When I reload the page,Then the URL query should persist with the applied filters and the listings and map should reflect these filters,Frontend
+Deep link - Primary and secondary filters,Given I have a deep link to the Listing page with Primary and secondary filters filters,When I open the link,Then the appropriate Primary and secondary filters should be preselected the listings should be filtered accordingly and the map should be zoomed to show relevant locations,Frontend
+Deep link - Primary, secondary, and tertiary filters,Given I have a deep link to the Listing page with Primary, secondary, and tertiary filters filters,When I open the link,Then all three filter levels should be preselected the listings should be filtered accordingly and the map should be zoomed to show relevant locations,Frontend
+Deep link - Filter update,Given I have opened the Listing page via a deep link,When I update any of the preselected filters,Then the listings and map should update accordingly,Frontend
+Search - Item Name,Given I am on the Listing page,When I enter a partial Item Name in the search box,Then I should see matching items in the results,Frontend
+Search - Item Description,Given I am on the Listing page,When I enter a partial Item Description in the search box,Then I should see matching items in the results,Frontend
+Search - Fuzzy match,Given I am on the Listing page,When I enter a slightly misspelled Item Name or Address,Then I should still see relevant matching items in the results,Frontend
+Search - Listing update,Given I am on the Listing page,When I perform a search,Then the listings should update to show all matching listing items in alphabetical order,Frontend
+Search - Map update,Given I am on the Listing page,When I perform a search,Then the map should zoom to show the matching listing items,Frontend
+Filter only - Listing update,Given I am on the Listing page,When I apply filters without a search term,Then the listings should update to show all matching listing items in alphabetical order,Frontend
+Filter only - Map update,Given I am on the Listing page,When I apply filters without a search term,Then the map should zoom to show the matching listing items,Frontend
+Search and Filter combination,Given I am on the Listing page,When I enter a search term and apply filters,Then I should see results that match both the search term AND the applied filters,Frontend
+Search and Filter - Listing update,Given I am on the Listing page,When I enter a search term and apply filters,Then the listings should update to show all listing items that match both criteria in alphabetical order,Frontend
+Search and Filter - Map update,Given I am on the Listing page,When I enter a search term and apply filters,Then the map should zoom to show listing items that match both criteria,Frontend
+Search outside filter - Edge case,Given I have applied filters to the Listing page,When I search for an item that exists but falls outside the currently active filters,Then the search results should still display the matching location,Frontend
+Multiple filter selection - AND logic,Given I am on the Listing page,When I select a primary and a secondary filter,Then I should only see listing items that match both the selected primary AND secondary filters,Frontend
+Filter data validation - Primary,Given I have selected a primary filter,When I view the results,Then all displayed listing items should belong to the selected primary filter,Frontend
+Filter data validation - Secondary,Given I have selected a secondary filter,When I view the results,Then all displayed listing items should belong to the selected secondary filter,Frontend
+Filter data validation - Tertiary,Given I have selected a tertiary filter,When I view the results,Then all displayed listing items should belong to the selected tertiary filter,Frontend
+Search data validation,Given I have performed a search,When I view the results,Then all displayed listing items should contain the search term in either their name or address,Frontend
+Search and Filter data validation,Given I have performed a search and applied filters,When I view the results,Then all displayed listing items should match both the search criteria and the applied filters,Frontend
+No results - Search,Given I am on the Listing page,When I search for a item that does not exist,Then I should see the 'No Results Text' from CMS displayed,Frontend
+No results - Filter,Given I am on the Listing page,When I apply a combination of filters that match no items,Then I should see the 'No Results Text' from CMS displayed,Frontend
+No results - Search and Filter,Given I am on the Listing page,When I search and apply filters that together match no items,Then I should see the 'No Results Text' from CMS displayed,Frontend
+Results count - Search,Given I am on the Listing page,When I perform a search,Then I should see the correct number of results displayed using the 'Results Text' format from CMS,Frontend
+Results count - Filter,Given I am on the Listing page,When I apply filters,Then I should see the correct number of results displayed using the 'Results Text' format from CMS,Frontend
+Results count - Search and Filter,Given I am on the Listing page,When I search and apply filters,Then I should see the correct number of results displayed using the 'Results Text' format from CMS,Frontend
+Search term retention,Given I have performed a search on the Listing page,When I apply or change filters,Then my search term should be retained in the search box,Frontend
+Filter retention after search,Given I have applied filters on the Listing page,When I perform a search,Then my applied filters should be retained,Frontend
+Clear search,Given I have performed a search on the Listing page,When I clear the search box,Then all listing items should be displayed (subject to any applied filters),Frontend
+Clear single filter,Given I have applied multiple filters on the Listing page,When I clear one filter,Then the results should update to reflect the remaining filters,Frontend
+Clear all filters,Given I have applied filters on the Listing page,When I clear all filters,Then all listing items should be displayed (subject to any applied search),Frontend
+Mobile/Tablet - Filter interaction,Given I am on the Listing page on a mobile or tablet device,When I interact with the filters,Then the filter dropdowns should be easily tappable and not obscured by other page elements,Frontend
+Accessibility - Keyboard filter navigation,Given I am on the Listing page,When I use the keyboard to navigate the filters,Then I should be able to open dropdowns select options and apply filters using only the keyboard,Frontend
+Accessibility - Screen reader filter announcement,Given I am using a screen reader on the Listing page,When I interact with the filters,Then the screen reader should announce filter changes and selected options correctly,Frontend
+Performance - Large result set,Given the Listing page has a large number of listing items,When I perform a search or apply filters,Then the page should respond quickly and display results without significant delay,Frontend

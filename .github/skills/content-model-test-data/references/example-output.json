@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "industry": "healthcare",
+    "industrySource": "provided",
+    "recordCount": 3,
+    "modelName": "patient-intake-v1",
+    "generatedAt": "2026-04-28T12:00:00Z",
+    "notes": [
+      "Optional fields use mixed sparsity: omitted, null, and populated values."
+    ]
+  },
+  "records": [
+    {
+      "id": "PT-1001",
+      "fullName": "Alex Carter",
+      "dateOfBirth": "1989-04-14",
+      "email": "alex.carter@example.test",
+      "phone": "+1-555-0101",
+      "status": "active",
+      "lastVisitAt": "2026-04-05T10:15:00Z",
+      "insuranceProvider": "North Valley Health",
+      "allergies": [
+        "Penicillin"
+      ],
+      "emergencyContact": {
+        "name": "Jordan Carter",
+        "relationship": "Spouse",
+        "phone": "+1-555-0199"
+      }
+    },
+    {
+      "id": "PT-1002",
+      "fullName": "Samira Ali",
+      "dateOfBirth": "1994-11-02",
+      "email": "samira.ali@example.test",
+      "status": "inactive",
+      "lastVisitAt": "2025-12-18T08:40:00Z",
+      "insuranceProvider": null,
+      "allergies": [],
+      "emergencyContact": {
+        "name": "Nadia Ali",
+        "relationship": "Parent",
+        "phone": "+1-555-0175"
+      }
+    },
+    {
+      "id": "PT-1003",
+      "fullName": "Evan Brooks",
+      "dateOfBirth": "1978-07-29",
+      "email": "evan.brooks@example.test",
+      "phone": "+1-555-0120",
+      "status": "active",
+      "lastVisitAt": "2026-03-22T14:05:00Z",
+      "allergies": [
+        "Latex",
+        "Peanuts"
+      ],
+      "emergencyContact": null
+    }
+  ]
+}

@@ -1,0 +1,1650 @@
+Case,Expected,Preconditions,Steps (text)
+1 x Filter (all category types),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select 1 x filter option from all category types, e.g. topic, audience and location<br />
+And I click to apply</p>"
+1 x Filter (one category type),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select 1 x filter option from one category type, e.g. topic<br />
+And I click to apply</p>"
+1 x Filter (two category types),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select 1 x filter option from two different category types, e.g. topic and audience<br />
+And I click to apply</p>"
+1/3 width,<p>Then I cannot add the block</p>,<p>Given I have created the block</p>,<p>When I add the block to a 1/3 width content area</p>
+2 x Filters (all category types),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select 2 x filter options from all category types, e.g. topic, audience and location<br />
+And I click to apply</p>"
+2 x Filters (one category type),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select 2 x filter options from one category type, e.g. topic<br />
+And I click to apply</p>"
+2 x Filters (two category types),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select 2 x filter options from two different category types, e.g. topic and audience<br />
+And I click to apply</p>"
+2/3 width,<p>Then I cannot add the block</p>,<p>Given I have created the block</p>,<p>When I add the block to a 2/3 width content area</p>
+About Us,<p>Then I can see the about us text has been pulled through to both the CMS and frontend as expected</p>,<p>Given I have run the scheduled Eventbrite scheduled job</p>,"<p>When I view the event details in the CMS<br />
+And I view the About Us section on the page</p>"
+About Us > Anchor links,"<p>Then I can add anchor links<br />
+And they display and function as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add anchor links to the content</p>
+About Us > Audio block,"<p>Then an audio block can be added<br />
+And it displays and functions as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add an embedded audio block to the WYSIWYG</p>
+About Us > Block quote,"<p>Then a quote can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add a quote to the WYSIWYG using a </p> HTML tag
+About Us > Bold text,"<p>Then bold text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bold text style to the WYSIWYG</p>
+About Us > Boundary content,<p>Then the content wraps and displays without error on the front-end</p>,<p>Given I am editing the feature in the CMS</p>,<p>When I add excessive content to the WYSIWYG and publishes</p>
+About Us > Bullet list,"<p>Then bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bullet list styles to the WYSIWYG</p>
+About Us > CTA link with arrow,"<p>Then I can add CTA links to the content<br />
+And they display and function as expected on the front-end<br />
+And when I hover I can see an animation on the arrow</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add CTA links to the content</p>
+About Us > Full rich text,<p>Then I can see the field is a full rich text area</p>,<p>Given I have run the scheduled Eventbrite scheduled job</p>,<p>When I view the About Us field in the CMS</p>
+About Us > Header styles,"<p>Then header styles (H2 to H6) can be added<br />
+And they display as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add all header styles to the WYSIWYG</p>
+About Us > Hyperlinks,"<p>Then hyperlinks can be added<br />
+And they display as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add hyperlinks to the WYSIWYG</p>
+About Us > Image,"<p>Then an image can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add an image to the WYSIWYG</p>
+About Us > Image block,"<p>Then an image block can be added<br />
+And it displays and functions as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add an embedded image block to the WYSIWYG</p>
+About Us > Indentation,"<p>Then indentation can be added<br />
+And it can be indented multiple times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add indentation to content</p>
+About Us > Infographic block,"<p>Then an infographic block can be added<br />
+And it displays and functions as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add an embedded infographic block to the WYSIWYG</p>
+About Us > Italic text,"<p>Then italic text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add italic text style to the WYSIWYG</p>
+About Us > Numbered list,"<p>Then numbered list can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add numbered list styles to the WYSIWYG</p>
+About Us > Paragraph,"<p>Then paragraphs can be added<br />
+And they display as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add paragraphs into the WYSIWYG</p>
+About Us > Quote block,"<p>Then a quote block can be added<br />
+And it displays and functions as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add an embedded quote block to the WYSIWYG</p>
+About Us > Standout text,"<p>Then I can add standout text<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add standout text to the content</p>
+About Us > Subscript,"<p>Then subscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add subscript to the WYSIWYG</p>
+About Us > Superscript,"<p>Then superscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add superscript to the WYSIWYG</p>
+About Us > Table,"<p>Then a table can be added<br />
+And it displays as expected on the front-end<br />
+And I can horizontally scroll when the table width is larger than the view port</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add a table to the WYSIWYG</p>
+About Us > Text alignment,"<p>Then left, right, and centre text alignment can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add text alignment to content</p>
+About Us > Two Column Bullets,"<p>Then I can add two column bullets to the content<br />
+And they display as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add two column bullets to the content</p>
+About Us > Underline text,"<p>Then underline text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add underline text style to the WYSIWYG</p>
+About Us > YouTube video block,"<p>Then a YouTube video block can be added<br />
+And it displays and functions as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add an embedded video block to the WYSIWYG</p>
+Add block > Global,<p>Then I can add and publish without error</p>,<p>Given I have created a global block</p>,"<p>When I add the block to the Content Area<br />
+And I publish the page</p>"
+Add blocks,"<p>Then I can add any 2/3 width blocks<br />
+And I cannot and any full-width only or 1/3 width blocks<br />
+And the blocks display without error on the front-end</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I add blocks to the 2/3 width content area<br />
+And I publish</p>"
+Add multiple blocks,<p>Then I can add and publish without error</p>,<p>Given I have access to the CMS</p>,<p>When I add multiple blocks to the content area</p>
+Add Primary CTA,"<p>Then the CTA displays as expected on the front-end<br />
+And the CTA is correctly aligned to the text copy above</p>",<p>Given I am editing the block in the CMS</p>,<p>When I add CTA link and text</p>
+Alert Message,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add text<br />
+And I publish</p>"
+Alert Message > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the text</p>
+Alert Message > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add text and publish</p>
+All filters (all category types),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select all filter options from all category types, e.g. topic, audience and location<br />
+And I click to apply</p>"
+All filters (one category type),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select all filter options from one category type, e.g. topic<br />
+And I click to apply</p>"
+All filters (two category types),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select all filter options from two different category types, e.g. topic and audience<br />
+And I click to apply</p>"
+All other sites,<p>Then I cannot see the page as the page is UK only content</p>,<p>Given I have published the page</p>,"<p>When I view the page on all of the other sites, e.g. /en, /ie, /asia, /ae</p>"
+Area Ordering,"<p>Then I will see:</p>
+<ul>
+<li>Notifications area</li>
+<li>Upper Full Width Area</li>
+<li>Lower Full Width Area</li>
+</ul>",<p>Given I am editing the page in the CMS</p>,<p>When I view the ordering of Content areas</p>
+Auto-update > Toggle > Default,"<p>Then I can see the toggle is defaulted false<br />
+And no automatic updates are made to the event details</p>",<p>Given I am editing the page in the CMS</p>,<p>When I view the 'Update this page' toggle</p>
+Auto-update > Toggle > False,<p>Then I can see the manual updates are correctly published to the updated Eventbrite content</p>,<p>Given I am editing the page in the CMS</p>,"<p>When I set the 'Update this page' toggle to be false<br />
+And I make manual updates to the content<br />
+And I publish</p>"
+Auto-update > Toggle > Helper text,"<p>Then I can see the helper text is “The scheduled Eventbrite job will check this field before updating the page. Set this toggle if you’d like the latest updates from Eventbrite. Note, this will remove any custom content added to the fields that Eventbrite writes into”</p>",<p>Given I am editing the page in the CMS</p>,<p>When I view the 'Update this page' toggle</p>
+Auto-update > Toggle > True,"<p>Then I can see automatic updates are made to the event details by Eventbrite<br />
+And Eventbrite updates override any manual updates made to the content</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I set the 'Update this page' toggle to be true<br />
+And I publish</p>"
+Back to Top,"<p>Then I will see a ""Back to Top"" button<br />
+And interacting with it will take me back to the top of the page</p>",<p>Given I am viewing the page</p>,<p>When I scroll the page</p>
+Background Image Colour > Options,"<p>Then I can see all colour options available:</p>
+<ul>
+<li>Dark Purple (Default)</li>
+<li>Dark Blue</li>
+<li>Bright Yellow</li>
+<li>Bright Green</li>
+<li>Bright Blue</li>
+<li>Bright Orange</li>
+<li>Neutral 3</li>
+</ul>",<p>Given I am editing the site strings in the CMS</p>,<p>When I view the colour options</p>
+Background Image Colour > Select each colour,<p>Then I can see all colours displaying as expected on the front-end</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I select and publish each of the colour options</p>
+Block positioning,<p>Then all blocks display against each other on the front-end without error</p>,<p>Given I am editing the page in the CMS</p>,"<p>When I position the blocks around other blocks</p>
+<p><em>Exploratory testing is required here</em></p>"
+Block Title,"<p>Then the block is published with no error<br />
+And the title is shown on the site with no issues</p>",<p>Given I am editing the block in the CMS</p>,"<p>When I add a title<br />
+And publish the block</p>"
+Block Title > Boundary content,<p>Then content wraps and displays without error</p>,<p>Given I am editing the block in the CMS</p>,<p>When I add a large amount of content to the title</p>
+Block Title > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the block in the CMS</p>,<p>When I do not add a title and publish</p>
+Branch,<p>Then I can see the branch has been pulled through to both the CMS and frontend as expected</p>,<p>Given I have run the scheduled Eventbrite scheduled job</p>,"<p>When I view the branch in the CMS<br />
+And I view the Hero section on the page</p>"
+Branch Category,<p>Then I can see the branch category has been pulled through to the CMS as expected</p>,<p>Given I have run the scheduled Eventbrite scheduled job</p>,<p>When I view the branch category in the CMS</p>
+Breadcrumb,"<p>Then I will see a breadcrumb to reflect my position in the site structure<br />
+And I can interact with the links to visit parent pages</p>",<p>Given I am viewing the page</p>,<p>When I check the upper portion of the site</p>
+Breadcrumb > Empty Short Page Name,"<p>Then the page is published with no error<br />
+And the heading is displayed as the breadcrumb text</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I do not add a short page name<br />
+And publish the page</p>"
+Breadcrumb > Short Page Name,"<p>Then the page is published with no error<br />
+And the short page name is displayed as the breadcrumb text</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I add a short page name<br />
+And publish the page</p>"
+Bubbles > Desktop,<p>Then I can see a small animation on the bubbles</p>,"<p>Given I am viewing any content<br />
+And I can see the 'renewal reminder' modal</p>",<p>When I view the bubbles on Desktop</p>
+Bubbles > Mobile,<p>Then I can see a small animation on the bubbles</p>,"<p>Given I am viewing any content<br />
+And I can see the 'renewal reminder' modal</p>",<p>When I view the bubbles on Mobile</p>
+Bubbles > Prefer Reduced Motion,<p>Then I can see the bubbles are static</p>,"<p>Given I am viewing any content<br />
+And I can see the 'renewal reminder' modal<br />
+And on my OS I have Prefer Reduced Motion set</p>",<p>When I view the bubbles</p>
+Card content and fallbacks,"<p>Then I will see</p>
+<ul>
+<li>
+<p>Image is pulled through from “Teaser Image”</p>
+</li>
+<li>
+<p>Small heading is pulled from - Event Type category</p>
+</li>
+<li>
+<p>Large date - Shortened version of “Start date”</p>
+</li>
+<li>
+<p>Event title - Pulls from “Teaser title”, falling back to “Event Title”</p>
+</li>
+<li>
+<p>Date - renders in the form of “StartDate” “StartYear”, “StartTime”-”EndTime”</p>
+</li>
+<li>
+<p>If there is an end date, render “StartDate” - “EndDate” “StartYear”, “StartTime”-”EndTime”</p>
+</li>
+<li>
+<p>Event format pulls from “Event format” category</p>
+</li>
+<li>
+<p>If page has both “Online” and “In person” then render “[eventLocation] and [online]”</p>
+</li>
+<li>
+<p>Ticket status pulls from “Ticket status” - retaining any Rich Text formatting</p>
+</li>
+<li>
+<p>Card description pulls from “Teaser Text”</p>
+</li>
+<li>
+<p>Branch pulls from “Branch” category. Only if the category has the “Show on Cards” toggle checked</p>
+</li>
+<li>
+<p>Category pills - these are only “Topic” categories. Only if the category has the “Show on Cards” toggle checked</p>
+</li>
+</ul>",<p>Given I am viewing the listing page</p>,<p>When I view the content of the card</p>
+Card date,<p>Then I will see Published date by default</p>,<p>Given I have configured the component</p>,<p>When I view the dates in the cards</p>
+Card elements,"<p>Then I can see the following:</p>
+<p>Title<br />
+Large Day &amp; Month<br />
+Event date and time<br />
+Event location<br />
+Member/non-member message<br />
+Topic Tags<br />
+Image (if target page checkbox is ticked)</p>",<p>Given I am viewing the listing</p>,<p>When I view the card elements</p>
+Card links > Hover state,"<p>Then I can see a hand cursor<br />
+And I can see the hover state matches the designs</p>",<p>Given I am viewing the block with events added</p>,<p>When I hover over the card links</p>
+Card Sort,<p>Then I will see the cards sorted by Latest Publishing date first</p>,"<p>Given I have configured the block<br />
+And I am viewing it on the Frontend</p>",<p>When I view the order in which the cards are sorted</p>
+Card Sort > Modified,"<p>Then I will see this page sorted in the correct place, based on it's modified date</p>","<p>Given I have configured the block<br />
+And I am viewing it on the Frontend</p>","<p>When I update a page to have a recent Modified Date<br />
+And set the Show Modified Date In Metadata toggle to true</p>"
+Categories,"<p>Then I can see that:</p>
+<ul>
+<li>Event Format category is pulled from Eventbrite</li>
+<li>Branch category is pulled from Eventbrite</li>
+<li>All other category defaults are defined in Site Settings</li>
+</ul>",<p>Given I have run the scheduled Eventbrite scheduled job</p>,<p>When I view the category properties of the page in the CMS</p>
+Categories > Add,"<p>Then I can add and publish without error<br />
+And the categories are added to the filters on the front-end</p>",<p>Given I am editing the filters in the CMS</p>,"<p>When I add categories<br />
+And I publish</p>"
+Categories > Add multiple from one category type,"<p>Then I can see the block displaying premium pages only<br />
+And the pages are filtered to the categories added<br />
+And the pages are ordered by latest published/updated</p>",<p>Given I am editing the block in the CMS</p>,"<p>When I add multiple categories from one category type to the block<br />
+And I publish</p>"
+Categories > Add one,"<p>Then I can see the block displaying premium pages only<br />
+And the pages are filtered to the category added<br />
+And the pages are ordered by latest published/updated</p>",<p>Given I am editing the block in the CMS</p>,"<p>When I add one category to the block<br />
+And I publish</p>"
+Categories > Add one of each category type,"<p>Then I can see the block displaying premium pages only<br />
+And the pages are filtered to the categories added<br />
+And the pages are ordered by latest published/updated</p>",<p>Given I am editing the block in the CMS</p>,"<p>When I add one category from each category type to the block<br />
+And I publish</p>"
+Categories > Event type > Multiple,<p>Then I will see all the event type tags</p>,"<p>Given I have enabled the feature on a page<br />
+And the editor has selected more than one <em>Event type</em> category</p>",<p>When I view the tags on the page</p>
+Categories > Event Type > No event type - tbc,<p>Then I will not see a Location tag</p>,"<p>Given I have enabled the feature on a page<br />
+And the editor has selected the ""No Event type"" category</p>",<p>When I view the tags on the page</p>
+Categories > Negative,"<p>Then I can publish with no error<br />
+And the Dropdown for the relevant filter is not rendered</p>",<p>Given I am editing the filters in the CMS</p>,<p>When I do not add any categories and publish</p>
+Categories > No topic and No event type,"<p>Then I will not see a Topic tag<br />
+And I will not see a Event type tag</p>","<p>Given I have enabled the feature on a page<br />
+And the editor has selected the ""No Topic"" category<br />
+And the editor has selected the ""No Event type"" category</p>",<p>When I view the tags on the page</p>
+Categories > None,"<p>Then I can publish as the field is optional<br />
+And I can see the block displaying premium pages only<br />
+And the pages are ordered by latest published/updated</p>",<p>Given I am editing the block in the CMS</p>,"<p>When I do not a category to the block<br />
+And I publish</p>"
+Categories > Other content types,<p>Then I cannot add anything except the specified category</p>,<p>Given I am editing the filters in the CMS</p>,<p>When I add other category types that are not the specified category type</p>
+Categories > Topics > Multiple,<p>Then I will see all the topic tags</p>,"<p>Given I have enabled the feature on a page<br />
+And the editor has selected more than one <em>Topic</em> category</p>",<p>When I view the tags on the page</p>
+Categories > Topics > No topic,<p>Then I will not see a Topic tag</p>,"<p>Given I have enabled the feature on a page<br />
+And the editor has selected the ""No Topic"" category</p>",<p>When I view the tags on the page</p>
+Categories > Update selected categories,"<p>Then I can see the block displaying premium pages only<br />
+And the pages are filtered to the categories added<br />
+And the pages are ordered by latest published/updated</p>",<p>Given I am editing the block in the CMS</p>,"<p>When I update the selection of categories added to the block<br />
+And I publish</p>"
+Category filters > Select 1,<p>Then I can publish the page with no issue</p>,"<p>Given I am editing the feature in the CMS<br />
+And I have selected ""Events"" as my type of Listing</p>",<p>When I select categories from only <strong>one</strong> category type</p>
+Category filters > Select 2,<p>Then I can publish the page with no issue</p>,"<p>Given I am editing the feature in the CMS<br />
+And I have selected ""Events"" as my type of Listing</p>",<p>When I select categories from only <strong>two</strong> category types</p>
+Category filters > Select 3,<p>Then I can publish the page with no issue</p>,"<p>Given I am editing the feature in the CMS<br />
+And I have selected ""Events"" as my type of Listing</p>",<p>When I select categories from <strong>three</strong> category types</p>
+Category filters > Select more than 3,"<p>Then I cannot publish the page <br />
+And I am shown a message saying that only 3 categories filters are permitted</p>","<p>Given I am editing the feature in the CMS<br />
+And I have selected ""Events"" as my type of Listing</p>",<p>When I select categories from <strong>more than three</strong> category types</p>
+Check Source > Alternate Canonical Url,"<p>Then I will see Alternate Canonical Url in the Source<br />
+And it will match as populated in the CMS</p>","<p>Given I am viewing the template on the site<br />
+And Alternate Canonical Url has been added in the CMS</p>",<p>When I check source</p>
+Check Source > Content Creator Twitter Account,"<p>Then I will see Content Creator Twitter Account in the Source<br />
+And it will match as populated in the CMS</p>","<p>Given I am viewing the template on the site<br />
+And Content Creator Twitter Account has been added in the CMS</p>",<p>When I check source</p>
+Check Source > SEO Description,"<p>Then I will see the SEO description<br />
+And it will match as populated in the CMS</p>","<p>Given I am viewing the template on the site<br />
+And a SEO description has been added in the CMS</p>",<p>When I check the source</p>
+Check Source > SEO Keywords,"<p>Then I will see the SEO keywords<br />
+And it will match as populated in the CMS</p>","<p>Given I am viewing the template on the site<br />
+And SEO keywords have been added in the CMS</p>",<p>When I check the source - TBC where</p>
+Check Source > Social Share Title,"<p>Then I will see Social Sharing title in the Source<br />
+And it will match as populated in the CMS</p>","<p>Given I am viewing the template on the site<br />
+And Social Share Title has been added in the CMS</p>",<p>When I check source</p>
+Check Source > Social Sharing Description,"<p>Then I will see Social Sharing Description in the Source<br />
+And it will match as populated in the CMS</p>","<p>Given I am viewing the template on the site<br />
+And  Social Sharing Description has been added in the CMS</p>",<p>When I check source</p>
+Check Source > Social Sharing Image,"<p>Then I will see Social Sharing Image in the Source<br />
+And it will match as populated in the CMS</p>","<p>Given I am viewing the template on the site<br />
+And Social Sharing Image has been added in the CMS</p>",<p>When I check source</p>
+Check Source > Social Sharing Image Alt Text,"<p>Then I will see Social Sharing Image Alt Text in the Source<br />
+And it will match as populated in the CMS</p>","<p>Given I am viewing the template on the site<br />
+And Social Sharing Image Alt Text has been added in the CMS</p>",<p>When I check source</p>
+Child pages are Premium > Default,<p>Then I can see the toggle is defaulted false</p>,<p>Given I am editing a page in the CMS</p>,<p>When I view the Child pages are Premium toggle</p>
+Child pages are Premium > False,<p>Then I can see the child pages are non-premium pages</p>,<p>Given I am editing a parent page in the CMS</p>,"<p>When I set the Child pages are Premium toggle to be false<br />
+And I view any of the child pages on the frontend</p>"
+Child pages are Premium > False > Parent,<p>Then I can see both the parent page and child pages are non-premium pages</p>,"<p>Given I am editing a parent page in the CMS<br />
+And I set the Child pages are Premium toggle to be false</p>",<p>When I view the parent page on the frontend</p>
+Child pages are Premium > True,<p>Then I can see the child pages are premium pages</p>,<p>Given I am editing a parent page in the CMS</p>,"<p>When I set the Child pages are Premium toggle to be true<br />
+And I view any of the child pages on the frontend</p>"
+Child pages are Premium > True > Parent,"<p>Then I can see the parent page is a non-premium page<br />
+And I can see the child pages are premium pages</p>","<p>Given I am editing a parent page in the CMS<br />
+And I set the Child pages are Premium toggle to be true</p>",<p>When I view the parent page on the frontend</p>
+Click,<p>Then I can hover and click anywhere on the card to trigger the hover state and link action</p>,<p>Given I am viewing the page</p>,"<p>When I hover anywhere on the card:</p>
+<ul>
+<li>Image</li>
+<li>Text</li>
+</ul>"
+Click > Filters not selected,<p>Then the CTA is inactive until filters have been selected</p>,"<p>Given I am viewing the listing<br />
+And I am viewing the open filters</p>","<p>When I do not select filters<br />
+And I click the CTA</p>"
+Click > Filters selected,"<p>Then the filters close<br />
+And the results update accordingly</p>","<p>Given I am viewing the listing<br />
+And I am viewing the open filters</p>","<p>When I select filters<br />
+And I click the CTA</p>"
+Click a result,"<p>Then I can return to the listing<br />
+And I can see filters still applied<br />
+And I can see the search query persist in the URL<br />
+And I can see the results count persists<br />
+And all matched results remain within the listing</p>","<p>Given I am viewing the listing<br />
+And I have filters applied</p>","<p>When I click a result<br />
+And I click the browser back button</p>"
+Click card links,<p>Then the matching pages load</p>,<p>Given I am viewing the block with events added</p>,<p>When I click the card links</p>
+Click CTA,<p>Then the relevant page loads</p>,<p>Given I am viewing the feature with a CTA added</p>,<p>When I click the CTA</p>
+Click links,<p>Then the matching pages load</p>,<p>Given I am viewing the listing</p>,<p>When I click the card links</p>
+Click to select all,"<p>Then all filter options are selected (including any that are hidden)<br />
+And matching results are returned</p>","<p>Given I am viewing the listing<br />
+And I am viewing the open filters</p>","<p>When I click to select all<br />
+And I click apply filters</p>"
+Click to show all,"<p>Then all filter options are displayed<br />
+And all options can be selected</p>","<p>Given I am viewing the listing<br />
+And I am viewing the open filters</p>",<p>When I click to show all</p>
+Close filter accordion,<p>Then I can close the filter</p>,"<p>Given I am viewing the listing<br />
+And I can see an open filter</p>",<p>When I click on the filter accordion again</p>
+Close Mega Menu,<p>Then I will be able to see the component again</p>,"<p>Given I can see the component<br />
+And I have just opened the Mega Menu</p>",<p>When I close the Mega Menu</p>
+Close modal,"<p>Then I can close the modal<br />
+And I am redirected to the Target Close Page as set in Site Strings</p>","<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal</p>",<p>When I click to close the modal</p>
+Close modal > Return to page,<p>Then I cannot see the 'my free content' modal displaying on any premium content pages</p>,<p>Given I have closed the 'my free content' modal</p>,"<p>When I navigate to other premium content pages<br />
+And I return to the previous page using my browser back button</p>"
+Close Universal Header,<p>Then I will be able to see the component again</p>,"<p>Given I can see the component<br />
+And I have just opened the Universal Header</p>",<p>When I close the universal header</p>
+CMS > Fields,"<p>Then the following fields will be available to populate:</p>
+<ul>
+<li>SEO Title</li>
+<li>SEO Description</li>
+<li>SEO Keywords</li>
+<li>Social Sharing Title - string</li>
+<li>Social Sharing Description - string</li>
+<li>Social Sharing Image - contentReference/Url</li>
+<li>Social Sharing Image Alt Text - string</li>
+<li>Content Creator Twitter Account - string</li>
+<li>SEO Robots - string</li>
+<li>Alternate Canonical Url - string</li>
+</ul>",<p>Given I am logged into the CMS</p>,<p>When I check the SEO settings for this template</p>
+CMS > Focal point,<p>Then I can see the image is correctly focused</p>,<p>Given I am editing the image in the CMS</p>,"<p>When I update the focal point on the image<br />
+And I publish</p>"
+CMS > Image alt text,<p>Then I can see an alt text field available to populate</p>,<p>Given I am editing the image in the CMS</p>,<p>When I view the feature/image within the CMS</p>
+Complete checkout,<p>Then I can checkout without error</p>,<p>Given I am viewing the embedded checkout on the page</p>,<p>When I continue through the checkout</p>
+Content root > Add,"<p>Then I can publish<br />
+And the results are filtered to content beneath the Content Root</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I add a link to the field<br />
+And I publish</p>"
+Content root > Negative,"<p>Then I can publish<br />
+And all content that matches the Content Type selected is displayed (TBC)</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I do not add a link to the field<br />
+And I publish</p>"
+Content root > Page Types,<p>Then I can publish as there is no restriction on content type pages</p>,<p>Given I am editing the page in the CMS</p>,"<p>When I add different content types pages to the field<br />
+And I publish</p>"
+Content types > Events,"<p>Then I can publish without error<br />
+And I can see events displayed on the front-end</p>","<p>Given I am editing the page in the CMS<br />
+And I have events available within the site tree</p>","<p>When I create the page<br />
+And I select events as my content type<br />
+And I publish</p>"
+Create block > Global,<p>Then I can create the block without error</p>,<p>Given I have access to the CMS</p>,<p>When I create a block globally</p>
+Create block > On-page,"<p>Then I can create, add and publish without error</p>",<p>Given I have access to the CMS</p>,"<p>When I create a block<br />
+And I add the block to the Content Area<br />
+And I publish the page</p>"
+Create child page,"<p>Then I can create and publish without error<br />
+And it displays in the CMS site tree as expected</p>",<p>Given I have created the page in the CMS</p>,"<p>When I create a child page<br />
+And I publish</p>"
+Create page,<p>Then I can create and publish without error</p>,<p>Given I have access to the CMS</p>,"<p>When I create the page<br />
+And I publish</p>"
+CTA > Click,<p>Then the matching URL loads</p>,"<p>Given my subscription has expired<br />
+And I can see the 'subscription expired' modal</p>",<p>When I click the primary CTA</p>
+CTA > External link,<p>Then the matching URL loads</p>,"<p>Given my subscription has expired<br />
+And I can see the 'subscription expired' modal<br />
+And I have added an external URL to my CTA</p>",<p>When I click the CTA</p>
+CTA > Hover,<p>Then the hover state displays as per the style guide</p>,"<p>Given my subscription has expired<br />
+And I can see the 'subscription expired' modal</p>",<p>When I hover over the primary CTA</p>
+CTA > Hover state,"<p>Then I can see a hand cursor<br />
+And I can see the hover state matches the designs</p>",<p>Given I am viewing the page</p>,<p>When I hover over the CTA in the hero</p>
+CTA > Internal link,<p>Then the matching URL loads</p>,"<p>Given my subscription has expired<br />
+And I can see the 'subscription expired' modal<br />
+And I have added an internal URL to my CTA</p>",<p>When I click the CTA</p>
+CTA > Open in new tab,<p>Then the matching URL loads in a new tab</p>,"<p>Given my subscription has expired<br />
+And I can see the 'subscription expired' modal<br />
+And I have set my CTA to open in a new tab</p>",<p>When I click the link</p>
+CTA Label,"<p>Then I can add CTA text<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add CTA text<br />
+And I publish</p>"
+CTA Label > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the CTA text</p>
+CTA Label > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a CTA label</p>
+CTA Link,<p>Then the CTA displays as expected on the front-end</p>,<p>Given I am editing the block in the CMS</p>,<p>When I add CTA link and text</p>
+CTA Link > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a CTA link</p>
+CTA Link > Page Types,<p>Then I can add all page types as the link</p>,<p>Given I am editing the site strings in the CMS</p>,"<p>When I add all page types into the link field<br />
+And I publish</p>"
+CTAs,"<p>Then I can see the CTAs<br />
+And it's content matches that in the CMS</p>","<p>Given I have created the feature<br />
+And I have added one or more CTAs</p>",<p>When I view the feature on the site</p>
+Date & Time > Blocks & Components > Format,<p>Then I can see the format has been updated to date/year/time across all instances</p>,<p>Given I am editing the existing Simple Event Detail Page in the CMS</p>,"<p>When I view the date &amp; time field format for all other blocks and components across the site:</p>
+<ul>
+<li>Simple Events Detail Page</li>
+<li>Stacked card block with events</li>
+<li>Search results with events</li>
+</ul>"
+Date & Time > Format,<p>Then I can see the format has been updated to date/year/time</p>,<p>Given I am editing the existing Simple Event Detail Page in the CMS</p>,<p>When I view the date &amp; time field format on the frontend</p>
+Date & Time > Icon,"<p>Then I can publish without error<br />
+And the content displays on the frontend as expected<br />
+And I can see the correct icon rendered next to the text</p>",<p>Given I am editing the existing Simple Event Detail Page in the CMS</p>,"<p>When I populate the date &amp; time field<br />
+And I publish</p>"
+Date & Time > Past date,"<p>Then I can see the 'Past event' content from site strings is displayed in place of the ticket status content<br />
+And I cannot see the ticket status icon</p>",<p>Given I am editing the existing Simple Event Detail Page in the CMS</p>,"<p>When I populate the date &amp; time as a past date<br />
+And I publish</p>"
+Date & Time > Past time,"<p>Then I can see the ticket status content displaying on the frontend as expected<br />
+And I can see the ticket status icon</p>",<p>Given I am editing the existing Simple Event Detail Page in the CMS</p>,"<p>When I populate the date &amp; time as a past time<br />
+And I publish</p>"
+Default,"<p>Then I will see the pre-selected filter is ""Upcoming""<br />
+And I will see the content sorted by soonest first<br />
+And I will only see future events</p>",<p>Given I am viewing the listing page</p>,<p>When I view the initial sort order</p>
+Delete block,"<p>Then I can remove the block<br />
+And the content is removed from the front-end</p>",<p>Given I am editing the page in the CMS</p>,<p>When I remove a block from the content area and publish</p>
+Delete page,"<p>Then I can delete the page without error<br />
+And the page is removed from the front-end</p>",<p>Given I have created the page in the CMS</p>,<p>When I delete the page</p>
+Description > Bold text,"<p>Then bold text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bold text style to the WYSIWYG</p>
+Description > Boundary content,<p>Then the content wraps and displays without error on the front-end</p>,<p>Given I am editing the feature in the CMS</p>,<p>When I add a large amount of content to the WYSIWYG and publish</p>
+Description > Italic text,"<p>Then italic text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add italic text style to the WYSIWYG</p>
+Description > Negative,"<p>Then I can publish as the field is optional<br />
+And the block height reduces accordingly</p>",<p>Given I am editing the block in the CMS</p>,<p>When I do not add text and publish</p>
+Description > Subscript,"<p>Then subscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add subscript to the WYSIWYG</p>
+Description > Superscript,"<p>Then superscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add superscript to the WYSIWYG</p>
+Description > Underline text,"<p>Then underline text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add underline text style to the WYSIWYG</p>
+Deselect all,<p>Then all filter options are deselected</p>,"<p>Given I am viewing the listing<br />
+And I am viewing the open filters<br />
+And I have selected to select all</p>",<p>When I click the select all checkbox again</p>
+Deselect filter option,<p>Then the filter option is deselected</p>,"<p>Given I am viewing the listing<br />
+And I have selected a filter checkbox</p>",<p>When I click to deselect a checkbox</p>
+Desktop & Tablet > Image grid,<p>Then I will see the images arranged into 2 rows of 3 images</p>,"<p>Given I am viewing the block on a Desktop or tablet device<br />
+And I have added some images</p>",<p>When I view the layout of the images</p>
+Display > No Secondary Content,"<p>Then I can only see the Primary Content displaying on the front-end<br />
+And the modal, overlay and page content display as expected</p>","<p>Given I have reached the limit of my free content<br />
+And there is no Secondary Content (Heading or Rich Text added in Site Strings)</p>",<p>When I view the 'purchase required' modal</p>
+Display > Secondary Content Heading only,"<p>Then I can see the Primary Content and Secondary Content Heading displaying on the front-end<br />
+And the modal, overlay and page content display as expected</p>","<p>Given I have reached the limit of my free content<br />
+And there is no Secondary Content Rich Text populated in Site Strings</p>",<p>When I view the 'purchase required' modal</p>
+Display > Secondary Content Rich Text only,"<p>Then I can see the Primary Content and Secondary Content Rich Text displaying on the front-end<br />
+And the modal, overlay and page content display as expected</p>","<p>Given I have reached the limit of my free content<br />
+And there is no Secondary Content Heading populated in Site Strings</p>",<p>When I view the 'purchase required' modal</p>
+Do not close modal,<p>Then I will not see the modal show again</p>,"<p>Given I am viewing any content<br />
+And I can see the 'renewal reminder' modal</p>","<p>When I do not click to close the modal<br />
+And I navigate to another page</p>"
+Elements > Boundary,"<p>Then the cards display without error<br />
+And all content wraps as expected<br />
+And the card heights display as expected</p>",<p>Given I am editing a page in the CMS that is currently listed</p>,"<p>When I add boundary content to the fields rendered within the cards<br />
+And I publish</p>"
+Elements > Negative,"<p>Then I can publish<br />
+And the cards display without error<br />
+And the card heights display as expected</p>",<p>Given I am editing a page in the CMS that is currently listed</p>,"<p>When I do not add content to optional fields rendered within the cards<br />
+And I publish</p>"
+Empty Hero Area,<p>Then I cannot publish the page</p>,<p>Given I am editing the page in the CMS</p>,<p>When I do NOT add a Heading to the page</p>
+Event > Categories > Ordering,"<p>Then I will see them in the following order:<br />
+Event type<br />
+Topics</p>","<p>Given I have enabled the feature on an Events page<br />
+And the editor has selected one of each <em>Event type</em>, <em>Location</em> and <em>Topic</em> categories</p>",<p>When I view the ordering of the category tags on the page</p>
+Event > Fallback image - TBC,<p>Then I can see the fallback image displaying as expected</p>,"<p>Given I am viewing the block with events added<br />
+And an event does not have a teaser image<br />
+And the image is set to display</p>",<p>When I view the card</p>
+Event > Member only > Member,"<p>Then I can see the event is correctly labelled as member only<br />
+And I can see the unlocked icon displaying</p>","<p>Given I am viewing the block as a member<br />
+And the block has an event that is set to be member only</p>",<p>When I view the card</p>
+Event > Member only > Non-member,"<p>Then I can see the event is correctly labelled as member only<br />
+And I can see the locked icon displaying</p>","<p>Given I am viewing the block as a non-member<br />
+And the block has an event that is set to be member only</p>",<p>When I view the card</p>
+Event > With listing image,<p>Then I can see the image displaying as expected</p>,"<p>Given I am viewing the block with events added<br />
+And an event has a teaesr image<br />
+And the image is set to display</p>",<p>When I view the card</p>
+Event > Without listing image,<p>Then I can see the card displaying without an image as expected</p>,"<p>Given I am viewing the block with events added<br />
+And an event has a teaesr image<br />
+And the image is set to not display</p>",<p>When I view the card</p>
+Event Date & Time,<p>Then I can see the event date and time has been pulled through to both the CMS and frontend as expected</p>,<p>Given I have run the scheduled Eventbrite scheduled job</p>,"<p>When I view the Event Date &amp; Time in the CMS<br />
+And I view the Hero section on the page</p>"
+Event Date & Time > Format,"<p>Then I can see the event date format is rendering as expected<br />
+And I can see the event time format is rendering as expected</p>",<p>Given I have run the scheduled Eventbrite scheduled job</p>,<p>When I view the Event Date &amp; Time format on the frontend</p>
+Event Date > In the past,"<p>Then I cannot see the embedded checkout displaying on the page<br />
+And other content has moved upwards/filled any empty space</p>",<p>Given I am viewing the page with an event date that is in the past</p>,<p>When I view the page</p>
+Event date and time > Format,<p>Then I can see the event date and time format matches the designs</p>,<p>Given I am viewing the block with events added</p>,<p>When I view the dates in the cards</p>
+Event date and time > Update,"<p>Then I can see the event date and time has been correctly updated<br />
+And the order of the events listed has also been correctly updated</p>","<p>Given I am viewing the block with events added<br />
+And I edit the start date and time in the CMS</p>",<p>When I view the date and time in the cards</p>
+Event Format > Face to Face,<p>Then I can see the event is displaying with the event location as expected</p>,"<p>Given I have run the scheduled Eventbrite scheduled job<br />
+And the event is face to face</p>",<p>When I view the Hero section on the page</p>
+Event Format > Online,<p>Then I can see the event is displaying 'online' as expected</p>,"<p>Given I have run the scheduled Eventbrite scheduled job<br />
+And the event is online</p>",<p>When I view the Hero section on the page</p>
+Event Format > Online and Face to Face,<p>Then I can see the event is displaying as 'hybrid' and with the event location as expected</p>,"<p>Given I have run the scheduled Eventbrite scheduled job<br />
+And the event is online and face to face</p>",<p>When I view the Hero section on the page</p>
+Event Format Category,<p>Then I can see the event format category has been pulled through to the CMS as expected</p>,<p>Given I have run the scheduled Eventbrite scheduled job</p>,<p>When I view the event format category in the CMS</p>
+Event Location - TBC,"<p>Then I can see the event has a 'view map' link<br />
+And the link is displaying as expected<br />
+And the link is correct based on the retrieved data</p>","<p>Given I have run the scheduled Eventbrite scheduled job<br />
+And a map link has been retrieved from Eventbrite</p>",<p>When I view the Hero section on the page</p>
+Event Title,<p>Then I can see the event title has been pulled through to both the CMS and frontend as expected</p>,<p>Given I have run the scheduled Eventbrite scheduled job</p>,"<p>When I view the Event Title in the CMS<br />
+And I view the Hero section on the page</p>"
+Eventbrite > Properties,"<p>Then I can see the following properties:</p>
+<ul>
+<li>Event Format category</li>
+<li>Branch category</li>
+<li>Teaser Image</li>
+<li>EventID (this field should be Read-Only)</li>
+<li>Hero</li>
+<li>Event title</li>
+<li>Event date &amp; time</li>
+<li>Format - Online or Face to Face</li>
+<li>Ticket Status</li>
+<li>Branch</li>
+<li>Page Intro - “Short Description”</li>
+<li>Rich Text for About us</li>
+</ul>","<p>Given I have run the scheduled Eventbrite scheduled job<br />
+And I am viewing the event details in the CMS</p>",<p>When I view the eventbrite properties</p>
+EventID,"<p>Then I can see the event ID has been pulled through to the CMS as expected<br />
+And I cannot edit the field</p>",<p>Given I have run the scheduled Eventbrite scheduled job</p>,<p>When I view the EventID in the CMS</p>
+EventID > Embedded Checkout,<p>Then I can see an iFrame embedded checkout on the page</p>,"<p>Given I have run the scheduled Eventbrite scheduled job<br />
+And an event ID has been retrieved from Eventbrite</p>",<p>When I view the page on the frontend</p>
+Events > No content,"<p>Then I cannot see the listing grid displaying on the front-end<br />
+And all other page content displays without error</p>","<p>Given I am editing the page in the CMS<br />
+And I have selected events as the content type<br />
+And there is no matching content on the site</p>",<p>When I view the page</p>
+Events order,<p>Then I will see the events are sorted by nearest event start date</p>,"<p>Given I have configured the block<br />
+And I am viewing it on the frontend</p>",<p>When I view the order in which the events are sorted</p>
+Exclude from Sampling & Non-Premium > False,"<p>Then I can see the page is non-premium on the frontend<br />
+And non-subscribers/members do not see 'my free content' modal when they view it<br />
+And any user can access the content</p>",<p>Given I am editing a page in the CMS</p>,"<p>When I set the Exclude from Sampling toggle to be false<br />
+And I also set it to be a non-premium page</p>"
+Exclude from Sampling & Non-Premium > True,"<p>Then I can see the page is non-premium on the frontend<br />
+And non-subscribers/members do not see 'my free content' modal when they view it<br />
+And any user can access the content</p>",<p>Given I am editing a page in the CMS</p>,"<p>When I set the Exclude from Sampling toggle to be true<br />
+And I also set it to be a non-premium page</p>"
+Exclude from Sampling & Premium > False,"<p>Then I can see the page is premium on the frontend<br />
+And non-subscribers/members see the 'my free content' modal displaying</p>",<p>Given I am editing a page in the CMS</p>,"<p>When I set the Exclude from Sampling toggle to be false<br />
+And I also set it to be a premium page</p>"
+Exclude from Sampling & Premium > True,"<p>Then I can see the page is premium on the frontend<br />
+And non-subscribers/non-members do not see 'my free content' modal when they view it</p>",<p>Given I am editing a page in the CMS</p>,"<p>When I set the Exclude from Sampling toggle to be true<br />
+And I also set it to be a premium page</p>"
+Exclude from Sampling > Default,<p>Then I can see the toggle is defaulted false</p>,<p>Given I am editing a page in the CMS</p>,<p>When I view the Exclude from Sampling toggle</p>
+Exclude from Search Results > False,<p>Then I can see the page returned within the listing</p>,<p>Given I am editing a page in the CMS that is returned on the listing page</p>,"<p>When I set the 'Exclude from Search Results' checkbox to be false<br />
+And I publish</p>"
+Exclude from Search Results > True,<p>Then I cannot see the page returned within the listing</p>,<p>Given I am editing a page in the CMS that is returned on the listing page</p>,"<p>When I set the 'Exclude from Search Results' checkbox to be true<br />
+And I publish</p>"
+External link,<p>Then the relevant URL loads</p>,<p>Given I have added an external URL to the CTA</p>,<p>When I click the CTA</p>
+Filter > Page reload,"<p>Then I can see the search query persist in the URL<br />
+And I can see the results count persists<br />
+And all matched results remain within the listing</p>",<p>Given I am viewing the listing</p>,"<p>When I apply filters<br />
+And I reload the page</p>"
+Filter/Paginate > Page reload,"<p>Then I can see the search query persist in the URL<br />
+And I can see the results count persists<br />
+And all matched results remain within the listing</p>",<p>Given I am viewing the listing</p>,"<p>When I apply filters<br />
+And I paginate<br />
+And I reload the page</p>"
+Filter/Sort > Page reload,"<p>Then I can see the search query persist in the URL<br />
+And I can see the results count persists<br />
+And all matched results remain within the listing</p>",<p>Given I am viewing the listing</p>,"<p>When I apply filters<br />
+And I update the sort-by<br />
+And I reload the page</p>"
+Filter/Sort/Pagination > Page reload,"<p>Then I can see the search query persist in the URL<br />
+And I can see the results count persists<br />
+And all matched results remain within the listing</p>",<p>Given I am viewing the listing</p>,"<p>When I apply filters<br />
+And I update the sort-by<br />
+And I paginate<br />
+And I reload the page</p>"
+First page,<p>Then I cannot see a previous button</p>,<p>Given I am viewing the first page in the pagination</p>,<p>When I view the page</p>
+Focal point > Resize feature,<p>Then I can see the image is correctly focused at all screen sizes</p>,<p>Given I have updated the focal point on an image in the CMS</p>,"<p>When I resize the feature to different screen sizes<br />
+And I view the image focal point</p>
+<p>Large desktop (1920px)<br />
+Desktop (1280px)<br />
+Tablet (1024px)<br />
+Small tablet (768px)<br />
+Mobile (320px)</p>"
+Foreground bubble masks,"<p>Then I will see new options for each Shape and Mask for ""Foreground bubble outline""</p>",<p>Given I am editing the page in the CMS</p>,<p>When I view the Shape dropdown</p>
+Foreground Image Colour > Options,"<p>Then I can see all colour options available:</p>
+<ul>
+<li>Bright Yellow (Default)</li>
+<li>Dark Purple</li>
+<li>Dark Blue</li>
+<li>Bright Green</li>
+<li>Bright Blue</li>
+<li>Bright Orange</li>
+<li>Neutral 3</li>
+</ul>",<p>Given I am editing the site strings in the CMS</p>,<p>When I view the colour options</p>
+Foreground Image Colour > Select each colour,<p>Then I can see all colours displaying as expected on the front-end</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I select and publish each of the colour options</p>
+Free content expired > Page load,<p>Then I can see the 'purchase required' modal displaying</p>,<p>Given I have reached the limit of my free content</p>,<p>When I load another page that requires a subscription</p>
+Full width areas,<p>Then I can only add blocks that are allowed in a full width area</p>,<p>Given I am editing the page in the CMS</p>,<p>When I add blocks to the upper and lower full width areas</p>
+Global block,<p>Then I can add and publish the block without error</p>,<p>Given I am editing the page in the CMS</p>,<p>When I add a block that was created globally</p>
+Header > Desktop,<p>Then I will <strong>not</strong> see the header</p>,<p>Given I have created a Landing page</p>,<p>When I view the page on a desktop</p>
+Header > Mobile,<p>Then I will <strong>not</strong> see the header</p>,<p>Given I have created a Landing page</p>,<p>When I view the page on a mobile</p>
+Heading,"<p>Then I can see the component published without error<br />
+And I can see the heading content displaying as expected<br />
+And I can see the heading is a H2</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a heading<br />
+And I publish</p>"
+Heading > # Free Page,"<p>Then I can see the component published without error<br />
+And I can see the heading content displaying as expected<br />
+And the heading renders as a H3</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a heading<br />
+And I publish</p>"
+Heading > # Free Page > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the heading</p>
+Heading > # Free Page > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a heading and publish</p>
+Heading > # Free Page > Placeholders,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a placeholders to the heading, e.g. Your [Read count value] of [Maximum] free premium pages<br />
+And I publish</p>"
+Heading > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the heading</p>
+Heading > First Free Page,"<p>Then I can see the component published without error<br />
+And I can see the heading content displaying as expected<br />
+And the heading renders as a H3</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a heading<br />
+And I publish</p>"
+Heading > First Free Page > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the heading</p>
+Heading > First Free Page > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a heading and publish</p>
+Heading > First Free Page > Placeholder,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a placeholder to the heading, e.g. Your 1st of [Maximum] free premium pages<br />
+And I publish</p>"
+Heading > Last Free Page,"<p>Then I can see the component published without error<br />
+And I can see the heading content displaying as expected<br />
+And the heading renders as a H3</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a heading<br />
+And I publish</p>"
+Heading > Last Free Page > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the heading</p>
+Heading > Last Free Page > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a heading and publish</p>
+Heading > Negative,<p>Then validation displays as the field is mandatory</p>,<p>Given I am editing site strings in the CMS</p>,<p>When I do not add a heading and publish</p>
+Hero > Event details,<p>Then I can see all event details rendering as expected</p>,<p>Given I am viewing the page with Eventbrite details populated</p>,"<p>When I view the hero<br />
+And I check the event details</p>"
+Hero Area,"<p>Then I can publish with no error<br />
+And I can see that the hero block is rendered in the correct position on the frontend using the default settings</p>",<p>Given I am editing the page in the CMS</p>,<p>When I add a Heading to the page</p>
+Hero Area > Default,"<p>Then I can publish with no error<br />
+And I can see that the hero block is rendered in the correct position on the frontend using the default settings<br />
+And the default hero theme is Bright Yellow<br />
+And the default symbol is Star<br />
+And the default symbol colour is Dark Purple</p>",<p>Given I am editing the page in the CMS</p>,<p>When I add a Heading to the page</p>
+Hero Area > Update styles,"<p>Then I can update the hero style<br />
+And the frontend updates as expected</p>",<p>Given I am editing the page in the CMS</p>,<p>When I update the hero style properties</p>
+Hero CTA > Click,"<p>Then I am anchored to the embedded checkout<br />
+And I can see the component rendered with an anchor ID #checkout</p>",<p>Given I am viewing the page</p>,<p>When I click the CTA in the hero</p>
+Hero Logo > Bright background,<p>Then I will see the standard site logo rendered in the Hero</p>,<p>Given I have chosen a Bright theme for the page hero in the CMS</p>,<p>When I view the hero on the frontend</p>
+Hero Logo > Dark background,"<p>Then I will see the ""Dark"" site logo rendered in the Hero</p>",<p>Given I have chosen a Dark theme for the page hero in the CMS</p>,<p>When I view the hero on the frontend</p>
+Hover,<p>Then the hover state displays as per the style guide</p>,"<p>Given I am viewing the listing<br />
+And I am viewing the open filters</p>",<p>When I hover over the checkbox</p>
+Hover > Accordion,<p>Then the hover states display as per the style guide</p>,<p>Given I am viewing the listing</p>,<p>When I hover over the filter accordions</p>
+Hover > Buttons,<p>Then the hover states display as per the style guide</p>,<p>Given I am viewing the listing with enough results for pagination</p>,<p>When I hover over the previous/next buttons</p>
+Hover > Card link,<p>Then the hover states display as per the style guide</p>,<p>Given I am viewing the listing</p>,<p>When I hover over the card links</p>
+Hover > Options,<p>Then the hover states display as per the style guide</p>,"<p>Given I am viewing the listing<br />
+And I am viewing the open filters</p>",<p>When I hover over the filter option checkboxes</p>
+Hover > Page numbers,<p>Then the hover states display as per the style guide</p>,<p>Given I am viewing the listing with enough results for pagination</p>,<p>When I hover over the page numbers and any '...'</p>
+Hover state,"<p>Then I can see a hand cursor<br />
+And I can see the hover state matches the designs</p>",<p>Given I am viewing the feature with a CTA added</p>,<p>When I focus the CTA</p>
+Image > Boundary,<p>The the image is resized/cropped without issue</p>,<p>Given I am editing the block in the CMS</p>,<p>When I add a really large image</p>
+Image > JPEG,"<p>Then the image can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the site strings in the CMS</p>,<p>When I add a JPEG image to the block</p>
+Image > Negative,<p>Then no validation displays as each field is optional</p>,<p>Given I am editing the block in the CMS</p>,<p>When I do not add an image and publish</p>
+Image > PNG,"<p>Then the image can be added<br />
+And it displays as expected on front-end</p>",<p>Given I am editing the site strings in the CMS</p>,<p>When I add a PNG image to the block</p>
+Image > Resize screen,<p>Then I will see that the images are never cropped</p>,<p>Given I am viewing the listing page</p>,<p>When I resize the screen</p>
+Image > Small,"<p>Then the image can be added<br />
+And it displays as expected on front-end</p>",<p>Given I am editing the block in the CMS</p>,<p>When I add a small image to the block</p>
+Images > Max,<p>Then I cannot add anymore images to the block</p>,<p>Given I am editing the block in the CMS</p>,<p>When I have added 6 images</p>
+Images > resize screen,"<p>Then I will see the images resize, but never crop<br />
+And the image will either render at maximum height or maximum width of each individual image area</p>",<p>Given I have configured with block with various images</p>,"<p>When I resize my viewport<br />
+And view the images</p>"
+Initial page size,"<p>Then I can publish<br />
+And number of items on the front-end match the value set</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I add an integer to the field<br />
+And I publish</p>"
+Initial page size > Alpha characters,<p>Then I cannot publish</p>,<p>Given I am editing the page in the CMS</p>,"<p>When I add alpha characters to the field<br />
+And I publish</p>"
+Initial page size > Negative integer,<p>Then I cannot publish</p>,<p>Given I am editing the page in the CMS</p>,"<p>When I add a negative integer to the field<br />
+And I publish</p>"
+Initial page size > Negative/default,"<p>Then validation displays as the field is mandatory OR<br />
+A default of X is added</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I do not add content to the field<br />
+And I publish</p>"
+Initial page size > Special characters,<p>Then I cannot publish</p>,<p>Given I am editing the page in the CMS</p>,"<p>When I add special characters to the field<br />
+And I publish</p>"
+Initial page size > Update,"<p>Then I can publish<br />
+And number of items on the front-end match the value set</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I update the integer to a new value<br />
+And I publish</p>"
+Internal link,<p>Then the relevant URL loads</p>,<p>Given I have added an internal URL to the CTA</p>,<p>When I click the CTA</p>
+Last page,<p>Then I cannot see a next button</p>,<p>Given I am viewing the last page in the pagination</p>,<p>When I view the page</p>
+Less than 3 events,"<p>Then I can see the correct number of events displaying in the block<br />
+And the events are always stacked</p>",<p>Given I am viewing the block</p>,<p>When I set the block up to display less than x events</p>
+Less than 4 cards,"<p>Then I can see the correct number of items displaying in the block<br />
+And the items build left-to-right</p>",<p>Given I am viewing the block</p>,<p>When I set the block up to display less than 4 items</p>
+Location,"<p>Then I can publish without error<br />
+And the content displays on the frontend as expected<br />
+And I can see the correct icon rendered next to the text</p>",<p>Given I am editing the existing Simple Event Detail Page in the CMS</p>,"<p>When I populate the location field<br />
+And I publish</p>"
+Location > Boundary,"<p>Then I can see the content wraps without error on the frontend<br />
+And the icon displays without issue</p>",<p>Given I am editing the existing Simple Event Detail Page in the CMS</p>,"<p>When I populate the location field with longer content<br />
+And I publish</p>"
+Logged in user > Branch info,"<p>Then I will see my branch pre-selected in the branch selector<br />
+And it will be prefixed with ""My branch""</p>","<p>Given I am a logged in user<br />
+And I have branch information assigned to my account</p>",<p>When I load the listing page</p>
+Logged in user > No branch info  > Allow location,"<p>Then I will see my nearest branch (based on Geo Location) chosen in the selector<br />
+And it will be prefixed with ""Local Branch""</p>","<p>Given I am not logged in<br />
+And I am on the UK site</p>","<p>When I view the listing page<br />
+And I allow the site to use my location</p>"
+Logged in user > No branch info  > Decline location,"<p>Then I will see the branch selector shown with the ""Select a branch"" text</p>","<p>Given I am not logged in<br />
+And I am on the UK site</p>","<p>When I view the listing page<br />
+And I <strong>do not</strong> allow the site to use my location</p>"
+Long-Term Expired CTA > Click,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'long-term expired' content</p>",<p>When I click the CTA</p>
+Long-Term Expired CTA > External link,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'long-term expired' content<br />
+And I have added an external URL to the CTA</p>",<p>When I click the CTA</p>
+Long-Term Expired CTA > Hover,<p>Then the hover state displays as per the style guide</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'long-term expired' content</p>",<p>When I hover over the CTA</p>
+Long-Term Expired CTA > Internal link,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'long-term expired' content<br />
+And I have added an internal URL to the CTA</p>",<p>When I click the CTA</p>
+Long-Term Expired CTA > Open in new tab,<p>Then the matching URL loads in a new tab</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'long-term expired' content<br />
+And I have set the CTA to open in a new tab</p>",<p>When I click the link</p>
+Long-Term Expired CTA Label,"<p>Then I can add CTA text<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add CTA text<br />
+And I publish</p>"
+Long-Term Expired CTA Label > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the CTA text</p>
+Long-Term Expired CTA Label > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a CTA label</p>
+Long-Term Expired CTA Link,<p>Then the CTA displays as expected on the front-end</p>,<p>Given I am editing the block in the CMS</p>,<p>When I add CTA link and text</p>
+Long-Term Expired CTA Link > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a CTA link</p>
+Long-Term Expired CTA Link > Page Types,<p>Then I can add all page types as the link</p>,<p>Given I am editing the site strings in the CMS</p>,"<p>When I add all page types into the link field<br />
+And I publish</p>"
+Long-Term Expired Heading,"<p>Then I can see the component published without error<br />
+And I can see the heading content displaying as expected<br />
+And I can see the heading is a H2</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a heading<br />
+And I publish</p>"
+Long-Term Expired Heading > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the heading</p>
+Long-Term Expired Heading > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a heading and publish</p>
+Long-Term Expired Rich Text,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add copy<br />
+And I publish</p>"
+Long-Term Expired Rich Text > Bold text,"<p>Then bold text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bold text style to the WYSIWYG</p>
+Long-Term Expired Rich Text > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content</p>
+Long-Term Expired Rich Text > Bullet list,"<p>Then bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bullet list styles to the WYSIWYG</p>
+Long-Term Expired Rich Text > CTA link with arrow,"<p>Then I can add CTA links to the content<br />
+And they display and function as expected on the front-end<br />
+And when I hover I can see an animation on the arrow</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add CTA links to the content</p>
+Long-Term Expired Rich Text > Hyperlinks,"<p>Then hyperlinks can be added<br />
+And they display and function as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add hyperlinks to the WYSIWYG</p>
+Long-Term Expired Rich Text > Indentation,"<p>Then indentation can be added<br />
+And it can be indented multiple times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add indentation to content</p>
+Long-Term Expired Rich Text > Italic text,"<p>Then italic text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add italic text style to the WYSIWYG</p>
+Long-Term Expired Rich Text > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add copy and publish</p>
+Long-Term Expired Rich Text > Numbered list,"<p>Then numbered list can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add numbered list styles to the WYSIWYG</p>
+Long-Term Expired Rich Text > Paragraph,"<p>Then paragraphs can be added<br />
+And they display as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add paragraphs into the WYSIWYG</p>
+Long-Term Expired Rich Text > Standout text,"<p>Then I can add standout text<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add standout text to the content</p>
+Long-Term Expired Rich Text > Subscript,"<p>Then subscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add subscript to the WYSIWYG</p>
+Long-Term Expired Rich Text > Superscript,"<p>Then superscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add superscript to the WYSIWYG</p>
+Long-Term Expired Rich Text > Underline text,"<p>Then underline text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add underline text style to the WYSIWYG</p>
+Long-Term Expired Rich Text > Yellow tick bullet list,"<p>Then yellow tick bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add yellow tick bullet list styles to the WYSIWYG</p>
+Long-Term Expired Rich Text Content Links > Click,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'long-term expired' content</p>",<p>When I click the link</p>
+Long-Term Expired Rich Text Content Links > External link,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'long-term expired' content<br />
+And I have added an external URL to the link</p>",<p>When I click the link</p>
+Long-Term Expired Rich Text Content Links > Hover,<p>Then the hover state displays as per the style guide</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'long-term expired' content</p>",<p>When I hover over the link</p>
+Long-Term Expired Rich Text Content Links > Internal link,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'long-term expired' content<br />
+And I have added an internal URL to the link</p>",<p>When I click the link</p>
+Long-Term Expired Rich Text Content Links > Open in new tab,<p>Then the matching URL loads in a new tab</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'long-term expired' content<br />
+And I have set the link to open in a new tab</p>",<p>When I click the link</p>
+Long-Term Expired Screen Reader Description,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected (in the source only)</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add content<br />
+And I publish</p>"
+Long-Term Expired Screen Reader Description > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add content and publish</p>
+Main Heading,"<p>Then I can see the component published without error<br />
+And I can see the heading content displaying as expected<br />
+And I can see the heading is a H2</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a heading<br />
+And I publish</p>"
+Main Heading > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the heading</p>
+Main Heading > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a heading and publish</p>
+Main Rich Text,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add copy<br />
+And I publish</p>"
+Main Rich Text > Bold text,"<p>Then bold text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bold text style to the WYSIWYG</p>
+Main Rich Text > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content</p>
+Main Rich Text > Bullet list,"<p>Then bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bullet list styles to the WYSIWYG</p>
+Main Rich Text > CTA link with arrow,"<p>Then I can add CTA links to the content<br />
+And they display and function as expected on the front-end<br />
+And when I hover I can see an animation on the arrow</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add CTA links to the content</p>
+Main Rich Text > Hyperlinks,"<p>Then hyperlinks can be added<br />
+And they display and function as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add hyperlinks to the WYSIWYG</p>
+Main Rich Text > Indentation,"<p>Then indentation can be added<br />
+And it can be indented multiple times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add indentation to content</p>
+Main Rich Text > Italic text,"<p>Then italic text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add italic text style to the WYSIWYG</p>
+Main Rich Text > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add copy and publish</p>
+Main Rich Text > Numbered list,"<p>Then numbered list can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add numbered list styles to the WYSIWYG</p>
+Main Rich Text > Paragraph,"<p>Then paragraphs can be added<br />
+And they display as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add paragraphs into the WYSIWYG</p>
+Main Rich Text > Standout text,"<p>Then I can add standout text<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add standout text to the content</p>
+Main Rich Text > Subscript,"<p>Then subscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add subscript to the WYSIWYG</p>
+Main Rich Text > Superscript,"<p>Then superscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add superscript to the WYSIWYG</p>
+Main Rich Text > Underline text,"<p>Then underline text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add underline text style to the WYSIWYG</p>
+Main Rich Text > Yellow tick bullet list,"<p>Then yellow tick bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add yellow tick bullet list styles to the WYSIWYG</p>
+Main Rich Text Content Links > Click,<p>Then the matching URL loads</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal</p>",<p>When I click the link</p>
+Main Rich Text Content Links > External link,<p>Then the matching URL loads</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal<br />
+And I have added an external URL to the link</p>",<p>When I click the link</p>
+Main Rich Text Content Links > Hover,<p>Then the hover state displays as per the style guide</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal</p>",<p>When I hover over the link</p>
+Main Rich Text Content Links > Internal link,<p>Then the matching URL loads</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal<br />
+And I have added an internal URL to the link</p>",<p>When I click the link</p>
+Main Rich Text Content Links > Open in new tab,<p>Then the matching URL loads in a new tab</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal<br />
+And I have set the link to open in a new tab</p>",<p>When I click the link</p>
+Map Link > Click Link,<p>Then the relevant page loads</p>,<p>Given I am viewing the feature with a link added</p>,<p>When I click the link</p>
+Map Link > External link,<p>Then the relevant URL loads</p>,<p>Given I have added an external URL to the link</p>,<p>When I click the link</p>
+Map Link > Hover state,"<p>Then I can see a hand cursor<br />
+And I can see the hover state matches the designs</p>",<p>Given I am viewing the feature with a link added</p>,<p>When I focus the link</p>
+Map Link > Internal link,<p>Then the relevant URL loads</p>,<p>Given I have added an internal URL to the link</p>,<p>When I click the link</p>
+Map Link > Link,"<p>Then I can see the link<br />
+And their content matches that in the CMS</p>","<p>Given I have created the feature<br />
+And I have added a map link</p>",<p>When I view the feature on the site</p>
+Map Link > Open in new tab,<p>Then the relevant page opens in a new tab</p>,<p>Given I have set the link to open in a new tab</p>,<p>When I click the link</p>
+Membership has lapsed > Page load,<p>Then I can see the 'lapsed membership' modal displaying</p>,<p>Given my membership has lapsed</p>,<p>When I load a page that has member-only content</p>
+Mobile > Carousel,"<p>Then I can see the block is displayed as a carousel<br />
+And the number of items matches the number displayed</p>",<p>Given I am viewing the block at mobile screen size</p>,<p>When I view the layout of the block</p>
+Mobile > Carousel > Rotate by swiping,<p>Then I can rotate the carousel to see all items</p>,<p>Given I am viewing the block at mobile screen size</p>,<p>When I rotate the carousel items by swiping left and right</p>
+Mobile > Carousel > Rotate using arrows,<p>Then I can rotate the carousel to see all items</p>,<p>Given I am viewing the block at mobile screen size</p>,<p>When I rotate the carousel items by using the arrows</p>
+Mobile > Click item,<p>Then the matching pages load</p>,<p>Given I am viewing the block with 3+ cards added on a mobile device</p>,<p>When I click each of the card links in the carousel</p>
+Mobile > Image grid,<p>Then I will see the images arranged into 3 rows of 2 images</p>,"<p>Given I am viewing the block on a Desktop or tablet device<br />
+And I have added some images</p>",<p>When I view the layout of the images</p>
+More than 4 cards,<p>Then I can see a maximum of 4 items displaying in the block</p>,<p>Given I am viewing the block</p>,<p>When I set the block up to display more than 4 items</p>
+More than x events,"<p>Then I can see a maximum of x events displaying in the block<br />
+And the events listed are the nearest in date (depending on any categories set)</p>",<p>Given I am viewing the block</p>,<p>When I set the block up to display more than x events</p>
+Multiple filters (all category types),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select multiple filter options from all category types, e.g. topic, audience and location<br />
+And I click to apply</p>"
+Multiple filters (one category type),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select multiple filter options from one category type, e.g. topic<br />
+And I click to apply</p>"
+Multiple filters (two category types),<p>Then matching results are returned</p>,<p>Given I am viewing the listing</p>,"<p>When I select multiple filter options from two different category types, e.g. topic and audience<br />
+And I click to apply</p>"
+Navigate via modal links > Return to page,"<p>Then I can return to the previous page<br />
+And I can see the 'lapsed membership' modal displaying over the page content</p>","<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal<br />
+When I navigate away from the current page via links within the modal</p>",<p>When I return to the previous page using my browser back button</p>
+New cookie session,<p>Then I can see the 'my free content' modal displaying</p>,<p>Given I have closed the 'my free content' modal</p>,"<p>When I load a new cookie session within my browser<br />
+And I navigate to premium content pages on the site</p>"
+New options,<p>Then I will <strong>not</strong> see the new hero options on these pages</p>,<p>Given I am logged into the CMS</p>,"<p>When I view other page templates, such as:</p>
+<ul>
+<li>Regular Landing Page</li>
+<li>General Content Pages (x2)</li>
+<li>Section hub</li>
+</ul>"
+New property > Ticket Status,<p>Then I can see a new property for 'Ticket Status'</p>,<p>Given I am editing the existing Simple Event Detail Page in the CMS</p>,<p>When I view the Event Details tab</p>
+New session after not closing modal,<p>Then I will see the modal shown again</p>,"<p>Given I have previously seen the Renewal Reminder component<br />
+And I did not explicitly close the modal<br />
+And I am a logged in user</p>","<p>When I begin a new browser session<br />
+And I view a page</p>"
+Next,"<p>Then the next page of results load<br />
+And the results count updates accordingly</p>",<p>Given I am viewing any page except the last page in the pagination</p>,<p>When I click the next button</p>
+No pagination,<p>Then I cannot see any pagination elements</p>,<p>Given I am viewing the listing with not enough results for pagination</p>,<p>When I view the page</p>
+Not logged in user,<p>Then I will see a browser popup asking me for my location</p>,"<p>Given I am not logged in<br />
+And I am on the UK site</p>",<p>When I view the listing page</p>
+Not logged in user > Allow location,"<p>Then I will see my nearest branch (based on Geo Location) chosen in the selector<br />
+And it will be prefixed with ""Local Branch""</p>","<p>Given I am not logged in<br />
+And I am on the UK site</p>","<p>When I view the listing page<br />
+And I allow the site to use my location</p>"
+Not logged in user > Decline location,"<p>Then I will see the branch selector shown with the ""Select a branch"" text</p>","<p>Given I am not logged in<br />
+And I am on the UK site</p>","<p>When I view the listing page<br />
+And I <strong>do not</strong> allow the site to use my location</p>"
+Notification Type > Negative,<p>Then validation displays as the field is mandatory</p>,<p>Given I am editing the block in the CMS</p>,<p>When I do not select a notification type and publish</p>
+Notification Type > Options,"<p>Then I can see the following options:</p>
+<p>Renewal Reminder:</p>
+<ul>
+<li>
+<p>If a user has bought a subscription for themselves, and it is due for renewal in N days</p>
+</li>
+<li>
+<p>If someone has bought a subscription for a user, and it is due for renewal in N days</p>
+</li>
+<li>
+<p>If the user has bought one or more other people a subscription, and it is due for renewal in N days</p>
+</li>
+</ul>
+<p>Subscription Expired:</p>
+<ul>
+<li>
+<p>If a user has bought a subscription for themselves, and their subscription is expired</p>
+</li>
+<li>
+<p>If someone has bought a subscription for a user, and their subscription is expired</p>
+</li>
+<li>
+<p>If the user has bought one or more other people a subscription, and their subscription is expired</p>
+</li>
+</ul>
+<p>Subscription renewal confirmation:</p>
+<ul>
+<li>
+<p>If a user renews their subscription and gets redirected back to the Content landing page</p>
+</li>
+<li>
+<p>If a user renews for others and gets redirected back to the Content landing page</p>
+</li>
+<li>
+<p>If a B2B user has renewed for their team</p>
+</li>
+</ul>",<p>Given I am editing the block in the CMS</p>,<p>When I view the available notification type options</p>
+Notification Type > Select each option,<p>Then I can select and publish each option without error</p>,<p>Given I am editing the block in the CMS</p>,<p>When I select each of the available notification type options and publish</p>
+Notifications area,<p>Then I can only add the Subscription Notification block</p>,<p>Given I am editing the page in the CMS</p>,<p>When I add blocks to the Notifications area</p>
+On-page block,<p>Then I can create and publish the block without error</p>,<p>Given I am editing the page in the CMS</p>,<p>When I create a block directly into the content area</p>
+Open filter accordion,"<p>Then I can open the filter<br />
+And the filter content displays as expected</p>",<p>Given I am viewing the listing</p>,<p>When I click a filter accordion</p>
+Open filters individually,"<p>Then each filter opens in turn<br />
+And the previously opened filter closes</p>",<p>Given I am viewing the listing</p>,<p>When I click each of the available filters in turn</p>
+Open in new tab,<p>Then the relevant page opens in a new tab</p>,<p>Given I have set the CTA link to open in a new tab</p>,<p>When I click the CTA</p>
+Open Mega Menu,"<p>Then I will see the component shown underneath the grey overlay<br />
+And I cannot interact with it through the overlay</p>",<p>Given I can see the component</p>,<p>When I open the mega menu</p>
+Open Universal Header,"<p>Then I will no longer see the component<br />
+And I cannot interact with it through the overlay</p>",<p>Given I can see the component</p>,<p>When I open the universal header</p>
+Page Intro,"<p>Then the page is published with no error<br />
+And the intro is displayed on the front-end</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I add an intro<br />
+And publish the page</p>"
+Page Intro > Empty,"<p>Then the page is published with no error<br />
+And the intro are is not rendered on the front-end</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I do not add an intro<br />
+And publish the page</p>"
+Page Intro/Short Description,<p>Then I can see the page intro/short description has been pulled through to both the CMS and frontend as expected</p>,<p>Given I have run the scheduled Eventbrite scheduled job</p>,"<p>When I view the event details in the CMS<br />
+And I view the Intro section on the page</p>"
+Page Intro/Short Description > Teaser Text,<p>Then I can see the page intro/short description has been pulled through to both the CMS and frontend as expected</p>,<p>Given I have run the scheduled Eventbrite scheduled job</p>,<p>When I view the teaser text in the CMS</p>
+Page layout,"<p>Then I can see the page layout is:</p>
+<ul>
+<li>Breadcrumb</li>
+<li>Hero</li>
+<li>Page Intro</li>
+<li>2/3rds Content area</li>
+<li>About this event Rich Text</li>
+<li>Embedded Checkout</li>
+<li>1/3 Content area</li>
+<li>Share banner</li>
+<li>Lookup Stacked card block component</li>
+<li>Full width Content area</li>
+</ul>",<p>Given I am viewing the page</p>,<p>When I view the page layout (when all fields are populated in the CMS)</p>
+Page numbers,"<p>Then the matching pages of results load<br />
+And the results count updates accordingly</p>",<p>Given I am viewing the pagination</p>,<p>When I click page numbers</p>
+Page Title,"<p>Then the page is published with no error<br />
+And the page title is shown on the site with no issues<br />
+And the title is in a &lt;H1&gt; tag</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I add a title<br />
+And publish the page</p>"
+Page Title > Boundary content,"<p>Then content wraps and displays without error<br />
+And the title is in a &lt;H1&gt; tag</p>",<p>Given I am editing the page in the CMS</p>,"<p>When I add a large amount of content to the title</p>
+<p>OR</p>
+<p>When I add the maximum amount of content to the title</p>"
+Page Title > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the page in the CMS</p>,<p>When I do not add a title and publish</p>
+Page Types > Toggles,"<p>Then I can see the available toggles:</p>
+<ul>
+<li>Child pages are Premium Content</li>
+<li>Premium content Override</li>
+<li>Exclude from Sampling</li>
+</ul>",<p>Given I have access to the CMS</p>,<p>When I view the configuration of page types within the CMS</p>
+Pagination,<p>Then the elements match the number of pages and results returned</p>,<p>Given I am viewing the listing with enough results for pagination</p>,<p>When I view the pagination elements</p>
+Pagination > Page reload,"<p>Then I can see the search query persist in the URL<br />
+And I can see the results count persists<br />
+And all matched results remain within the listing</p>",<p>Given I am viewing the listing</p>,"<p>When I paginate<br />
+And I reload the page</p>"
+Past,"<p>Then The ""switch"" will flip<br />
+And the sort order will be updated to show soonest past event first<br />
+And only show past events</p>",<p>Given I am viewing the listing page</p>,"<p>When I click ""Past""</p>"
+Populate Fields,<p>Then I will be able to successfully populate SEO and Social Meta Tags</p>,<p>Given I am logged into the CMS</p>,"<p>When I populate all SEO and Social Meta Tags<br />
+And publish</p>"
+Premium content > Page load,<p>Then I can see the 'my free content' modal displaying</p>,<p>Given I am viewing premium content for the first time</p>,<p>When I load a page that requires a subscription</p>
+Premium content Override > Default,"<p>Then I can see the following options:</p>
+<ul>
+<li>Follow Parent (Default)</li>
+<li>Premium</li>
+<li>Non-Premium</li>
+</ul>",<p>Given I am editing a page in the CMS</p>,<p>When I view the Premium content Override drop down</p>
+Premium content Override > Follow Parent,<p>Then I can see both the parent and child pages are either premium or non-premium</p>,<p>Given I am editing a page in the CMS</p>,"<p>When I set the Premium content Override drop down to be Follow Parent<br />
+And I view the parent and child page on the frontend</p>"
+Premium content Override > Non-Premium,"<p>Then I can see the page is non-premium<br />
+And it has overridden any setting defined by it's parent<br />
+And it has not updated any other page on the site</p>",<p>Given I am editing a page in the CMS</p>,"<p>When I set the Premium content Override drop down to be Non-Premium<br />
+And I page on the frontend</p>"
+Premium content Override > Premium,"<p>Then I can see the page is premium<br />
+And it has overridden any setting defined by it's parent<br />
+And it has not updated any other page on the site</p>",<p>Given I am editing a page in the CMS</p>,"<p>When I set the Premium content Override drop down to be Premium<br />
+And I page on the frontend</p>"
+Premium Pages > No matching categories,<p>Then I cannot see the block displaying on the front-end</p>,<p>Given I am editing the block in the CMS</p>,"<p>When I add categories to the block that do not match any premium pages<br />
+And I publish</p>"
+Premium Pages View Limit,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add an integer value<br />
+And I publish</p>"
+Premium Pages View Limit > Boundary content,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a large integer value, e.g. 100</p>"
+Premium Pages View Limit > Invalid,<p>Then validation displays as the field only accepts positive integers</p>,<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a letter, negative integer, special character or space into the field</p>"
+Premium Pages View Limit > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a value and publish</p>
+Previous,"<p>Then the previous page of results load<br />
+And the results count updates accordingly</p>",<p>Given I am viewing any page except the first page in the pagination</p>,<p>When I click the previous button</p>
+Primary & Secondary CTA,<p>Then I can see the CTAs displaying inline</p>,<p>Given I only add both a Primary and Secondary CTA to the block</p>,<p>When I view the block</p>
+Primary CTA > Add link only,<p>Then validation displays</p>,<p>Given I am editing the block in the CMS</p>,"<p>When I add a CTA link<br />
+And I do <strong>not</strong> add CTA text</p>"
+Primary CTA > Add text only,<p>Then validation displays</p>,<p>Given I am editing the block in the CMS</p>,"<p>When I add CTA text<br />
+And I do <strong>not</strong> add CTA link</p>"
+Primary CTA > Click,<p>Then the matching URL loads</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal</p>",<p>When I click the primary CTA</p>
+Primary CTA > CTA,<p>Then the matching URL loads</p>,<p>Given I am viewing the block with a CTA added</p>,<p>When I click the CTA</p>
+Primary CTA > External link,<p>Then the matching URL loads</p>,<p>Given I add an external URL to the CTA</p>,<p>When I click the CTA</p>
+Primary CTA > Hover,<p>Then the hover state displays as per the style guide</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal</p>",<p>When I hover over the primary CTA</p>
+Primary CTA > Hover state,<p>Then the hover state displays as per the style guide</p>,<p>Given I am viewing the block with a CTA added</p>,<p>When I hover over the CTA</p>
+Primary CTA > Internal link,<p>Then the matching URL loads</p>,<p>Given I add an internal URL to the CTA</p>,<p>When I click the CTA</p>
+Primary CTA > Negative,<p>Then I cannot publish as the field is required</p>,<p>Given I am editing the block in the CMS</p>,<p>When I do not add a CTA</p>
+Primary CTA > Open in new tab,<p>Then the matching URL loads in a new tab</p>,<p>Given I set the CTA link to open in a new tab</p>,<p>When I click the link</p>
+Primary CTA Label,"<p>Then I can add CTA text<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the block in the CMS</p>,"<p>When I add CTA text<br />
+And I publish</p>"
+Primary CTA Label > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the block in the CMS</p>,<p>When I add a large amount of content to the CTA text</p>
+Primary CTA Label > Negative,<p>Then I can publish as the field is optional</p>,<p>Given I am editing the block in the CMS</p>,<p>When I do not add a CTA label</p>
+Primary CTA Link,<p>Then the CTA displays as expected on the front-end</p>,<p>Given I am editing the block in the CMS</p>,<p>When I add CTA link and text</p>
+Primary CTA Link > Negative,<p>Then validation displays as field is mandatory (only if the CTA label is populated)</p>,<p>Given I am editing the block in the CMS</p>,<p>When I do not add a CTA link</p>
+Primary CTA Link > Page Types,<p>Then I can add all page types as the link</p>,<p>Given I am editing the block in the CMS</p>,"<p>When I add all page types into the link field<br />
+And I publish</p>"
+Primary CTA only,<p>Then I can see the CTA is left-aligned</p>,<p>Given I only add a Primary CTA to the block</p>,<p>When I view the block</p>
+Primary CTA text > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the block in the CMS</p>,<p>When I add excessive content to the CTA text</p>
+Product Name,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add text<br />
+And I publish</p>"
+Product Name > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of text</p>
+Product Name > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add text and publish</p>
+Properties > Manually update,"<p>Then I can update all properties (except EventID)<br />
+And the content is correctly updated on the frontend</p>",<p>Given I am viewing the event details in the CMS</p>,<p>When I manually update the eventbrite properties in the tab</p>
+Recently Lapsed CTA > Click,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'recently lapsed' content</p>",<p>When I click the CTA</p>
+Recently Lapsed CTA > External link,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'recently lapsed' content<br />
+And I have added an external URL to the CTA</p>",<p>When I click the CTA</p>
+Recently Lapsed CTA > Hover,<p>Then the hover state displays as per the style guide</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'recently lapsed' content</p>",<p>When I hover over the CTA</p>
+Recently Lapsed CTA > Internal link,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'recently lapsed' content<br />
+And I have added an internal URL to the CTA</p>",<p>When I click the CTA</p>
+Recently Lapsed CTA > Open in new tab,<p>Then the matching URL loads in a new tab</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'recently lapsed' content<br />
+And I have set the CTA to open in a new tab</p>",<p>When I click the link</p>
+Recently Lapsed CTA Label,"<p>Then I can add CTA text<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add CTA text<br />
+And I publish</p>"
+Recently Lapsed CTA Label > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the CTA text</p>
+Recently Lapsed CTA Label > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a CTA label</p>
+Recently Lapsed CTA Link,<p>Then the CTA displays as expected on the front-end</p>,<p>Given I am editing the block in the CMS</p>,<p>When I add CTA link and text</p>
+Recently Lapsed CTA Link > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a CTA link</p>
+Recently Lapsed CTA Link > Page Types,<p>Then I can add all page types as the link</p>,<p>Given I am editing the site strings in the CMS</p>,"<p>When I add all page types into the link field<br />
+And I publish</p>"
+Recently Lapsed Heading,"<p>Then I can see the component published without error<br />
+And I can see the heading content displaying as expected<br />
+And I can see the heading is a H2</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a heading<br />
+And I publish</p>"
+Recently Lapsed Heading > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the heading</p>
+Recently Lapsed Heading > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a heading and publish</p>
+Recently Lapsed Rich Text,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add copy<br />
+And I publish</p>"
+Recently Lapsed Rich Text > Bold text,"<p>Then bold text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bold text style to the WYSIWYG</p>
+Recently Lapsed Rich Text > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content</p>
+Recently Lapsed Rich Text > Bullet list,"<p>Then bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bullet list styles to the WYSIWYG</p>
+Recently Lapsed Rich Text > CTA link with arrow,"<p>Then I can add CTA links to the content<br />
+And they display and function as expected on the front-end<br />
+And when I hover I can see an animation on the arrow</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add CTA links to the content</p>
+Recently Lapsed Rich Text > Hyperlinks,"<p>Then hyperlinks can be added<br />
+And they display and function as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add hyperlinks to the WYSIWYG</p>
+Recently Lapsed Rich Text > Indentation,"<p>Then indentation can be added<br />
+And it can be indented multiple times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add indentation to content</p>
+Recently Lapsed Rich Text > Italic text,"<p>Then italic text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add italic text style to the WYSIWYG</p>
+Recently Lapsed Rich Text > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add copy and publish</p>
+Recently Lapsed Rich Text > Numbered list,"<p>Then numbered list can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add numbered list styles to the WYSIWYG</p>
+Recently Lapsed Rich Text > Paragraph,"<p>Then paragraphs can be added<br />
+And they display as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add paragraphs into the WYSIWYG</p>
+Recently Lapsed Rich Text > Standout text,"<p>Then I can add standout text<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add standout text to the content</p>
+Recently Lapsed Rich Text > Subscript,"<p>Then subscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add subscript to the WYSIWYG</p>
+Recently Lapsed Rich Text > Superscript,"<p>Then superscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add superscript to the WYSIWYG</p>
+Recently Lapsed Rich Text > Underline text,"<p>Then underline text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add underline text style to the WYSIWYG</p>
+Recently Lapsed Rich Text > Yellow tick bullet list,"<p>Then yellow tick bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add yellow tick bullet list styles to the WYSIWYG</p>
+Recently Lapsed Rich Text Content Links > Click,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'recently lapsed' content</p>",<p>When I click the link</p>
+Recently Lapsed Rich Text Content Links > External link,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'recently lapsed' content<br />
+And I have added an external URL to the link</p>",<p>When I click the link</p>
+Recently Lapsed Rich Text Content Links > Hover,<p>Then the hover state displays as per the style guide</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'recently lapsed' content</p>",<p>When I hover over the link</p>
+Recently Lapsed Rich Text Content Links > Internal link,<p>Then the matching URL loads</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'recently lapsed' content<br />
+And I have added an internal URL to the link</p>",<p>When I click the link</p>
+Recently Lapsed Rich Text Content Links > Open in new tab,<p>Then the matching URL loads in a new tab</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal displaying the 'recently lapsed' content<br />
+And I have set the link to open in a new tab</p>",<p>When I click the link</p>
+Recently Lapsed Screen Reader Description,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected (in the source only)</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add content<br />
+And I publish</p>"
+Recently Lapsed Screen Reader Description > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add content and publish</p>
+Reload the page,<p>Then I can see the 'lapsed membership' modal still displaying</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal</p>",<p>When I reload the current page</p>
+Rendering order,"<p>Then I will see content in the following order:</p>
+<ul>
+<li>Hero</li>
+<li>Notifications</li>
+<li>Page Intro</li>
+<li>Upper Full width content area</li>
+<li>Share Banner</li>
+<li>Lower Full width content area</li>
+<li>Footer</li>
+</ul>","<p>Given I have created the page in the CMS<br />
+And I have added content to each area</p>",<p>When I view the page</p>
+Renewal Reminder & Subscription Expired > Multiple matches,<p>Then I can see each of the notification blocks that match my users information</p>,<p>Given notification blocks have been set up for each of the renewal reminder and subscription expired options</p>,"<p>When I login with a user account that matches multiple notification criteria<br />
+And I load the page where the blocks are added</p>"
+Renewal Reminder & Subscription Expired > No matches,<p>Then I cannot see any of the notification blocks</p>,<p>Given notification blocks have been set up for each of the renewal reminder and subscription expired options</p>,"<p>When I login with a user account that does <strong>not</strong> match any notification criteria<br />
+And I load the page where the blocks are added</p>"
+Renewal Reminder > Bought own subscription,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If a user has bought a subscription for themselves, and it is due for renewal in N days'</p>","<p>When I login with a user account that matches the notification criteria<br />
+And I load the page where the block is added</p>"
+Renewal Reminder > Bought own subscription > User does not match,<p>Then I cannot see the block displaying on the page</p>,"<p>Given a notification block has been set up for 'If a user has bought a subscription for themselves, and it is due for renewal in N days'</p>","<p>When I login with a user account that does <strong>not</strong> matches the notification criteria<br />
+And I load the page where the block is added</p>"
+Renewal Reminder > Bought someone elses subscription > Purchased for,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If someone has bought a subscription for a user, and it is due for renewal in N days'</p>","<p>When I login with a user account that matches the notification criteria<br />
+And the account is for a <strong>person the subscription was purchased for</strong><br />
+And I load the page where the block is added</p>"
+Renewal Reminder > Bought someone elses subscription > Purchaser,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If someone has bought a subscription for a user, and it is due for renewal in N days'</p>","<p>When I login with a user account that matches the notification criteria<br />
+And the account is for the <strong>purchaser of the subscription</strong><br />
+And I load the page where the block is added</p>"
+Renewal Reminder > Bought someone elses subscription > User does not match,<p>Then I cannot see the block displaying on the page</p>,"<p>Given a notification block has been set up for 'If someone has bought a subscription for a user, and it is due for renewal in N days'</p>","<p>When I login with a user account that does <strong>not</strong> matches the notification criteria<br />
+And I load the page where the block is added</p>"
+Renewal Reminder > Bought subscriptions for one or more people > Purchased for,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If the user has bought one or more other people a subscription, and it is due for renewal in N days'</p>","<p>When I login with a user account that matches the notification criteria<br />
+And the account is for a <strong>person the subscription was purchased for</strong><br />
+And I load the page where the block is added</p>"
+Renewal Reminder > Bought subscriptions for one or more people > Purchaser,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If the user has bought one or more other people a subscription, and it is due for renewal in N days'</p>","<p>When I login with a user account that matches the notification criteria<br />
+And the account is for the <strong>purchaser of the subscription</strong><br />
+And I load the page where the block is added</p>"
+Renewal Reminder > Bought subscriptions for one or more people > User does not match,<p>Then I cannot see the block displaying on the page</p>,"<p>Given a notification block has been set up for 'If the user has bought one or more other people a subscription, and it is due for renewal in N days'</p>","<p>When I login with a user account that does <strong>not</strong> matches the notification criteria<br />
+And I load the page where the block is added</p>"
+Renewal Reminder > Multiple matches,<p>Then I can see each of the notification blocks that match my users information</p>,<p>Given multiple notification blocks have been set up for each of the renewal reminder options</p>,"<p>When I login with a user account that matches multiple notification criteria<br />
+And I load the page where the blocks are added</p>"
+Restore page,"<p>Then I can restore the page without error<br />
+And I can see the page again in the site tree<br />
+And I can see the page displaying on the front-end</p>",<p>Given I have deleted the page in the CMS</p>,"<p>When I restore the deleted page<br />
+And I publish</p>"
+Rich Text,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add copy<br />
+And I publish</p>"
+Rich Text > Bold text,"<p>Then bold text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bold text style to the WYSIWYG</p>
+Rich Text > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content</p>
+Rich Text > Bullet list,"<p>Then bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bullet list styles to the WYSIWYG</p>
+Rich Text > CTA link with arrow,"<p>Then I can add CTA links to the content<br />
+And they display and function as expected on the front-end<br />
+And when I hover I can see an animation on the arrow</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add CTA links to the content</p>
+Rich Text > Hyperlinks,"<p>Then hyperlinks can be added<br />
+And they display and function as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add hyperlinks to the WYSIWYG</p>
+Rich Text > Indentation,"<p>Then indentation can be added<br />
+And it can be indented multiple times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add indentation to content</p>
+Rich Text > Italic text,"<p>Then italic text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add italic text style to the WYSIWYG</p>
+Rich Text > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add copy and publish</p>
+Rich Text > Numbered list,"<p>Then numbered list can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add numbered list styles to the WYSIWYG</p>
+Rich Text > Paragraph,"<p>Then paragraphs can be added<br />
+And they display as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add paragraphs into the WYSIWYG</p>
+Rich Text > Standout text,"<p>Then I can add standout text<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add standout text to the content</p>
+Rich Text > Subscript,"<p>Then subscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add subscript to the WYSIWYG</p>
+Rich Text > Superscript,"<p>Then superscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add superscript to the WYSIWYG</p>
+Rich Text > Underline text,"<p>Then underline text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add underline text style to the WYSIWYG</p>
+Rich Text > Yellow tick bullet list,"<p>Then yellow tick bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add yellow tick bullet list styles to the WYSIWYG</p>
+Rich Text Content Links > Click,<p>Then the matching URL loads</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal</p>",<p>When I click the link</p>
+Rich Text Content Links > External link,<p>Then the matching URL loads</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal<br />
+And I have added an external URL to the link</p>",<p>When I click the link</p>
+Rich Text Content Links > Hover,<p>Then the hover state displays as per the style guide</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal</p>",<p>When I hover over the link</p>
+Rich Text Content Links > Internal link,<p>Then the matching URL loads</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal<br />
+And I have added an internal URL to the link</p>",<p>When I click the link</p>
+Rich Text Content Links > Open in new tab,<p>Then the matching URL loads in a new tab</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal<br />
+And I have set the link to open in a new tab</p>",<p>When I click the link</p>
+Screen Reader Description,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected (in the source only)</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add content<br />
+And I publish</p>"
+Screen Reader Description > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add content and publish</p>
+Scroll modal > Mobile,<p>Then I can see the alert message and close icon become a sticky header as the rest of the modal content scrolls</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal on mobile</p>",<p>When I scroll the modal</p>
+Scroll page content > Desktop,<p>Then I am unable to scroll the page content behind</p>,"<p>Given my membership has lapsed<br />
+And I can see the 'lapsed membership' modal on desktop</p>",<p>When I try to scroll the page content behind the modal</p>
+Second page +,<p>Then I can see a previous and a next button</p>,<p>Given I am viewing the second page onwards in the pagination</p>,<p>When I view each page</p>
+Secondary Area Background Colour > Options,"<p>Then I can see all colour options available:</p>
+<ul>
+<li>Dark Purple (Default)</li>
+<li>Dark Blue</li>
+<li>Bright Yellow</li>
+<li>Bright Green</li>
+<li>Bright Blue</li>
+<li>Bright Orange</li>
+</ul>",<p>Given I am editing the site strings in the CMS</p>,<p>When I view the colour options</p>
+Secondary Area Background Colour > Select each colour,<p>Then I can see all colours displaying as expected on the front-end</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I select and publish each of the colour options</p>
+Secondary CTA > Click,<p>Then the matching URL loads</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal</p>",<p>When I click the secondary CTA</p>
+Secondary CTA > CTA,<p>Then the matching URL loads</p>,<p>Given I am viewing the block with a CTA added</p>,<p>When I click the CTA</p>
+Secondary CTA > Hover,<p>Then the hover state displays as per the style guide</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal</p>",<p>When I hover over the secondary CTA</p>
+Secondary CTA > Hover state,<p>Then the hover state displays as per the style guide</p>,<p>Given I am viewing the block with a CTA added</p>,<p>When I hover over the CTA</p>
+Secondary CTA only,<p>Then I can see the CTA is left-aligned</p>,<p>Given I only add a Secondary CTA to the block</p>,<p>When I view the block</p>
+Secondary Heading,"<p>Then I can see the component published without error<br />
+And I can see the heading content displaying as expected<br />
+And I can see the heading is a H3</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add a heading<br />
+And I publish</p>"
+Secondary Heading > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content to the heading</p>
+Secondary Heading > Negative,<p>Then I can publish as the field is optional</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add a heading and publish</p>
+Secondary Rich Text,"<p>Then I can see the component published without error<br />
+And I can see the content displaying as expected</p>",<p>Given I am editing the site strings in the CMS</p>,"<p>When I add copy<br />
+And I publish</p>"
+Secondary Rich Text > Bold text,"<p>Then bold text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bold text style to the WYSIWYG</p>
+Secondary Rich Text > Boundary content,<p>Then the content wraps and displays without error</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I add a large amount of content</p>
+Secondary Rich Text > Bullet list,"<p>Then bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bullet list styles to the WYSIWYG</p>
+Secondary Rich Text > CTA link with arrow,"<p>Then I can add CTA links to the content<br />
+And they display and function as expected on the front-end<br />
+And when I hover I can see an animation on the arrow</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add CTA links to the content</p>
+Secondary Rich Text > Hyperlinks,"<p>Then hyperlinks can be added<br />
+And they display and function as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add hyperlinks to the WYSIWYG</p>
+Secondary Rich Text > Indentation,"<p>Then indentation can be added<br />
+And it can be indented multiple times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add indentation to content</p>
+Secondary Rich Text > Italic text,"<p>Then italic text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add italic text style to the WYSIWYG</p>
+Secondary Rich Text > Negative,<p>Then I can publish as the field is optional</p>,<p>Given I am editing the site strings in the CMS</p>,<p>When I do not add copy and publish</p>
+Secondary Rich Text > Numbered list,"<p>Then numbered list can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add numbered list styles to the WYSIWYG</p>
+Secondary Rich Text > Paragraph,"<p>Then paragraphs can be added<br />
+And they display as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add paragraphs into the WYSIWYG</p>
+Secondary Rich Text > Standout text,"<p>Then I can add standout text<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add standout text to the content</p>
+Secondary Rich Text > Subscript,"<p>Then subscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add subscript to the WYSIWYG</p>
+Secondary Rich Text > Superscript,"<p>Then superscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add superscript to the WYSIWYG</p>
+Secondary Rich Text > Underline text,"<p>Then underline text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add underline text style to the WYSIWYG</p>
+Secondary Rich Text > Yellow tick bullet list,"<p>Then yellow tick bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add yellow tick bullet list styles to the WYSIWYG</p>
+Secondary Rich Text Link > Click,<p>Then the matching URL loads</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal</p>",<p>When I click the link</p>
+Secondary Rich Text Link > External link,<p>Then the matching URL loads</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal<br />
+And I have added an external URL to the link</p>",<p>When I click the link</p>
+Secondary Rich Text Link > Hover,<p>Then the hover state displays as per the style guide</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal</p>",<p>When I hover over the link</p>
+Secondary Rich Text Link > Internal link,<p>Then the matching URL loads</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal<br />
+And I have added an internal URL to the link</p>",<p>When I click the link</p>
+Secondary Rich Text Link > Open in new tab,<p>Then the matching URL loads in a new tab</p>,"<p>Given I have reached the limit of my free content<br />
+And I can now see the 'purchase required' modal<br />
+And I have set the link to open in a new tab</p>",<p>When I click the link</p>
+Select a filter (Event format),<p>Then I will see the Topics dropdown in a Loading State</p>,<p>Given I am on the listing page</p>,<p>When I select a category from the dropdown</p>
+Select a filter (Event type and event format),<p>Then I will see the Topics dropdown in a Loading State</p>,<p>Given I am on the listing page</p>,<p>When I select a category from both dropdowns</p>
+Select a filter (Event type),<p>Then I will see the Topics dropdown in a Loading State</p>,<p>Given I am on the listing page</p>,<p>When I select a category from the dropdown</p>
+Select all > Update selection,"<p>Then filter options are updated<br />
+And matching results are returned</p>","<p>Given I am viewing the listing<br />
+And I am viewing the open filters<br />
+And I have selected to select all</p>","<p>When I update the selection, e.g. remove multiple<br />
+And I click to apply filters</p>"
+Select filter option,<p>Then the filter option is selected</p>,"<p>Given I am viewing the listing<br />
+And I am viewing the open filters</p>",<p>When I click to select a checkbox</p>
+Selection > Can only pick one,<p>Then I can only select one branch</p>,<p>Given I am viewing the listing page</p>,<p>When I open the branch selector</p>
+Selection > show all,<p>Then I will see the rest of the branches rendered in the list</p>,<p>Given I am viewing the listing page</p>,"<p>When I open the branch selector<br />
+And click Show all</p>"
+SEO properties,,<p>When I view the SEO tab properties of the page in the CMS</p>,<p>Then I can see that all fields have their default values (no changes)</p>
+Settings properties,,<p>When I view the Settings tab properties of the page in the CMS</p>,<p>Then I can see that all fields have their default values (no changes)</p>
+Show Global Promo Block > Default,"<p>Then I can see the toggle is defaulted true<br />
+And I can see the global promo block is displayed correctly on the page</p>",<p>Given I am editing the page in the CMS</p>,<p>When I view the 'Show Global Promo Block' toggle</p>
+Show Global Promo Block > False,"<p>Then I cannot see the global promo block displaying on the frontend<br />
+And I can see any other manually create promo blocks displaying as expected</p>",<p>Given I am editing the page in the CMS</p>,<p>When I set the 'Show Global Promo Block' toggle to be false</p>
+Show Global Promo Block > True,"<p>Then I can see the global promo block displaying on the frontend<br />
+And I can see any other manually create promo blocks displaying below the global block as expected</p>",<p>Given I am editing the page in the CMS</p>,<p>When I set the 'Show Global Promo Block' toggle to be true</p>
+Show meta data > False,<p>Then I cannot see the meta data displaying</p>,<p>Given I am editing the page in the CMS</p>,"<p>When I set the meta data to not display<br />
+And I then view the page</p>"
+Show meta data > True,<p>Then I can see the meta data displaying as expected</p>,<p>Given I am editing the page in the CMS</p>,"<p>When I set the meta data to display<br />
+And I then view the page</p>"
+Sign out,<p>Then I will no longer see the notifications</p>,"<p>Given I am logged in<br />
+And I can see one or more notifications</p>","<p>When I sign out<br />
+And view the page again</p>"
+Small Heading > Boundary,"<p>Then I can do so without warning<br />
+And the content displays as expected on the frontend</p>",<p>Given I am editing the page in the CMS</p>,<p>When I add a large amount of content to the Small Heading field</p>
+Small heading > Boundary content,<p>Then content wraps and displays without error</p>,<p>Given I am editing the block in the CMS</p>,<p>When I add a large amount of content to the heading</p>
+Small Heading for Customers,"<p>Then the block is published with no error<br />
+And the heading is shown on the site with no issues</p>",<p>Given I am editing the block in the CMS</p>,"<p>When I add a heading<br />
+And publish the block</p>"
+Small Heading for Customers > Boundary content,<p>Then content wraps and displays without error</p>,<p>Given I am editing the block in the CMS</p>,<p>When I add a large amount of content to the heading</p>
+Small Heading for Customers > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the block in the CMS</p>,<p>When I do not add a heading and publish</p>
+Small Heading for Non-Customers,"<p>Then the block is published with no error<br />
+And the heading is shown on the site with no issues</p>",<p>Given I am editing the block in the CMS</p>,"<p>When I add a heading<br />
+And publish the block</p>"
+Small Heading for Non-Customers > Boundary content,<p>Then content wraps and displays without error</p>,<p>Given I am editing the block in the CMS</p>,<p>When I add a large amount of content to the heading</p>
+Small Heading for Non-Customers > Negative,<p>Then validation displays as field is mandatory</p>,<p>Given I am editing the block in the CMS</p>,<p>When I do not add a heading and publish</p>
+Social media properties,,<p>When I view the social media tab properties of the page in the CMS</p>,"<p>Then I can see that all fields have their default values (no changes) except Social Sharing Image<br />
+And I can see Social Sharing Image has been populated by Eventbrite</p>"
+Someone else bought for User,"<p>Then I will see the Renewal Reminder Component<br />
+And it will show with the ""Renewal reminder &gt; Heading"" text as defined in site settings</p>","<p>Given I am a user who had a subscription bought for me<br />
+And it is set to expire in X days (configured in Settings)<br />
+And I am a logged in user</p>","<p>When I have just started a new browser session<br />
+And I view the first page after opening my session</p>"
+Sort > Page reload,"<p>Then I can see the search query persist in the URL<br />
+And I can see the results count persists<br />
+And all matched results remain within the listing</p>",<p>Given I am viewing the listing</p>,"<p>When I update the sort-by<br />
+And I reload the page</p>"
+Sort/Pagination > Page reload,"<p>Then I can see the search query persist in the URL<br />
+And I can see the results count persists<br />
+And all matched results remain within the listing</p>",<p>Given I am viewing the listing</p>,"<p>When I update the sort-by<br />
+And I paginate<br />
+And I reload the page</p>"
+Sort-by > Alphabetical,<p>Then I can see all items are ordered acordingly</p>,<p>Given I am viewing the listing</p>,<p>When I update the sort by to alphabetical</p>
+Sort-by > Default,"<p>Then I can see that latest first is the default<br />
+And all items are ordered accordingly</p>",<p>Given I am viewing the listing</p>,<p>When I view the default option</p>
+Sort-by > Latest first,<p>Then I can see all items are ordered acordingly</p>,<p>Given I am viewing the listing</p>,<p>When I update the sort by to latest first</p>
+Sort-by > Options,"<p>Then I can see the following:</p>
+<p>Alphabetical<br />
+Latest First<br />
+Relevant</p>","<p>Given I am viewing the listing<br />
+And I have configured the feature to show all Sort options</p>",<p>When I view the available options</p>
+Sort-by > Relevance,<p>Then I can see all items are ordered acordingly</p>,<p>Given I am viewing the listing</p>,<p>When I update the sort by to Relevance</p>
+Subscription Expired > Bought own subscription,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If a user has bought a subscription for themselves, and their subscription is expired'</p>","<p>When I login with a user account that matches the notification criteria<br />
+And I load the page where the block is added</p>"
+Subscription Expired > Bought own subscription > User does not match,<p>Then I cannot see the block displaying on the page</p>,"<p>Given a notification block has been set up for 'If a user has bought a subscription for themselves, and their subscription is expired'</p>","<p>When I login with a user account that does <strong>not</strong> matches the notification criteria<br />
+And I load the page where the block is added</p>"
+Subscription Expired > Bought someone elses subscription > Purchased,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If someone has bought a subscription for a user, and their subscription is expired'</p>","<p>When I login with a user account that matches the notification criteria<br />
+And the account is for the <strong>purchaser of the subscription</strong><br />
+And I load the page where the block is added</p>"
+Subscription Expired > Bought someone elses subscription > Purchased for,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If someone has bought a subscription for a user, and their subscription is expired'</p>","<p>When I login with a user account that matches the notification criteria<br />
+And the account is for a <strong>person the subscription was purchased for</strong><br />
+And I load the page where the block is added</p>"
+Subscription Expired > Bought someone elses subscription > User does not match,<p>Then I cannot see the block displaying on the page</p>,"<p>Given a notification block has been set up for 'If someone has bought a subscription for a user, and their subscription is expired'</p>","<p>When I login with a user account that does <strong>not</strong> matches the notification criteria<br />
+And I load the page where the block is added</p>"
+Subscription Expired > Bought subscriptions for one or more people > Purchased,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If the user has bought one or more other people a subscription, and their subscription is expired'</p>","<p>When I login with a user account that matches the notification criteria<br />
+And the account is for the <strong>purchaser of the subscription</strong><br />
+And I load the page where the block is added</p>"
+Subscription Expired > Bought subscriptions for one or more people > Purchased for,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If the user has bought one or more other people a subscription, and their subscription is expired'</p>","<p>When I login with a user account that matches the notification criteria<br />
+And the account is for a <strong>person the subscription was purchased for</strong><br />
+And I load the page where the block is added</p>"
+Subscription Expired > Bought subscriptions for one or more people > User does not match,<p>Then I cannot see the block displaying on the page</p>,"<p>Given a notification block has been set up for 'If the user has bought one or more other people a subscription, and their subscription is expired'</p>","<p>When I login with a user account that does <strong>not</strong> matches the notification criteria<br />
+And I load the page where the block is added</p>"
+Subscription Expired > Multiple matches,<p>Then I can see each of the notification blocks that match my users information</p>,<p>Given multiple notification blocks have been set up for each of the subscription expired options</p>,"<p>When I login with a user account that matches multiple notification criteria<br />
+And I load the page where the blocks are added</p>"
+Subscription expired > Page load,<p>Then I can see the 'subscription expired' modal displaying</p>,<p>Given my subscription has expired</p>,<p>When I load a page that requires a subscription</p>
+Subscription Renewal Confirmation > B2B renews for the team > Person renewing,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If a B2B user has renewed for their team'<br />
+And I am logged in with a user account that matches the notification criteria</p>","<p>When a B2B renews a subscription<br />
+And I am the <strong>B2B person renewing the subscription</strong><br />
+And I am redirected back to the landing page where the block is added</p>"
+Subscription Renewal Confirmation > B2B renews for the team > Renewed for,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If a B2B user has renewed for their team'<br />
+And I am logged in with a user account that matches the notification criteria</p>","<p>When a B2B renews a subscription<br />
+And I am someone who has <strong>had their subscription renewed by a B2B person</strong><br />
+And I am redirected back to the landing page where the block is added</p>"
+Subscription Renewal Confirmation > Renew own subscription,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If a user renews their subscription and gets redirected back to the Content landing page'<br />
+And I am logged in with a user account that matches the notification criteria</p>","<p>When I renew my subscription<br />
+And I am redirected back to the landing page where the block is added</p>"
+Subscription Renewal Confirmation > Renews for others > Person renewing,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If a user renews for others and gets redirected back to the Content landing page'<br />
+And I am logged in with a user account that matches the notification criteria</p>","<p>When I renew someone elses subscription<br />
+And I am the <strong>person renewing the subscription</strong><br />
+And I am redirected back to the landing page where the block is added</p>"
+Subscription Renewal Confirmation > Renews for others > Renewed for,"<p>Then I can see the notification block displaying on the page<br />
+And the block content is correct based on my users information</p>","<p>Given a notification block has been set up for 'If a user renews for others and gets redirected back to the Content landing page'<br />
+And I am logged in with a user account that matches the notification criteria</p>","<p>When I renew someone elses subscription<br />
+And I am someone who has <strong>had their subscription renewed by someone else</strong><br />
+And I am redirected back to the landing page where the block is added</p>"
+Subtext > Bold text,"<p>Then bold text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bold text style to the WYSIWYG</p>
+Subtext > Bullet list,"<p>Then bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bullet list styles to the WYSIWYG</p>
+Subtext > Hyperlinks,"<p>Then hyperlinks can be added<br />
+And they display and function as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add hyperlinks to the WYSIWYG</p>
+Subtext > Italic text,"<p>Then italic text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add italic text style to the WYSIWYG</p>
+Subtext > Numbered list,"<p>Then numbered list can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add numbered list styles to the WYSIWYG</p>
+Subtext > Paragraph,"<p>Then paragraphs can be added<br />
+And they display as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add paragraphs into the WYSIWYG</p>
+Subtext > Placeholder [Date] (of expiry),"<p>Then the placeholder can be added<br />
+And the correct content displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add a placeholder for [Date] (of expiry) to the WYSIWYG</p>
+Subtext > Placeholder [Days remaining],"<p>Then the placeholder can be added<br />
+And the correct content displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add a placeholder for [Days remaining] to the WYSIWYG</p>
+Subtext > Special bullet list,"<p>Then special bullet list can be added<br />
+And it can be indented up to three times<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add special bullet list styles to the WYSIWYG</p>
+Subtext > Underline text,"<p>Then underline text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add underline text style to the WYSIWYG</p>
+Teaser Image,<p>Then I can see the external logo has been pulled through to the frontend as expected</p>,<p>Given I have run the scheduled Eventbrite scheduled job</p>,"<p>When I view the External Logo Link in the CMS<br />
+And I load the link in a new tab</p>"
+Teaser properties,,<p>When I view the teaser tab properties of the page in the CMS</p>,"<p>Then I can see that all fields have their default values (no changes) except</p>
+<ul>
+<li>Teaser Image (populated by Eventbrite)</li>
+<li>Show teaser image in listing pages (set to true)</li>
+</ul>"
+Theme >  Bright Blue,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Background colour will be blue (#58dfea)</li>
+<li>Title font colour will be purple (#3d1152)</li>
+<li>Small heading font colour will be slate (#202020)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Bright Blue theme<br />
+And publish</p>"
+Theme >  Bright Blue > CTAs,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Primary CTA colour will be purple (#3d1152) and font will be white (#ffffff)<br />
+ </li>
+<li>Primary CTA will have a hover state of purple font &amp; CTA outline (#3d1152) and blue fill (#58dfea)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Bright Blue theme<br />
+And publish</p>"
+Theme >  Bright Green,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Background colour will be green (#b6d441)</li>
+<li>Title font colour will be purple (#3d1152)</li>
+<li>Small heading font colour will be slate (#202020)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Bright Green theme<br />
+And publish</p>"
+Theme >  Bright Green > CTAs,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Primary CTA colour will be purple (#3d1152) and font will be white (#ffffff)<br />
+ </li>
+<li>Primary CTA will have a hover state of purple font &amp; CTA outline (#3d1152) and green fill (#b6d441)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Bright Green theme<br />
+And publish</p>"
+Theme >  Bright Orange,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Background colour will be orange (#ff4e27)</li>
+<li>Title font colour will be purple (#3d1152)</li>
+<li>Small heading font colour will be  slate (#202020)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Bright Orange theme<br />
+And publish</p>"
+Theme >  Bright Orange > CTAs,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>
+<p>Primary CTA colour will be purple (#3d1152) and font will be white (#ffffff)<br />
+ </p>
+</li>
+<li>
+<p>Primary CTA will have a hover state of purple font &amp; CTA outline (#3d1152) and orange fill (#ff4e27)</p>
+</li>
+<li>
+<p>Secondary CTA colour will be purple outline (#3d1152), orange fill (#ff4e27) and purple font (#3d1152)</p>
+</li>
+<li>
+<p>Secondary CTA will have a hover state of purple fill (#3d1152) and white font (#ffffff)</p>
+</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Bright Orange theme<br />
+And publish</p>"
+Theme >  Bright Yellow,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Background colour will be yellow (#ffb701)</li>
+<li>Title font colour will be purple (#3d1152) </li>
+<li>Small heading font colour will be slate (#202020)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Bright Yellow theme<br />
+And publish</p>"
+Theme >  Bright Yellow > CTAs,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Primary CTA colour will be purple (#3d1152) and font will be white (#ffffff)<br />
+ </li>
+<li>Primary CTA will have a hover state of purple font &amp; CTA outline (#3d1152) and yellow fill (#ffb701)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Bright Yellow theme<br />
+And publish</p>"
+Theme >  Dark Blue,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Background colour will be blue (#00293E)</li>
+<li>Title font colour will be white (#ffffff) </li>
+<li>Small heading font colour will be neutral 2 (#eae5e0)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Dark Blue theme<br />
+And publish</p>"
+Theme >  Dark Blue > CTAs,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Primary CTA colour will be yellow (#ffb701) and font will be purple (#3d1152)<br />
+ </li>
+<li>Primary CTA will have a hover state of yellow font &amp; CTA outline (#ffb701) and blue fill (#00293e)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Dark Blue theme<br />
+And publish</p>"
+Theme >  Dark Purple,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Background colour will be purple (#3d1152)</li>
+<li>Title font colour will be white (#ffffff)</li>
+<li>Small heading font colour will be neutral 2 (#eae5e0)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Dark Purple theme<br />
+And publish</p>"
+Theme >  Dark Purple > CTAs,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Primary CTA colour will be yellow (#ffb701) and font will be purple (#3d1152)<br />
+ </li>
+<li>Primary CTA will have a hover state of yellow font &amp; CTA outline (#ffb701) and purple fill (#3d1152)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the Dark Purple theme<br />
+And publish</p>"
+Theme >  Neutral > CTAs,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Primary CTA colour will be yellow and font will be purple<br />
+ </li>
+<li>Primary CTA will have a hover state of white font and purple fill</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the neutral theme<br />
+And publish</p>"
+Theme > Bright colours > Foreground Bubbles,<p>Then I will see the foreground bubbles will be Purple (#3d1152)</p>,<p>Given I am editing the feature</p>,"<p>When I select a Bright theme<br />
+And publish</p>"
+Theme > Dark Colours > Foreground Bubbles,<p>Then I will see the foreground bubbles will be yellow (#ffb701)</p>,<p>Given I am editing the feature</p>,"<p>When I select a Dark theme<br />
+And publish</p>"
+Theme > Neutral,"<p>Then I will see the following colours applied to the feature on the frontend:</p>
+<ul>
+<li>Background colour will be neutral 3 (#f7f5f3)</li>
+<li>Title font colour will be purple (#3d1152)</li>
+<li>Subtext font colour will be slate (#202020)</li>
+<li>Small heading font colour will be  slate (#202020)</li>
+</ul>",<p>Given I am editing the feature</p>,"<p>When I select the neutral theme<br />
+And publish</p>"
+Ticket Status > Bold text,"<p>Then bold text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add bold text style to the WYSIWYG</p>
+Ticket Status > Boundary,"<p>Then I can see the content wraps without error on the frontend<br />
+And the icon displays without issue</p>",<p>Given I am editing the existing Simple Event Detail Page in the CMS</p>,"<p>When I populate the ticket status field with longer content<br />
+And I publish</p>"
+Ticket Status > Italic text,"<p>Then italic text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add italic text style to the WYSIWYG</p>
+Ticket Status > Negative,"<p>Then I can publish as the field is optional<br />
+And I cannot see a ticket icon rendered<br />
+And all other hero padding adjusts accordingly</p>",<p>Given I am editing the existing Simple Event Detail Page in the CMS</p>,"<p>When I do not populate the ticket status<br />
+And I publish</p>"
+Ticket Status > Subscript,"<p>Then subscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add subscript to the WYSIWYG</p>
+Ticket Status > Superscript,"<p>Then superscript can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add superscript to the WYSIWYG</p>
+Ticket Status > Underline text,"<p>Then underline text style can be added<br />
+And it displays as expected on the front-end</p>",<p>Given I am editing the feature in the CMS</p>,<p>When I add underline text style to the WYSIWYG</p>
+UK only,<p>Then I can only see the branch selector on the /uk/ site</p>,<p>Given I have created the page</p>,<p>When I view the page across multiple locales</p>
+UK site,<p>Then I can see the page displaying as expected</p>,<p>Given I have published the page</p>,"<p>When I view the page on the UK site, e.g. /uk</p>"
+Universal Header > Desktop,<p>Then I will <strong>not</strong> see the Universal header</p>,<p>Given I have created a Landing page</p>,<p>When I view the page on a desktop</p>
+Universal Header > Mobile,<p>Then I will <strong>not</strong> see the Universal header</p>,<p>Given I have created a Landing page</p>,<p>When I view the page on a mobile</p>
+Upcoming,"<p>Then the ""switch"" will flip<br />
+And the sort order will be updated to show soonest future event first<br />
+And only show future events</p>",<p>Given I am viewing the listing page</p>,"<p>When I click ""Upcoming""</p>"
+Updated Card date,"<p>Then I will see the page Modified date, prefixed with the ""Updated test"" from site strings</p>","<p>Given I have configured the component<br />
+And I have configured a page to have the Show Modified Date In Metadata toggle as true</p>",<p>When I view the date in the card</p>
+User bought for someone else,"<p>Then I will see the Renewal Reminder Component<br />
+And it will show with the ""Renewal reminder &gt; Heading - if bought for others"" text as defined in site settings</p>","<p>Given I am a user who has bought a subscription for someone else<br />
+And it is set to expire in X days (configured in Settings)<br />
+And I am a logged in user</p>","<p>When I have just started a new browser session<br />
+And I view the first page after opening my session</p>"
+User bought for someone else and themself,"<p>Then I will see the Renewal Reminder Component<br />
+And it will show with the ""Renewal reminder &gt; Heading - if bought for others"" text as defined in site settings</p>","<p>Given I am a user who has bought a subscription for someone else<br />
+And I have also bought my own subscription<br />
+And it is set to expire in X days (configured in Settings)<br />
+And I am a logged in user</p>","<p>When I have just started a new browser session<br />
+And I view the first page after opening my session</p>"
+User bought for themselves,"<p>Then I will see the Renewal Reminder Component<br />
+And it will show with the ""Renewal reminder &gt; Heading"" text as defined in site settings</p>","<p>Given I am a user who has bought my own subscription<br />
+And it is set to expire in X days (configured in Settings)<br />
+And I am a logged in user</p>","<p>When I have just started a new browser session<br />
+And I view the first page after opening my session</p>"
+User has never had a membership,"<p>Then I cannot see the 'lapsed membership' modal<br />
+And I can see the 'my free content' or 'purchase required' modal (depending on the sampling settings in place)</p>",<p>Given I am a user that has never had a membership</p>,<p>When I navigate to any premium or member-only page</p>
+User has renewed their subscription,"<p>Then I cannot see the 'subscription expired' modal<br />
+And I can access the content</p>",<p>Given I am a user that has just renewed my subscription</p>,<p>When I navigate to any page that requires subscription</p>
+Users membership has long-term expired,"<p>Then I can see the 'lapsed membership' modal displaying the 'long-term expired' content<br />
+And I cannot access the page content</p>",<p>Given I am a user whose membership has long-term expired</p>,<p>When I navigate to any premium or member-only page</p>
+Users membership has recently lapsed,"<p>Then I can see the 'lapsed membership' modal displaying the 'recently lapsed' content<br />
+And I cannot access the page content</p>",<p>Given I am a user whose membership has recently lapsed</p>,<p>When I navigate to any premium or member-only page</p>
+Users subscription has expired,"<p>Then I can see the 'subscription expired' modal<br />
+And I cannot access the content</p>",<p>Given I am a user that has an expired subscription</p>,<p>When I navigate to a page that requires subscription</p>
+View Topics dropdown,<p>Then I will only see categories that match my current selections</p>,<p>Given I have selected some filters from Event type and event format</p>,<p>When I view the Topics dropdown</p>
+Visit  unique premium pages > 5 > Reached Limit,"<p>Then I can see the 'my free content' modal displaying<br />
+And I can see the 'Heading - last free page'</p>","<p>Given I am viewing premium content for the fourth time<br />
+And I can see the 'my free content' modal</p>",<p>When I navigate to a fifth premium content page</p>
+Visit a premium page again,"<p>Then I can see the page content<br />
+And my premium page count won't increase</p>",<p>Given I have viewed some premium content previously</p>,<p>When I return to a previously sampled page</p>
+Visit a premium page again > Limit reached,"<p>Then I can see the page content<br />
+And my premium page count won't increase</p>","<p>Given I have viewed some premium content previously<br />
+And I have reached my page limit</p>",<p>When I return to a previously sampled page</p>
+Visit non-premium pages,<p>Then I cannot see the 'my free content' modal displaying on non-premium content pages</p>,"<p>Given I am viewing premium content<br />
+And I can see the 'my free content' modal</p>",<p>When I navigate to non-premium content pages across the site</p>
+Visit premium pages > Reached Limit,<p>Then I can see the 'purchased required' modal displaying</p>,"<p>Given I am viewing my last free premium content page<br />
+And I can see the 'my free content' modal<br />
+And I can see the 'Heading - last free page'</p>",<p>When I navigate to another premium content page</p>
+Visit unique premium pages > 1,"<p>Then I can see the 'Heading - first free page'<br />
+And I can see the number of free pages remaining is correct based on the value in Site Strings</p>","<p>Given I am viewing premium content for the first time<br />
+And I can see the 'my free content' modal</p>",<p>When I view the content within the modal</p>
+Visit unique premium pages > 2,"<p>Then I can see the 'my free content' modal displaying<br />
+And I can see the 'Heading - # free page'<br />
+And the number of free pages remaining updates accordingly</p>","<p>Given I am viewing premium content for the first time<br />
+And I can see the 'my free content' modal</p>",<p>When I navigate to a second premium content page</p>
+Visit unique premium pages > 3,"<p>Then I can see the 'my free content' modal displaying<br />
+And I can see the 'Heading - # free page'<br />
+And the number of free pages remaining updates accordingly</p>","<p>Given I am viewing premium content for the second time<br />
+And I can see the 'my free content' modal</p>",<p>When I navigate to a third premium content page</p>
+Visit unique premium pages > 4,"<p>Then I can see the 'my free content' modal displaying<br />
+And I can see the 'Heading - # free page'<br />
+And the number of free pages remaining updates accordingly</p>","<p>Given I am viewing premium content for the third time<br />
+And I can see the 'my free content' modal</p>",<p>When I navigate to a fourth premium content page</p>
+X-Y days > Click to close modal,"<p>Then I can close the modal<br />
+And the modal does not display again until Y days before renewal</p>","<p>Given I am viewing any content<br />
+And my subscription is set to expire in the next X-Y days<br />
+And I can see the 'renewal reminder' modal</p>",<p>When I click to close the modal</p>
+Y days > return to site,<p>Then I can see the renewal reminder modal</p>,"<p>Given I am viewing any content<br />
+And my subscription is set to expire in the next Y days</p>",<p>When I view any page in a logged in session</p>

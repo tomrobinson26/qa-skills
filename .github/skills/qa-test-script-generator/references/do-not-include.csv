@@ -1,0 +1,104 @@
+"Case","Expected","Preconditions","Steps (text)"
+"WAVE","<p>Then I can check the results<br />
+And log any (red) errors</p>","<p>Given I have access to the WAVE tool</p>","<p>When I run WAVE against the feature</p>"
+"Lighthouse","<p>Then I can check the results<br />
+And log any errors</p>","<p>Given I have the current page open in Chrome</p>","<p>When I generate a Lighthouse report</p>"
+"Skip to content","<p>Then I can see a 'Skip to content' navigation link at the top of the page<br />
+And I can select it using my keyboard<br />
+And I am skipped to the start of the main content of the page</p>","<p>Given I am viewing the site</p>","<p>When I start to tab from the very top of the page</p>"
+"Headings","<p>Then I can only see one H1 (for pages)<br />
+And I can see the correct tags for all heading types<br />
+And I can see the header elements used in sequence</p>
+<p>Example:</p>
+<h1>This is the page title</h1>
+And role=""heading""
+<h1></h1><h2></h2><h3></h3>","<p>Given I am viewing the feature</p>","<p>When I view the HTML tags of all headings</p>"
+"Font size","<p>Then I can see there are no UI issues after changing the font size</p>","<p>Given I change the font size to Small, Large and Extra Large</p>","<p>When I view the feature</p>"
+"Font style","<p>Then I can see there are no UI issues after changing the font style</p>","<p>Given I initiate a font changer extension</p>","<p>When I view the feature</p>"
+"Keyboard > Tab","<p>Then I can tab forward<br />
+And I can reverse tab<br />
+And I can see that the tab order is logical</p>","<p>Given I am viewing the feature</p>","<p>When I tab through all interactive elements<br />
+And then I reverse tab (Shift + Tab) through all interactive elements</p>"
+"Keyboard > Focus","<p>Then I can see a clear focus on all interactive elements</p>","<p>Given I am viewing the feature</p>","<p>When I tab through the elements</p>"
+"Keyboard > Select","<p>Then I can select the element using either key</p>","<p>Given I am viewing the feature</p>","<p>When I tab into an interactive element<br />
+And I press the Enter keys or Space bar to select an element</p>"
+"Keyboard > Arrows","<p>Then I can press the keys to scroll up and down easily</p>","<p>Given I am viewing the feature</p>","<p>When I press the keyboard up and down arrows to scroll</p>"
+"Keyboard > Spacebar","<p>Then I can press the keys to scroll up and down easily</p>","<p>Given I am viewing the feature</p>","<p>When I press the spacebar to scroll downwards<br />
+And I press the spacebar (Shift + Spacebar) to scroll upwards</p>"
+"Keyboard > Esc","<p>Then I can press the Esc key to close or dismiss the feature</p>","<p>Given I am viewing the feature<br />
+And the feature has a modal or similar feature that can be 'opened'</p>","<p>When I press the Esc key</p>"
+"Image alt text > CMS","<p>Then I can see an alt text field available to populate</p>","<p>Given I am logged into the CMS</p>","<p>When I view the feature/image within the CMS</p>"
+"Image alt text > Display","<p>Then I can see the alt text<br />
+And it matches the content added in the CMS</p>","<p>Given I have added alt text to images via the CMS</p>","<p>When I view the image alt text on the front-end</p>"
+"Zoom to 200%","<p>Then I can zoom to 200% without any loss to content or functionality<br />
+And I can see all text wrapping appropriately<br />
+And I can see a scroll present if needed</p>","<p>Given I am viewing the feature</p>","<p>When I zoom the page gradually up to 200%</p>"
+"Zoom to 400%","<p>Then I can zoom to 400% without any loss to content or functionality<br />
+And I can see text and content reflowing<br />
+And I cannot see a horizontal scrollbar</p>","<p>Given I am viewing the feature</p>","<p>When I zoom the page gradually up to 400%</p>"
+"High-contrast enabled","<p>Then I can see that the application adopts the high contrast theme</p>","<p>Given I am viewing the feature</p>","<p>When I enable high contrast mode</p>"
+"High-contrast content","<p>Then I can see that all content and interactive elements are visible and usable</p>","<p>Given I am viewing the feature<br />
+And I have enabled high-contrast mode</p>","<p>When I view the copy and images on the page<br />
+And I interact with links and other elements</p>"
+"UI > 'Point of regard'","<p>The I can see the feature is still in my current focus</p>","<p>Given I am viewing the feature</p>","<p>When I interact with a link within the feature<br />
+And I am navigated to a new part of the site<br />
+When I return to the feature</p>"
+"ARIA labels > Page load","<p>Then I will see all ARIA labels are within the DOM on page load</p>","<p>Given I am viewing a feature with ARIA labels</p>","<p>When I reload the page<br />
+And inspect the elements</p>"
+"Expandable elements","<p>Then I will see the <code>aria-expanded</code> label update to <code>true</code> or <code>false</code> for each action that opens and closes the element</p>","<p>Given I am viewing an expandable element</p>","<p>When I interact with the element to toggle it open and closed<br />
+And I inspect the page source for this element</p>"
+"Dynamic Content","<p>Then I will see the <code>aria-live</code> label added with either:</p>
+<ul>
+<li>
+<code>""polite""</code> - for non urgent updates</li>
+<li>
+<code>""assertive""</code> - for critical updates</li>
+</ul>","<p>Given I am viewing an element whose content can update without reloading the page</p>","<p>When I inspect the page source for this element</p>"
+"Interactable elements without text","<p>Then I will see either <code>aria-label</code>, <code>aria-labelledby</code> or <code>aria-describedby</code> added to provide a text label to the element.</p>","<p>Given I am viewing an element that has no text content attached</p>","<p>When I inspect the page source for this element</p>"
+"Groups of controls","<p>Then I will see that it is structured using <code>&amp;lt;fieldset&amp;gt;</code> and <code>&amp;lt;legend&amp;gt;</code> tags</p>","<p>Given I am viewing an element that has a group of controls</p>","<p>When I inspect the page source for this element</p>"
+"Invisible text","<p>Then I will see the <code>aria-hidden</code> label added to the element</p>","<p>Given I am viewing an element whose content should not be read by screen readers</p>","<p>When I inspect the page source for this element</p>"
+"Design breakpoints","<p>Then I can see the feature and all content displaying as expected</p>","<p>Given I am viewing the feature</p>","<p>When I resize the browser to each of the design breakpoints</p>"
+"Exploratory breakpoints","<p>Then I can see the feature and all content displaying without issue</p>","<p>Given I am viewing the feature</p>","<p>When I resize the browser to different breakpoints between 1920px and 320px</p>"
+"Boundary breakpoints","<p>Then I can see the feature and all content displaying without issue</p>","<p>Given I am viewing the feature</p>","<p>When I resize the browser to boundary breakpoints (between 1920px and 3840px)</p>"
+"Resize browser","<p>Then all content displays as expected</p>","<p>Given I am viewing the feature</p>","<p>When I resize the browser and then reload the site at the following screen widths</p>
+<p>2560<br />
+1920<br />
+1620<br />
+1536<br />
+1400<br />
+1330<br />
+1229<br />
+1100<br />
+1010<br />
+992<br />
+991<br />
+768<br />
+767<br />
+766</p>"
+"Chrome > Windows 10/11","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a desktop device</p>","<p>When I compare the feature to the designs<br />
+And functionality to the requirements</p>"
+"Edge > Windows 10/11","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a desktop device</p>","<p>When I compare the feature to the designs<br />
+And functionality to the requirements</p>"
+"Firefox > Windows 10/11","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a desktop device</p>","<p>When I compare the feature to the designs<br />
+And functionality to the requirements</p>"
+"Chrome > Mac OS (latest)","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a desktop device</p>","<p>When I compare the feature to the designs<br />
+And functionality to the requirements</p>"
+"Firefox > Mac OS (latest)","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a desktop device</p>","<p>When I compare the feature to the designs<br />
+And functionality to the requirements</p>"
+"Safari > Mac OS (latest)","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a desktop device</p>","<p>When I compare the feature to the designs<br />
+And functionality to the requirements</p>"
+"Safari > Mac OS (Previous)","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a desktop device</p>","<p>When I compare the feature to the designs<br />And functionality to the requirements</p>"
+"iPhone - iOS (Latest) > Safari","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a mobile device</p>","<p>When I compare the feature to the designs<br />And functionality to the requirements</p>"
+"iPhone - iOS (Previous) > Safari","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a mobile device</p>","<p>When I compare the feature to the designs<br />And functionality to the requirements</p>"
+"iPhone SE - iOS (Previous) > Safari","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a mobile device</p>","<p>When I compare the feature to the designs<br />And functionality to the requirements</p>"
+"iPad Pro - iPadOS (Latest) > Safari","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a mobile device</p>","<p>When I compare the feature to the designs<br />And functionality to the requirements</p>"
+"iPad Air - iPadOS (Previous) > Safari","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a mobile device</p>","<p>When I compare the feature to the designs<br />And functionality to the requirements</p>"
+"Samsung Galaxy (Latest) > Chrome","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a mobile device</p>","<p>When I compare the feature to the designs<br />And functionality to the requirements</p>"
+"Samsung Galaxy (Latest) > Firefox","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a mobile device</p>","<p>When I compare the feature to the designs<br />And functionality to the requirements</p>"
+"Samsung Tab (Previous) > Chrome","<p>Then the feature should display and function without error</p>","<p>Given I am viewing the feature on a mobile device</p>","<p>When I compare the feature to the designs<br />And functionality to the requirements</p>"
+"Design check > Large desktop","<p>Then the page displays as per the designs</p>","<p>Given I have created the page</p>","<p>When I compare the page to the designs</p>"
+"Design check > Desktop","<p>Then the page displays as per the designs</p>","<p>Given I have created the page</p>","<p>When I compare the page to the designs</p>"
+"Design check > Mobile","<p>Then the page displays as per the designs</p>","<p>Given I have created the page<br />
+And I am viewing the page on a mobile device</p>","<p>When I compare the page to the designs</p>"
+"Design check > Tablet","<p>Then the page displays as per the designs</p>","<p>Given I have created the page<br />
+And I am viewing the page on a tablet device</p>","<p>When I compare the page to the designs</p>"

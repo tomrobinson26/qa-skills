@@ -1,0 +1,94 @@
+{
+  "modelName": "digital-badge-block",
+  "description": "Generic JSON content model normalized from CMS block properties.",
+  "fields": [
+    {
+      "name": "blockHeading",
+      "type": "string",
+      "required": false,
+      "translatable": true,
+      "default": "Your digital badge",
+      "description": "Optional heading shown above the badge. Leave blank to hide."
+    },
+    {
+      "name": "membershipYearLabel",
+      "type": "string",
+      "required": false,
+      "translatable": true,
+      "default": "Membership Year",
+      "description": "Label shown next to the membership year value."
+    },
+    {
+      "name": "issuedLabel",
+      "type": "string",
+      "required": false,
+      "translatable": true,
+      "default": "Issued",
+      "description": "Label shown above the issued date."
+    },
+    {
+      "name": "expiresLabel",
+      "type": "string",
+      "required": false,
+      "translatable": true,
+      "default": "Expires",
+      "description": "Label shown above the expiry date."
+    },
+    {
+      "name": "accessBadgeCtaLabel",
+      "type": "string",
+      "required": false,
+      "translatable": true,
+      "default": "Access my badge",
+      "description": "Label for the button that routes the user to their full digital badge."
+    },
+    {
+      "name": "activeStatusLabel",
+      "type": "string",
+      "required": false,
+      "translatable": true,
+      "default": "Active",
+      "description": "Label shown in the status pill when the badge is active."
+    },
+    {
+      "name": "expiredStatusLabel",
+      "type": "string",
+      "required": false,
+      "translatable": true,
+      "default": "Expired",
+      "description": "Label shown in the status pill when the badge has expired."
+    },
+    {
+      "name": "loadingStateLabel",
+      "type": "string",
+      "required": false,
+      "translatable": true,
+      "default": "Loading your badge",
+      "description": "Accessibility label announced while the badge data is loading."
+    },
+    {
+      "name": "errorStateMessage",
+      "type": "string",
+      "required": false,
+      "translatable": true,
+      "default": "TBC",
+      "description": "Message shown when the badge cannot be loaded."
+    },
+    {
+      "name": "noBadgeStateMessage",
+      "type": "richText",
+      "required": false,
+      "translatable": true,
+      "default": "TBC",
+      "description": "Message shown when the user has no digital badge on their account."
+    },
+    {
+      "name": "hideWhenNoBadge",
+      "type": "boolean",
+      "required": false,
+      "translatable": false,
+      "default": false,
+      "description": "If checked, the block is not rendered when the user has no digital badge."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "industry": "professional-membership",
+    "industrySource": "inferred",
+    "recordCount": 2,
+    "modelName": "digital-badge-block",
+    "generatedAt": "2026-04-28T12:00:00Z",
+    "notes": [
+      "Optional fields use mixed sparsity: omitted, null, and populated values.",
+      "Values are synthetic mock copy and client friendly."
+    ]
+  },
+  "records": [
+    {
+      "blockHeading": "Your digital badge",
+      "membershipYearLabel": "Membership Year",
+      "issuedLabel": "Issued",
+      "expiresLabel": "Expires",
+      "accessBadgeCtaLabel": "Access my badge",
+      "activeStatusLabel": "Active",
+      "expiredStatusLabel": "Expired",
+      "loadingStateLabel": "Loading your badge",
+      "errorStateMessage": "We could not load your digital badge right now. Please try again.",
+      "noBadgeStateMessage": "You do not have a digital badge yet.",
+      "hideWhenNoBadge": false
+    },
+    {
+      "blockHeading": null,
+      "membershipYearLabel": "Membership Year",
+      "issuedLabel": "Issued",
+      "expiresLabel": "Expires",
+      "accessBadgeCtaLabel": "View my badge",
+      "activeStatusLabel": "Current",
+      "expiredStatusLabel": "Expired",
+      "loadingStateLabel": "Loading your badge",
+      "noBadgeStateMessage": "No digital badge is linked to this account.",
+      "hideWhenNoBadge": true
+    }
+  ]
+}

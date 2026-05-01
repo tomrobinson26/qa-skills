@@ -1,0 +1,159 @@
+Case,Preconditions,Steps (text),Expected,Folder
+Valid user logs in,"Given I am on the site","When I log in as a valid user (e.g. a user eligible to begin the sign-up journey)","Then I can log in
+And I am permitted to begin the membership journey",Frontend
+Invalid user logs in,"Given I am on the site","When I log in as an ineligible user (e.g. a lapsed or suspended account)","Then I can log in
+And I am not permitted to begin the membership journey
+And I am shown a relevant error message",Frontend
+Ineligible user exit page,"Given I am on the site
+And I navigate to the journey landing page","When I log in as an ineligible user","Then I will see the ineligible user exit page",Frontend
+Register,"Given I am viewing the site
+And I am not logged in","When I arrive on the Landing Page
+And I click to Register","Then I will be taken to the relevant registration page to begin creating an account",Frontend
+Finish registration,"Given I have begun registering for an account","When I have completed my registration
+And I click the final submit action","Then I am passed back to the site to begin the membership journey",Frontend
+Valid user - already logged in,"Given I am on the site
+And I am already logged in","When I arrive at the landing page","Then I am automatically recognised
+And I can begin the journey",Frontend
+Returning user - already completed journey,"Given I am on the site
+And I am already logged in
+And I have previously completed the journey","When I arrive at the landing page","Then I am automatically recognised
+And I am taken to the relevant completed or in-progress state",Frontend
+Journey tab display - standard user paying for self,"Given I am a logged in standard user
+And I am paying for myself","When I begin the membership journey","Then I will see the expected journey steps in the correct order (e.g. Check details, Billing details, Payment, Order complete)",Frontend
+Journey tab display - standard user not paying for self,"Given I am a logged in standard user
+And I am not paying for myself","When I begin the membership journey","Then I will see the expected journey steps in the correct order (e.g. Check details, Billing details, Order complete)",Frontend
+Journey tab display - secondary user type paying for self,"Given I am logged in as a secondary user type
+And I am paying for myself","When I begin the membership journey","Then I will see the expected journey steps appropriate for this user type",Frontend
+First load - pre-set details,"Given I am a logged in user
+And my account already holds the relevant details (name, address, etc.)","When I land on the personal details step for the first time","Then I will see my information prefilled in the form fields",Frontend
+First load - no pre-set details,"Given I am a logged in user
+And my account holds no relevant information","When I land on the personal details step for the first time","Then I will see all fields are empty",Frontend
+No pre-set details - populate required fields,"Given I am a logged in user
+And my account holds no information","When I fill all required fields
+And I move to the next step","Then my details will be saved",Frontend
+Pre-set details - update values in fields,"Given I am a logged in user
+And my account holds pre-populated information","When I update the values in some fields
+And I move to the next step","Then my updated details will be saved",Frontend
+Progress to next step - validation,"Given I am any user completing the personal details step","When I attempt to interact with the 'Save and continue' button","Then I can only progress once all required fields are filled with valid values",Frontend
+View previous steps,"Given I am in the membership journey","When I view a previous step","Then I will see all the correct content that I have previously entered",Frontend
+Accept modal - Terms and Conditions,"Given I am a user
+And I am viewing the billing step","When I click the link next to the T&Cs checkbox","Then the relevant modal will open
+And I can read the content within",Frontend
+T&Cs modal - Accept,"Given I am a user
+And I am viewing the billing step
+And I have opened the T&Cs modal","When I click the Accept button","Then the modal will close
+And the T&Cs checkbox will be ticked",Frontend
+T&Cs modal - Decline,"Given I am a user
+And I am viewing the billing step
+And I have opened the T&Cs modal","When I click the Decline button","Then the modal will close
+And the T&Cs checkbox will not be ticked
+And I will see a required field warning",Frontend
+Accept modal - Code of Conduct,"Given I am a user
+And I am viewing the billing step","When I click the link next to the Code of Conduct checkbox","Then the relevant modal will open
+And I can read the content within",Frontend
+Code of Conduct modal - Accept,"Given I am a user
+And I am viewing the billing step
+And I have opened the Code of Conduct modal","When I click the Accept button","Then the modal will close
+And the Code of Conduct checkbox will be ticked",Frontend
+Code of Conduct modal - Decline,"Given I am a user
+And I am viewing the billing step
+And I have opened the Code of Conduct modal","When I click the Decline button","Then the modal will close
+And the Code of Conduct checkbox will not be ticked
+And I will see a required field warning",Frontend
+Land on billing - paying for self,"Given I am a user
+And I am paying for my own membership","When I arrive at the billing step","Then I will see a collection of payment options
+And an order summary",Frontend
+Land on billing - not paying for self,"Given I am a user
+And my membership is being paid by a third party","When I arrive at the billing step","Then I will see a message confirming payment is covered
+And I will not see any payment options or order summary",Frontend
+Do not accept checkboxes,"Given I am a user
+And I am on the billing step","When I do not accept the required checkboxes","Then the 'Next' button will be disabled
+And I cannot proceed",Frontend
+Accept checkboxes - enabled next button,"Given I am a user
+And I have accepted all required checkboxes","When I view the 'Next' button","Then the button will be active
+And I can proceed to the next step",Frontend
+Billing - duration options displayed,"Given I am a user on the billing step","When I view the billing options","Then I will see the available duration options (e.g. radio buttons for different membership lengths)",Frontend
+Billing - default selection,"Given I am a user on the billing step","When I view the billing options without making any selection","Then the default duration and payment method will be pre-selected as defined in the spec",Frontend
+Billing - switch duration option,"Given I am on the billing step
+And I have the default duration selected","When I select a different duration option","Then the previous options will be replaced
+And I will see only the options relevant to the selected duration",Frontend
+Billing - card payment in full option,"Given I am on the billing step","When I view the payment options for a given duration","Then I can see a card-in-full payment option",Frontend
+Billing - direct debit instalment option,"Given I am on the billing step","When I view the payment options for a given duration","Then I can see a direct debit instalment option (where applicable per spec)",Frontend
+Billing - direct debit annual option,"Given I am on the billing step","When I view the payment options for a given duration","Then I can see a direct debit annual option (where applicable per spec)",Frontend
+Order summary - card in full,"Given I have selected a card-in-full payment option","When I view the order summary","Then I will see the correct fees and totals as per the spec",Frontend
+Order summary - direct debit instalments,"Given I have selected a direct debit instalments option","When I view the order summary","Then I will see the correct joining fee and instalment breakdown as per the spec",Frontend
+Order summary - direct debit annual,"Given I have selected a direct debit annual option","When I view the order summary","Then I will see the correct joining fee and annual billing details as per the spec",Frontend
+Payment step - next button state,"Given I am on the payment step","When I view the payment action button","Then it will be inactive until I have completed the entire payment form",Frontend
+Card payment - failed transaction,"Given I have chosen to pay by card in full
+And I am on the payment page","When I enter test card details for a declined card","Then I will see the failed payment message",Frontend
+Card payment - successful transaction,"Given I have chosen to pay by card in full
+And I am on the payment page","When I enter valid test card details for a successful transaction","Then I will see that the checkout completes successfully
+And I am passed to the next step",Frontend
+Direct debit - content displayed,"Given I have chosen a direct debit option
+And I am on the direct debit details page","When I view the page","Then I will see the legalese content with the amount due and details of my plan",Frontend
+Direct debit - invalid details,"Given I have chosen a direct debit option
+And I am on the direct debit details page","When I add invalid account details to the form
+And I click Continue","Then I will see a relevant error message
+And I can try again",Frontend
+Direct debit - valid details,"Given I have chosen a direct debit option
+And I am on the direct debit details page","When I add valid account details to the form
+And I click Continue","Then I will see a success message
+And I will be taken to the confirmation page",Frontend
+Direct debit - confirmation content,"Given I have chosen a direct debit option
+And I have entered valid account details","When I land on the confirmation page","Then I will see all relevant plan and account details displayed correctly",Frontend
+Direct debit - confirmation back,"Given I have chosen a direct debit option
+And I am on the confirmation page","When I click 'Back'","Then I will be taken back to the direct debit details page
+And I will see my previously entered details retained",Frontend
+Direct debit - confirmation continue,"Given I have chosen a direct debit option
+And I am on the confirmation page","When I click 'Continue'","Then I will proceed to the next step in the journey",Frontend
+Enrolment failed,"Given I have completed the payment steps
+And the system has not accepted my enrolment","When I view the page","Then I will see an error page with a relevant error message",Frontend
+Enrolment success,"Given I have completed the payment steps
+And the system has accepted my enrolment","When I view the page","Then I will see the Order Complete step",Frontend
+Order complete - primary CTA,"Given I have landed on the Order Complete page","When I click the primary CTA (Continue, Next, etc.)","Then I will be taken to the next step of the process",Frontend
+Order complete - cannot navigate back,"Given I am in the journey
+And I am on the Order Complete step","When I attempt to view any previous steps","Then I cannot navigate backwards from this step",Frontend
+Order complete - membership details (self-pay),"Given I have successfully enrolled
+And I paid for myself","When I view the Order Complete page","Then I will see a section containing my membership details (e.g. name, membership number, membership status)",Frontend
+Order complete - payment details (self-pay),"Given I have successfully enrolled
+And I paid for myself","When I view the Order Complete page","Then I will see a section showing payment details matching my chosen payment method",Frontend
+Download receipt - click,"Given I have successfully enrolled
+And I paid for myself","When I click the Download Receipt link","Then the browser print or download modal will open
+And there will be content within it",Frontend
+Download receipt - validate,"Given I have successfully enrolled
+And I paid for myself
+And I have clicked the Download Receipt link","When I validate the content","Then it will match my payment and personal details",Frontend
+Email receipt - validate,"Given I have successfully enrolled
+And I paid for myself","When I check my email inbox","Then I will see a receipt email that matches my payment and personal details",Frontend
+Order complete - membership details (third-party pay),"Given I have successfully enrolled
+And my membership was paid for by a third party","When I view the Order Complete page","Then I will see a section containing my membership details",Frontend
+Order complete - no payment section (third-party pay),"Given I have successfully enrolled
+And my membership was paid for by a third party","When I view the Order Complete page","Then I will not see a payment details section",Frontend
+Secondary user type - distinct content,"Given I am logged in as a secondary user type (e.g. affiliate, associate)","When I view the relevant steps of the journey","Then I will see user-type-specific content, labels, and CTAs as defined in the spec",Frontend
+Qualification step - cannot navigate back,"Given I am in the journey
+And I am on the Check Qualification step","When I attempt to view the previous steps","Then I cannot navigate backwards from this step",Frontend
+Qualification step - user with no record,"Given I am a user in the journey
+And I have no existing record in the system","When I view the qualification step","Then I will still see the qualification step
+And the content will reflect the no-record state",Frontend
+Query modal - open,"Given I am a user on the qualification step","When I click the 'Query' button","Then a query modal will appear
+And I can select at least one query type
+And I can add descriptive text",Frontend
+Query modal - submit,"Given I am a user on the qualification step
+And I have the query modal open","When I add valid content to my query
+And I click Submit","Then I will see the query submitted confirmation modal",Frontend
+Submitted query - proceed,"Given I am a user on the qualification step
+And I have the query submitted modal open","When I click 'Proceed to payment'","Then I will be taken to the next step",Frontend
+Submitted query - back,"Given I am a user on the qualification step
+And I have the query submitted modal open","When I click 'Back'","Then I will be taken back to the qualification screen
+And I will see the 'Query' button greyed out
+And a persistent notification for 'Submitted query' will be present",Frontend
+Admin - query email received,"Given I am an admin or support agent
+And my email address is configured in the system for query notifications
+And a user has submitted a query","When I check my emails","Then I will see an email from the site containing the correct query details",Frontend
+Confirm qualifications and continue,"Given I am a user on the qualification step
+And I have qualification data displayed","When I click 'Confirm and Continue'","Then I can proceed to the next step",Frontend
+Journey complete - standard user,"Given I am a standard user in the journey","When I proceed past Order Complete and qualification steps","Then I will see the Journey Completed page
+And it will display the relevant standard content",Frontend
+Journey complete - secondary user type,"Given I am a user of a secondary type in the journey","When I proceed past Order Complete","Then I will see the Journey Completed page
+And it will display the user-type-specific content",Frontend
+Journey complete - unexpected error,"Given I am a user in the journey","When an unexpected system error is encountered","Then I will see the generic error page",Frontend

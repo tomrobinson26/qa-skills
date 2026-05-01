@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sample HTML page for Playwright testing">
+    <title>Sample Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sample Test Page</h1>
+            <p>This is a sample HTML page for testing Playwright automation</p>
+        </header>
+
+        <nav>
+            <button data-testid="nav-home">Home</button>
+            <button data-testid="nav-about">About</button>
+            <button data-testid="nav-contact">Contact</button>
+        </nav>
+
+        <main>
+            <h2>Contact Form</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        data-testid="name-input" 
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        data-testid="email-input" 
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        data-testid="message-input" 
+                        rows="5"
+                        placeholder="Enter your message"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" data-testid="country-select">
+                        <option value="">Select a country</option>
+                        <option value="USA">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="CA">Canada</option>
+                        <option value="AU">Australia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" data-testid="terms-checkbox" required>
+                        I agree to the terms and conditions
+                    </label>
+                </div>
+
+                <button type="submit" data-testid="submit-button">Submit</button>
+                <button type="button" data-testid="reset-button" onclick="resetForm()">Reset</button>
+            </form>
+
+            <div class="success-message" data-testid="success-message">
+                Thank you! Your message has been received.
+            </div>
+
+            <h2>Sample Cards</h2>
+            <div class="card" data-testid="card">
+                <h3 data-testid="card-title">Card 1</h3>
+                <p>This is the first sample card</p>
+                <img 
+                    data-testid="card-image" 
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect fill='%23ddd' width='100' height='100'/%3E%3C/svg%3E"
+                    alt="Sample image"
+                    style="width: 100px; height: 100px;"
+                >
+            </div>
+
+            <div class="card" data-testid="card">
+                <h3 data-testid="card-title">Card 2</h3>
+                <p>This is the second sample card</p>
+                <img 
+                    data-testid="card-image" 
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect fill='%23bbb' width='100' height='100'/%3E%3C/svg%3E"
+                    alt="Sample image"
+                    style="width: 100px; height: 100px;"
+                >
+            </div>
+        </main>
+
+        <footer data-testid="footer">
+            <p>&copy; 2026 Sample Test Page. For testing purposes only.</p>
+        </footer>
+    </div>
+
+    <script>
+        console.log('Page loaded successfully');
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            console.log('Form submitted');
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            console.log('Form data:', { name, email, message });
+            
+            // Show success message
+            document.querySelector('.success-message').style.display = 'block';
+            
+            // Reset form after 2 seconds
+            setTimeout(() => {
+                resetForm();
+            }, 2000);
+        });
+
+        function resetForm() {
+            document.getElementById('contact-form').reset();
+            document.querySelector('.success-message').style.display = 'none';
+            console.log('Form reset');
+        }
+
+        // Navigation buttons
+        document.querySelectorAll('nav button').forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('Navigation clicked:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
