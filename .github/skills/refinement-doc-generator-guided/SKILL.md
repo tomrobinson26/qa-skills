@@ -8,6 +8,7 @@ description: >
   with questions that explain the reasoning as they go.
 
   Only use this skill when the user explicitly invokes it by name. Do not trigger automatically.
+distribute: true
 ---
 
 # Refinement Doc Generator — Guided

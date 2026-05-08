@@ -18,7 +18,13 @@ jobs:
         run: |
           New-Item -ItemType Directory -Path dist -Force | Out-Null
           Get-ChildItem .github/skills -Directory | ForEach-Object {
-            .\package-skill.ps1 $_.FullName -OutputDir dist
+            $skill = $_
+            $skillMd = Join-Path $skill.FullName "SKILL.md"
+            if ((Test-Path $skillMd) -and (Get-Content $skillMd -Raw) -match "(?m)^distribute:\s*true") {
+              .\package-skill.ps1 $skill.FullName -OutputDir dist
+            } else {
+              Write-Host "Skipping $($skill.Name) (distribute: true not set)"
+            }
           }
 
       - name: Create GitHub Release

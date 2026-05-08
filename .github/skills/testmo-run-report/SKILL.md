@@ -1,6 +1,7 @@
 ---
 name: testmo-run-report
 description: "Convert a Testmo test run CSV export into a stakeholder-friendly report (HTML by default, markdown also supported) showing each test's current and previous status, comments, and linked issues. Use this skill whenever the user uploads a Testmo export (filenames typically starting with 'testmo-export-run-') or asks to turn a test run into a report, summary, digest, or status document for stakeholders. Also trigger on phrases like 'test run report', 'testmo report', 'results breakdown', 'summarise this test run', or when the user wants to compare current results against previous results from the same export. Output includes summary metrics, a status-changes block, and per-folder result cards — no Given/When/Then content."
+distribute: true
 ---
 
 # Testmo run report

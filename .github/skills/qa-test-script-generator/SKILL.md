@@ -6,6 +6,7 @@ description: >
   Also triggers when the user provides requirements (e.g. a spec, user story, or description of a feature) and asks for coverage,
   test cases, or a test plan — even if they don't say "skill". This skill handles both CMS and Frontend testing across
   web features, producing output ready for import into test management tools.
+distribute: true
 ---
 
 # QA Test Script Generator
