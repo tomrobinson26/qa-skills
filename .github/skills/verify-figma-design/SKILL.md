@@ -2,6 +2,9 @@
 name: verify-figma-design
 description: Validate that a deployed website matches its source Figma design. Use this skill during QA verification, regression testing, or design compliance audits. Use when asked to verify, diff, or compare a deployed website against a Figma design, when visual fidelity issues are suspected, or when the user says "verify", "check against Figma", "visual diff", or "does this match the design". Requires the deployed website URL and the Figma MCP server connection.
 user-invocable: true
+metadata:
+  author: Tom Robinson - tom.robinson@msqdx.com
+  version: "1.0.1"
 ---
 
 # Verify Figma Design Implementation

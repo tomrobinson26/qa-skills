@@ -8,6 +8,9 @@ description: >
   with questions that explain the reasoning as they go.
 
   Only use this skill when the user explicitly invokes it by name. Do not trigger automatically.
+metadata:
+  author: "Tom Robinson - tom.robinson@msqdx.com"
+  version: "1.0.1"
 ---
 
 # Refinement Doc Generator — Guided
@@ -344,6 +347,37 @@ If yes, ask (open text):
 
 ---
 
+**Question 4b** — always ask this, regardless of the answer to Q4:
+
+**Teaching note to include before this question:**
+
+> "Even components that feel 'static' usually contain buttons, links, or clickable cards — and every interactive element needs a defined visual state for hover, focus, active, and sometimes disabled. These are easy to miss because the designs often only show the default state. If they're not specified now, developers have to invent them — and that leads to inconsistency."
+
+Use `ask_user_input_v0`:
+
+> "Does this component contain any interactive elements — buttons, links, clickable cards, tabs, or similar?"
+
+Options:
+- **Yes** — there are interactive elements
+- **No** — it's purely display content with no clickable elements
+
+If **Yes**, ask (open text):
+
+> "For each interactive element, do the designs show its visual states — hover (cursor over it), active or pressed (mid-click), focus (keyboard selected), and disabled (if it can be inactive)? Describe what you can see, or note which states are missing from the designs."
+
+Teaching note to include:
+
+> "You don't need to know the technical details — just describe what the designs show. For example: 'The button goes darker on hover, and there's a blue outline when focused. There's no disabled state shown.' If the designs don't show a state, we'll flag it as TBC."
+
+After the answer:
+
+- For each state the user **can describe**: write it as a requirement.
+- For each state the designs **do not show**: mark as `**TBC**` and add a matching question in Phase 5 — e.g. *"The designs do not show a hover state for the CTA button — confirm the intended behaviour with design."*
+- Always auto-assert: all interactive elements must have a visible focus state consistent with the site's design system. This is non-negotiable and does not need to be asked.
+- If a disabled state is possible (e.g. a submit button before a form is valid): assert that disabled elements must be visually distinct and include `aria-disabled` — flag specifics as TBC if the designs don't show it.
+
+---
+
 **Question 5** — single-select using `ask_user_input_v0`:
 
 **Teaching note to include before this question:**
@@ -592,6 +626,11 @@ Use this when writing callout notes after generated sections. Only explain terms
 | Viewport | The visible area of a web page within the browser window. Content "within the viewport" is what the user can currently see without scrolling. |
 | Breakpoint | A screen width at which the layout changes to suit a different device size — for example, 768px is a common point at which a desktop layout switches to a mobile layout. |
 | `poster` frame | The still image displayed on a video before the user plays it, or while it is loading. Set in the CMS so there is always something visible rather than a blank box. |
+| Hover state | The visual appearance of an interactive element when a user moves their cursor over it — for example, a button changing colour or a link gaining an underline. Only triggered by a mouse; touch and keyboard users never see hover states, so hover must never be the only way to communicate something. |
+| Focus state | The visible outline or highlight on an element that has been selected via keyboard (Tab key). Required for all interactive elements so keyboard-only users know where they are. Focus state design should match the site design system unless the designs specify otherwise. |
+| Active / pressed state | The visual appearance of an element at the exact moment it is clicked or activated — for example, a button appearing slightly depressed or darker. Typically brief but should be defined so there is visible feedback that the click registered. |
+| Disabled state | The visual appearance of an element that exists on the page but cannot currently be interacted with — for example, a submit button before a form is complete. Must be visually distinct from the default state and marked with `aria-disabled` so screen readers announce it correctly. |
+| `aria-disabled` | An attribute added to elements that are disabled but remain visible and focusable. Unlike the HTML `disabled` attribute, `aria-disabled` keeps the element in the keyboard tab order so screen reader users are aware it exists and understand why it cannot be activated. |
 
 ---
 
@@ -606,4 +645,5 @@ Quick check before presenting the final assembly:
 - Responsive behaviour stated for desktop and mobile at minimum; tablet flagged in Questions if designs don't show it.
 - CMS properties all have types and a Required value — never left blank.
 - Requirements assert technical defaults (keyboard, focus, semantic HTML) rather than punting them to Questions.
+- Every interactive element has requirements covering hover, focus, active/pressed, and disabled states — or a TBC with a matching question if the designs don't show them.
 - British English throughout.

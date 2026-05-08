@@ -6,6 +6,9 @@ description: >
   code, or generate automated tests from an existing test script. Also triggers when the user says "automate these tests",
   "convert to Playwright", "write Playwright tests from my CSV", or pastes GWT-style test steps and asks for code.
   Produces POM locators, page methods, test fixtures, and spec files — scoped to only what is needed based on the input.
+metadata:
+  author: Tom Robinson - tom.robinson@msqdx.com
+  version: "1.0.1"
 ---
  
 # Playwright Test Generator

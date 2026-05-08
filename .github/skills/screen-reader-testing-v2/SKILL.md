@@ -2,6 +2,9 @@
 name: screen-reader-testing-v2
 description: 'Conduct comprehensive screen reader testing for website features. Use when validating accessibility, verifying screen reader compatibility, dismissing cookie banners, running axe-core CLI, and producing strict ranked findings tables with evidence gates.'
 argument-hint: 'Feature URL or selector to test'
+metadata:
+  author: Tom Robinson - tom.robinson@msqdx.com
+  version: "1.0.1"
 ---
 
 # Screen Reader Testing (Enhanced with Verification Methodology)

@@ -3,6 +3,9 @@ name: content-model-test-data
 description: 'Generate schema-aware JSON test data from a provided content model. Use when you need min/max/type-valid mock content, industry-specific realism inferred from project context, and machine-ingestible output for downstream automation agents.'
 argument-hint: 'Content model/schema + optional project context + desired record count'
 user-invocable: true
+metadata:
+  author: Tom Robinson - tom.robinson@msqdx.com
+  version: "1.0.1"
 ---
 
 # Content Model Test Data Generation

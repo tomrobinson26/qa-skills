@@ -6,6 +6,9 @@ description: >
   add Page Object Model foundations, configure fixtures and environments, or fix
   setup issues such as missing installs and broken first-run commands.
 license: Complete terms in LICENSE.txt
+metadata:
+  author: Tom Robinson - tom.robinson@msqdx.com
+  version: "1.0.1"
 ---
 
 # Playwright Test Setup
