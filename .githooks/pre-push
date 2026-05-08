@@ -1,0 +1,4 @@
+#!/bin/bash
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+powershell.exe -ExecutionPolicy Bypass -NoProfile -File "$REPO_ROOT/.githooks/package-skills.ps1"
+exit $?
