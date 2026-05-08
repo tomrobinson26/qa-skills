@@ -20,10 +20,10 @@ jobs:
           Get-ChildItem .github/skills -Directory | ForEach-Object {
             $skill = $_
             $skillMd = Join-Path $skill.FullName "SKILL.md"
-            if ((Test-Path $skillMd) -and (Get-Content $skillMd -Raw) -match "(?m)^distribute:\s*true") {
+            if (Test-Path (Join-Path $skill.FullName ".distribute")) {
               .\package-skill.ps1 $skill.FullName -OutputDir dist
             } else {
-              Write-Host "Skipping $($skill.Name) (distribute: true not set)"
+              Write-Host "Skipping $($skill.Name) (no .distribute file)"
             }
           }
 

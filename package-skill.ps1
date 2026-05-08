@@ -18,13 +18,17 @@ if (-not (Test-Path $skillDir -PathType Container)) {
 $skillName  = Split-Path $skillDir -Leaf
 $outputFile = Join-Path $OutputDir "$skillName.skill"
 
-# Build into a temp zip then rename so we can guarantee the .skill extension
-$tempZip = [System.IO.Path]::ChangeExtension($outputFile, 'zip')
+# Copy to a temp dir, strip .distribute, then zip — so the marker never ends up in the archive
+$tempDir = Join-Path ([System.IO.Path]::GetTempPath()) ([System.Guid]::NewGuid().ToString())
+Copy-Item $skillDir $tempDir -Recurse
+Remove-Item (Join-Path $tempDir '.distribute') -ErrorAction SilentlyContinue
 
-if (Test-Path $tempZip) { Remove-Item $tempZip -Force }
+$tempZip = [System.IO.Path]::ChangeExtension($outputFile, 'zip')
+if (Test-Path $tempZip)    { Remove-Item $tempZip    -Force }
 if (Test-Path $outputFile) { Remove-Item $outputFile -Force }
 
-Compress-Archive -Path (Join-Path $skillDir '*') -DestinationPath $tempZip
+Compress-Archive -Path (Join-Path $tempDir '*') -DestinationPath $tempZip
 Rename-Item -Path $tempZip -NewName "$skillName.skill"
+Remove-Item $tempDir -Recurse -Force
 
 Write-Host "Packaged '$skillName' -> $outputFile"

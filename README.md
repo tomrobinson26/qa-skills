@@ -19,11 +19,19 @@ Each skill lives in `.github/skills/<skill-name>/` and must contain a `SKILL.md`
 ---
 name: my-skill
 description: When and how to use this skill.
-distribute: true   # include in releases — omit for IDE-only skills
 ---
 ```
 
-Any skill without `distribute: true` is ignored during packaging.
+To mark a skill as distributable, add an empty `.distribute` file to its folder:
+
+```
+.github/skills/my-skill/
+├── SKILL.md
+├── .distribute       ← presence of this file triggers packaging
+└── ...
+```
+
+Skills without a `.distribute` file are ignored during packaging. The `.distribute` file is never included in the packaged `.skill` archive.
 
 ---
 
@@ -67,5 +75,5 @@ This does not affect releases — releases always build from committed code in C
 
 1. Create a folder under `.github/skills/<skill-name>/`
 2. Add a `SKILL.md` with the required frontmatter
-3. Add `distribute: true` if it should be included in releases
+3. Add an empty `.distribute` file to the folder if it should be included in releases
 4. Commit and push — tag a new version when ready to release

@@ -1,7 +1,6 @@
 ---
 name: refinement-doc-generator
 description: Generate dev-ready refinement documents (functional requirements specs) for CMS-based web components. Produces a structured markdown artifact with Description, CMS Properties table, Requirements, Performance, a standard Accessibility block, Questions, and Designs sections. Only use this skill when the user explicitly invokes it by name — e.g. "use the refinement-doc-generator skill" or "run the refinement doc skill". Do not trigger automatically from topic alone.
-distribute: true
 ---
 
 # Refinement Doc Generator
