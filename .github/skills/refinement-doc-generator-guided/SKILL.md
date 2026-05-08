@@ -91,7 +91,88 @@ Options:
 
 ---
 
-### Phase 2 — CMS Properties
+### Phase 2 — External integrations
+
+**Teaching note to include before questions:**
+
+> "Before we work out what an editor can fill in, we need to know whether this component connects to anything outside the CMS — for example, a CRM, a product database, or an external API. This matters now because an integration can completely change the content model. If a component pulls product data from an external system, the editor might not need to enter a title or description at all — those fields come from the feed, not the CMS. Getting this wrong at the properties stage means rebuilding it later."
+
+**Question 1** — multi-select using `ask_user_input_v0`:
+
+> "Does this component connect to, or depend on, any external systems or data sources?"
+
+Options:
+- **CRM** — e.g. Salesforce, Microsoft Dynamics — typically for forms that submit lead or contact data
+- **PIM / Product data** — e.g. Akeneo, inRiver — product catalogues, descriptions, pricing
+- **External API** — a bespoke or third-party data feed not covered by other options
+- **Analytics / Tag Manager** — e.g. Google Analytics, GTM, Adobe Analytics — event tracking on interactions
+- **Search** — e.g. Algolia, Elasticsearch — powering search results or filtered listings
+- **Payment provider** — e.g. Stripe, PayPal — handling transactions
+- **Authentication / SSO** — login, session state, or personalisation based on who the user is
+- **Social media feed** — pulling in posts or content from Instagram, X, LinkedIn, etc.
+- **Mapping / Geolocation** — e.g. Google Maps, store finders
+- **No external dependencies** — the component is self-contained within the CMS
+
+If **No external dependencies** is selected: proceed directly to Phase 3.
+
+If one or more integrations are selected: for each one, ask the following three questions in sequence before moving to the next.
+
+---
+
+**Per-integration Question A** — single-select using `ask_user_input_v0`:
+
+> "For [system name] — what does this component do with it?"
+
+Options:
+- **Reads data from it** — the component displays information that lives in the external system (e.g. product name, price, user details)
+- **Writes data to it** — the component sends information to the external system (e.g. a form submission going into a CRM)
+- **Both** — the component reads from and writes to the system
+- **Not sure** — we'll flag this as TBC
+
+Teaching note to include: "Knowing the direction of data flow determines which fields the editor needs to provide, which come automatically from the system, and what failure states we need to plan for."
+
+---
+
+**Per-integration Question B** — single-select using `ask_user_input_v0`:
+
+> "What should the component do if [system name] is unavailable or slow to respond?"
+
+Options:
+- **Show a fallback / placeholder** — display static content or a 'content unavailable' message
+- **Hide the component entirely** — don't render anything if the data can't be loaded
+- **Show a loading state first, then error if it fails** — spinner or skeleton, then an error message
+- **Not sure** — we'll flag this as TBC
+
+Teaching note to include: "External systems go down, time out, or return unexpected responses. Defining the failure behaviour now means developers don't have to guess — and it often surfaces requirements the design hasn't shown."
+
+---
+
+**Per-integration Question C** — single-select using `ask_user_input_v0`:
+
+> "Does this integration already exist in the project, or does it need to be built?"
+
+Options:
+- **Already exists** — the connection to this system is already in place and we're building on top of it
+- **Needs to be built** — this is a new integration
+- **Not sure** — needs to be confirmed
+
+Teaching note to include: "A new integration is a dependency that could block development entirely if it's not confirmed upfront. If it needs to be built, it should be flagged as a blocker in the Questions section."
+
+---
+
+**After this phase**: update the Requirements and Questions sections based on answers:
+
+- For each integration where data is **read**: note which CMS properties may be partially or fully populated by the external system rather than the editor, and carry this into Phase 3 so those fields are correctly scoped.
+- For each integration where data is **written**: add requirements for success state, error state, and validation behaviour.
+- For each integration where failure behaviour is **TBC**: add a matching question in Phase 5.
+- For each integration that **needs to be built**: add a question flagging it as a potential blocker and calling out that it needs to be confirmed before development starts.
+- If the integration is **new**: note in the Questions section that delivery timelines for the integration should be confirmed separately.
+
+Show a brief summary of what was captured before moving on — for example: *"Got it — this component reads product data from a PIM. I'll make sure we only create CMS properties for things the editor actually needs to provide, and flag the failure state and integration status in Questions."*
+
+---
+
+### Phase 3 — CMS Properties
 
 **Message to send before starting:**
 
@@ -196,7 +277,7 @@ Show the completed table in a markdown block before moving on.
 
 ---
 
-### Phase 3 — Requirements
+### Phase 4 — Requirements
 
 **Message to send before starting:**
 
@@ -293,7 +374,7 @@ Only include entries for terms that actually appear in the generated section. Do
 
 ---
 
-### Phase 4 — Questions
+### Phase 5 — Questions
 
 Before asking anything, compile all `**TBC**` markers flagged during Phases 1–3 into a list and present it to the user.
 
@@ -324,7 +405,7 @@ If yes, ask (open text): "Describe what's unknown."
 
 ---
 
-### Phase 5 — Designs
+### Phase 6 — Designs
 
 **Message to send before questions:**
 
@@ -394,7 +475,7 @@ Description:
 
 ---
 
-### Phase 6 — Review & check-in
+### Phase 7 — Review & check-in
 
 This phase is an open educational conversation. Its purpose is to make sure the user understands what is in their document before they take it into a meeting — particularly anything that was added automatically without them being asked about it.
 
