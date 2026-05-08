@@ -1,0 +1,51 @@
+#!/bin/bash
+# Pre-push hook: auto-bump patch version in SKILL.md files that changed since last push.
+# Adds a chore commit so the bumps are included in the push.
+
+remote="$1"
+
+while IFS= read -r local_ref local_sha remote_ref remote_sha; do
+  # Skip branch deletes
+  [ "$local_sha" = "0000000000000000000000000000000000000000" ] && continue
+
+  if [ "$remote_sha" = "0000000000000000000000000000000000000000" ]; then
+    # New branch: compare against the latest tag, or the initial commit
+    base=$(git describe --tags --abbrev=0 2>/dev/null || git rev-list --max-parents=0 HEAD)
+  else
+    base="$remote_sha"
+  fi
+
+  changed=$(git diff --name-only "$base" "$local_sha" -- '.github/skills/*/SKILL.md' 2>/dev/null \
+            | grep -E '^\.github/skills/[^/]+/SKILL\.md$')
+
+  [ -z "$changed" ] && continue
+
+  bumped=false
+  while IFS= read -r skill_file; do
+    [ -f "$skill_file" ] || continue
+
+    current=$(grep -m1 '  version:' "$skill_file" | sed 's/.*version: "\(.*\)".*/\1/')
+    [ -z "$current" ] && continue
+
+    major=$(echo "$current" | cut -d. -f1)
+    minor=$(echo "$current" | cut -d. -f2)
+    patch=$(echo "$current" | cut -d. -f3)
+
+    if [ -n "$patch" ]; then
+      new_version="${major}.${minor}.$((patch + 1))"
+    else
+      new_version="${major}.$((minor + 1))"
+    fi
+
+    perl -i -pe "s|(  version: \")${current}(\")|\${1}${new_version}\${2}|" "$skill_file"
+    git add "$skill_file"
+    echo "  skill version bump: $skill_file  $current -> $new_version"
+    bumped=true
+  done <<< "$changed"
+
+  if [ "$bumped" = true ]; then
+    git commit -m "chore: auto-bump skill versions"
+  fi
+done
+
+exit 0
