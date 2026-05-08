@@ -1,3 +1,6 @@
+# Source: quality-gate.spec.ts
+
+```ts
 import { test, expect } from '../testFixtures/base';
 import { qualityGate } from '../testFixtures/base';
 
@@ -82,3 +85,5 @@ test.describe('Quality Gate Tests @qualitygate', () => {
     expect(loadTime).toBeLessThan(5000);
   });
 });
+
+```

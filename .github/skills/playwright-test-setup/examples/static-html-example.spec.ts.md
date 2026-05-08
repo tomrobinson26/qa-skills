@@ -1,3 +1,6 @@
+# Source: static-html-example.spec.ts
+
+```ts
 import { test, expect } from '@playwright/test';
 import * as path from 'path';
 
@@ -58,3 +61,5 @@ test('read HTML content directly', async ({ page }) => {
   const inputs = await page.locator('input, textarea').all();
   console.log(`Found ${inputs.length} form inputs`);
 });
+
+```

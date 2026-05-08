@@ -1,3 +1,6 @@
+# Source: envConfig.ts
+
+```ts
 /**
  * Environment configuration type definition
  * Add new environment variables here and implement them in each environment file
@@ -10,3 +13,5 @@ export interface envConfig {
   // authToken?: string;
   // timeout?: number;
 }
+
+```

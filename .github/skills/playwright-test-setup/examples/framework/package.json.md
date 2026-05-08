@@ -1,3 +1,6 @@
+# Source: package.json
+
+```json
 {
   "name": "playwright-testing-framework",
   "version": "1.0.0",
@@ -32,3 +35,5 @@
     "prettier": "3.6.2"
   }
 }
+
+```

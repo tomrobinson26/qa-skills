@@ -1,3 +1,6 @@
+# Source: basic-test.spec.ts
+
+```ts
 import { test, expect } from '../testFixtures/base';
 
 /**
@@ -44,3 +47,5 @@ test.describe('Basic Page Tests', () => {
     await basePage.verifyCommonElements();
   });
 });
+
+```

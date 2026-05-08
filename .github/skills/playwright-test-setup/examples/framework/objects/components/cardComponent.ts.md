@@ -1,3 +1,6 @@
+# Source: cardComponent.ts
+
+```ts
 import { Page, Locator } from '@playwright/test';
 
 /**
@@ -61,3 +64,5 @@ export class CardComponent {
     return false;
   }
 }
+
+```

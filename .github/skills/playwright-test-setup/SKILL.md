@@ -1,282 +1,93 @@
 ---
-name: webapp-testing
-description: Playwright TypeScript testing framework for web applications. Supports end-to-end testing with Page Object Model, fixtures, visual regression, accessibility testing, and comprehensive test automation.
+name: playwright-test-setup
+description: >
+  Set up and scaffold a Playwright TypeScript test framework for web applications.
+  Use when users ask to initialize Playwright, bootstrap a new E2E structure,
+  add Page Object Model foundations, configure fixtures and environments, or fix
+  setup issues such as missing installs and broken first-run commands.
 license: Complete terms in LICENSE.txt
 ---
-> **How this fits together:** This skill handles framework setup and patterns. See the [Playwright Skills Workflow Guide](../playwright-cli/references/workflow-guide.md) to understand how playwright-test-setup relates to playwright-cli (for exploration) and playwright-test-gen (for test generation).
 
----
-# Web Application Testing with Playwright + TypeScript
-## Quick Start
+# Playwright Test Setup
 
+Creates a reliable starting point for Playwright plus TypeScript, with an optional full framework template.
 
-## Quick Start
+## When to Use
 
-1. **Initialize the testing framework** in your project directory:
-   ```bash
-   npm init -y
-   npm install -D @playwright/test typescript
-   npx playwright install
-   ```
+- User asks to set up Playwright in a project
+- User needs first-run commands for a new Playwright repo
+- User wants a maintainable test architecture with page objects and fixtures
+- User reports setup failures, missing browser installs, or missing package installs
+- User wants to bootstrap from the included template examples
 
-2. **Copy the framework structure** from `examples/framework/` to your project
+> How this fits together: use this skill for framework setup, use playwright-cli for live exploration, and use playwright-test-gen to convert manual Given/When/Then tests into Playwright specs.
 
-3. **Run your first test**:
-   ```bash
-   npx playwright test
-   ```
+See the workflow guide: [workflow-guide.md](../playwright-cli/references/workflow-guide.md)
 
-## Framework Structure
+## Procedure
 
-```
-playwright/
-├── config/
-│   ├── environments/          # Environment-specific configuration (qa, staging, prod)
-│   └── projects.ts            # Browser configuration
-├── objects/
-│   ├── components/            # Reusable UI components
-│   └── pages/                 # Page Object Models
-│       └── basePage.ts        # Base page class with common functionality
-├── testFixtures/
-│   └── base.ts                # Custom fixtures extending Playwright
-├── tests/
-│   └── *.spec.ts              # Your test files
-├── types/
-│   ├── envConfig.ts           # Environment configuration types
-│   └── pages.ts               # Page type definitions
-├── utils/
-│   └── environmentManager.ts  # Environment variable management
-├── playwright.config.ts       # Playwright configuration
-└── package.json
-```
+1. Confirm project state.
+Determine whether this is a new test project or an existing codebase adding Playwright.
 
-## Key Concepts
+2. Install core dependencies.
+Ensure package initialization plus required Playwright and TypeScript dependencies are installed.
 
-### Page Object Model (POM)
+3. Install browsers.
+Run Playwright browser installation after dependency install.
 
-Organize your tests using page objects for maintainability:
+4. Choose setup mode.
+Use quick mode for simple tests or framework mode for team-scale suites.
 
-```typescript
-import { Page } from '@playwright/test';
-import { BasePage } from './basePage';
+5. Scaffold files.
+For framework mode, copy and adapt the structure from the framework example references.
 
-export class LoginPage extends BasePage {
-    url = '/login';
-    
-    constructor(page: Page) {
-        super(page);
-        this.usernameInput = page.getByTestId('username-input');
-        this.passwordInput = page.getByTestId('password-input');
-        this.submitButton = page.getByTestId('submit-button');
-    }
-    
-    async login(username: string, password: string) {
-        await this.usernameInput.fill(username);
-        await this.passwordInput.fill(password);
-        await this.submitButton.click();
-    }
-}
-```
+6. Validate first test run.
+Execute a minimal test command and confirm environment, browser, and command wiring all work.
 
-### Fixtures
+7. Apply baseline quality rules.
+Prefer stable locators, independent tests, and dynamic waits.
 
-Use custom fixtures for reusable test setup:
+## Setup Modes
 
-```typescript
-import { test, expect } from '../testFixtures/base';
+Note: example implementation files in this skill are markdown references (`*.md`) and are intended to be copied into a target runnable project.
 
-test('should login successfully', async ({ loginPage }) => {
-    await loginPage.goto();
-    await loginPage.login('user@example.com', 'password');
-    await expect(loginPage.page).toHaveURL('/dashboard');
-});
-```
+### Quick Mode
 
-### Locator Strategy
+Use when the user needs immediate coverage and minimal structure.
 
-**Prefer `data-testid` attributes** for stable, maintainable selectors:
+- Start with a single spec file and default Playwright config
+- Keep setup minimal and iterate from passing tests
 
-```typescript
-// ✅ Preferred - stable and semantic
-this.submitButton = page.getByTestId('submit-button');
+### Framework Mode
 
-// ❌ Avoid - brittle and coupled to structure
-this.submitButton = page.locator('div.form > button.btn-primary');
-```
+Use when the user needs a scalable suite.
 
-**Fallback options** (in order of preference):
-1. `getByRole()` - for semantic HTML elements
-2. `getByLabel()` - for form inputs with labels
-3. Simple CSS selectors - for stable class names
-4. `getByText()` - for unique text content (use sparingly)
+- Use page objects, reusable fixtures, and environment config
+- Start from template assets in the framework example directory
 
-## Running Tests
+## Missing Install Recovery
 
-```bash
-# Run all tests
-npx playwright test
+When setup is flagged by missing installs:
 
-# Run specific test file
-npx playwright test tests/login.spec.ts
+1. Verify dependency install completed successfully.
+2. Verify Playwright browsers are installed.
+3. Verify commands run from the project root containing `package.json`.
+4. Re-run a single smoke test before broader execution.
 
-# Run in headed mode (see browser)
-npx playwright test --headed
+## Resources
 
-# Run with UI mode (interactive)
-npx playwright test --ui
+- Getting started guide: [GETTING_STARTED.md](./GETTING_STARTED.md)
+- Example overview: [README.md](./examples/README.md)
+- Full framework template: [README.md](./examples/framework/README.md)
+- Playwright documentation: https://playwright.dev/
+- TypeScript documentation: https://www.typescriptlang.org/
+- Playwright best practices: https://playwright.dev/docs/best-practices
 
-# Run tagged tests
-npx playwright test --grep @smoke
-npx playwright test --grep @qualitygate
+## Notes for Skill Authors
 
-# Run against specific environment
-ENV=staging npx playwright test
-```
-
-## Common Test Patterns
-
-### Basic Page Test
-
-```typescript
-import { test, expect } from '../testFixtures/base';
-
-test('homepage loads correctly', async ({ basePage }) => {
-    await basePage.goto();
-    await expect(basePage.page.getByRole('heading', { level: 1 })).toBeVisible();
-});
-```
-
-### Form Interaction
-
-```typescript
-test('form submission works', async ({ page }) => {
-    await page.goto('/contact');
-    await page.getByTestId('name-input').fill('John Doe');
-    await page.getByTestId('email-input').fill('john@example.com');
-    await page.getByTestId('submit-button').click();
-    await expect(page.getByText('Thank you')).toBeVisible();
-});
-```
-
-### Element Discovery
-
-```typescript
-test('discover page elements', async ({ page }) => {
-    await page.goto('http://localhost:3000');
-    
-    // Find all buttons
-    const buttons = await page.locator('button').all();
-    console.log(`Found ${buttons.length} buttons`);
-    
-    // Take screenshot
-    await page.screenshot({ path: 'discovery.png', fullPage: true });
-});
-```
-
-### Console Log Capture
-
-```typescript
-test('capture console logs', async ({ page }) => {
-    const logs: string[] = [];
-    page.on('console', msg => logs.push(`[${msg.type()}] ${msg.text()}`));
-    
-    await page.goto('http://localhost:3000');
-    await page.waitForLoadState('networkidle');
-    
-    console.log('Console logs:', logs);
-});
-```
-
-## Quality Gates & Testing
-
-### Quality Gate Fixture
-
-Run comprehensive quality checks:
-
-```typescript
-test('quality checks pass', async ({ qualityGate, basePage }) => {
-    await qualityGate(basePage);
-    // Automatically checks: SEO, images, headers, accessibility
-});
-```
-
-### Accessibility Testing
-
-```typescript
-test('page is accessible', async ({ accessibility, basePage }) => {
-    await accessibility(basePage);
-    // Runs Axe accessibility tests against WCAG 2.0 Level A & AA
-});
-```
-
-### Visual Regression
-
-```typescript
-test('visual regression check', async ({ page }) => {
-    await page.goto('/');
-    await expect(page).toHaveScreenshot('homepage.png');
-});
-```
-
-## Environment Management
-
-Configure different environments in `config/environments/`:
-
-```typescript
-// config/environments/qa.ts
-import { EnvConfig } from '../../types/envConfig';
-
-export const qaConfig: EnvConfig = {
-    baseUrl: 'https://qa.example.com',
-    apiUrl: 'https://api-qa.example.com',
-};
-```
-
-Access environment config in tests:
-
-```typescript
-import { EnvironmentManager } from '../utils/environmentManager';
-
-const envManager = new EnvironmentManager();
-const baseUrl = envManager.getValue('baseUrl');
-```
-
-## Test Tags
-
-Organize tests with tags for selective execution:
-
-- `@smoke` - Quick smoke tests
-- `@regression` - Full regression suite
-- `@qualitygate` - Critical quality checks
-- `@visual` - Visual regression tests
-
-```typescript
-test('login flow @smoke', async ({ loginPage }) => {
-    // Test implementation
-});
-```
-
-## Best Practices
-
-### ✅ DO:
-- Import fixtures from `testFixtures/base.ts`, not `@playwright/test`
-- Use `data-testid` attributes for stable selectors
-- Wait for `networkidle` before inspecting dynamic content
-- Keep tests independent and self-contained
-- Use Page Object Model for maintainability
-- Add appropriate tags for test filtering
-- Write descriptive test names
-
-### ❌ DON'T:
-- Use brittle CSS selectors based on styling classes
-- Inspect DOM before page is fully loaded
-- Create interdependent tests
-- Use fixed waits (`wait(5000)`) - use dynamic waiting
-- Duplicate test setup - use fixtures instead
-
-## Troubleshooting
-
-### Tests Fail Locally
+- Keep this SKILL file concise for progressive loading.
+- Place large code samples in referenced docs under examples or references.
+- Prefer procedural instructions in this file and implementation details in linked resources.
 - Ensure Playwright browsers are installed: `npx playwright install`
 - Check if server is running on correct port
 - Verify environment variables are set correctly

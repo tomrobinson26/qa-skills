@@ -1,3 +1,6 @@
+# Source: qa.ts
+
+```ts
 import { envConfig } from '../../types/envConfig';
 
 /**
@@ -7,3 +10,5 @@ export const qaConfig: envConfig = {
   baseUrl: 'https://qa.example.com',
   apiUrl: 'https://api-qa.example.com',
 };
+
+```

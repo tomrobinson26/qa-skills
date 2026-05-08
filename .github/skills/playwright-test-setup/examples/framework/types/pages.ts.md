@@ -1,3 +1,6 @@
+# Source: pages.ts
+
+```ts
 import { basePage } from '../objects/pages/basePage';
 
 /**
@@ -11,3 +14,5 @@ export type pages = {
   // loginPage: LoginPage;
   // dashboardPage: DashboardPage;
 };
+
+```

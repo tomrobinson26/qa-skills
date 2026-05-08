@@ -1,3 +1,6 @@
+# Source: basic-example.spec.ts
+
+```ts
 import { test, expect } from '@playwright/test';
 
 /**
@@ -75,3 +78,5 @@ test('take screenshot', async ({ page }) => {
   
   console.log('\nScreenshot saved to: page-discovery.png');
 });
+
+```

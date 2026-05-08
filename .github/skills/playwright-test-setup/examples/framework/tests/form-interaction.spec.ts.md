@@ -1,3 +1,6 @@
+# Source: form-interaction.spec.ts
+
+```ts
 import { test, expect } from '../testFixtures/base';
 
 /**
@@ -69,3 +72,5 @@ test.describe('Form Interactions', () => {
     await expect(page.getByTestId('option-1')).toBeChecked();
   });
 });
+
+```

@@ -1,3 +1,6 @@
+# Source: console-logging-example.spec.ts
+
+```ts
 import { test, expect } from '@playwright/test';
 
 /**
@@ -95,3 +98,5 @@ test('monitor JavaScript errors', async ({ page }) => {
   
   expect(jsErrors).toHaveLength(0);
 });
+
+```

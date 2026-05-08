@@ -1,3 +1,6 @@
+# Source: staging.ts
+
+```ts
 import { envConfig } from '../../types/envConfig';
 
 /**
@@ -7,3 +10,5 @@ export const stagingConfig: envConfig = {
   baseUrl: 'https://staging.example.com',
   apiUrl: 'https://api-staging.example.com',
 };
+
+```

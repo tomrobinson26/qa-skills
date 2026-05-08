@@ -1,3 +1,6 @@
+# Source: page-object-test.spec.ts
+
+```ts
 import { test, expect } from '../testFixtures/base';
 import { LoginPage } from '../objects/pages/loginPage';
 
@@ -73,3 +76,5 @@ test.describe('Login Tests with Fixtures', () => {
   });
 });
 */
+
+```

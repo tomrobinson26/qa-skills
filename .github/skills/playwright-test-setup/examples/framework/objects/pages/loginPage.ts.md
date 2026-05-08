@@ -1,3 +1,6 @@
+# Source: loginPage.ts
+
+```ts
 import { Page, Locator } from '@playwright/test';
 import { BasePage } from './basePage';
 
@@ -67,3 +70,5 @@ export class LoginPage extends BasePage {
     await this.submitButton.waitFor({ state: 'visible' });
   }
 }
+
+```

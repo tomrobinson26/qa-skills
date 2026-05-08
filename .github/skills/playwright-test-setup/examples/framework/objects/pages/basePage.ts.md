@@ -1,3 +1,6 @@
+# Source: basePage.ts
+
+```ts
 import { expect, type Locator, type Page } from '@playwright/test';
 import { EnvironmentManager } from '../../utils/environmentManager';
 
@@ -174,3 +177,5 @@ export class basePage {
     return [initialBox, newBox];
   }
 }
+
+```

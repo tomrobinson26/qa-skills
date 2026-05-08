@@ -1,3 +1,6 @@
+# Source: projects.ts
+
+```ts
 import { devices, Project } from '@playwright/test';
 
 /**
@@ -77,3 +80,5 @@ export const projects: Project[] = [
   //   },
   // },
 ];
+
+```

@@ -1,3 +1,6 @@
+# Source: playwright.config.ts
+
+```ts
 import { defineConfig } from '@playwright/test';
 import { TestmoReporterOptions } from 'playwright-testmo-reporter';
 import { projects } from './config/projects';
@@ -63,3 +66,5 @@ export default defineConfig({
   /* Configure projects for major browsers, defined in config/projects.ts */
   projects: projects,
 });
+
+```

@@ -1,3 +1,6 @@
+# Source: console-logging.spec.ts
+
+```ts
 import { test, expect } from '../testFixtures/base';
 
 /**
@@ -90,3 +93,5 @@ test.describe('Console Logging', () => {
     expect(jsErrors).toHaveLength(0);
   });
 });
+
+```

@@ -1,3 +1,6 @@
+# Source: navigationComponent.ts
+
+```ts
 import { Page, Locator } from '@playwright/test';
 
 /**
@@ -57,3 +60,5 @@ export class NavigationComponent {
     return await this.nav.isVisible();
   }
 }
+
+```

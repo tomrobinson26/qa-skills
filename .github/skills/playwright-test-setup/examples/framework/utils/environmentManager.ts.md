@@ -1,3 +1,6 @@
+# Source: environmentManager.ts
+
+```ts
 import { envConfig } from '../types/envConfig';
 import { qaConfig } from '../config/environments/qa';
 import { stagingConfig } from '../config/environments/staging';
@@ -36,3 +39,5 @@ export class EnvironmentManager {
 }
 
 module.exports = { EnvironmentManager };
+
+```
