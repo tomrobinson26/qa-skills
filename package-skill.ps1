@@ -27,7 +27,18 @@ $tempZip = [System.IO.Path]::ChangeExtension($outputFile, 'zip')
 if (Test-Path $tempZip)    { Remove-Item $tempZip    -Force }
 if (Test-Path $outputFile) { Remove-Item $outputFile -Force }
 
-Compress-Archive -Path (Join-Path $tempDir '*') -DestinationPath $tempZip
+# Use ZipFile directly so entry paths use forward slashes on all platforms.
+# Compress-Archive writes backslash separators on Windows, which breaks uploads.
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$zip = [System.IO.Compression.ZipFile]::Open($tempZip, 'Create')
+try {
+    Get-ChildItem $tempDir -Recurse -File | ForEach-Object {
+        $entryName = $_.FullName.Substring($tempDir.Length + 1).Replace('\', '/')
+        [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $_.FullName, $entryName) | Out-Null
+    }
+} finally {
+    $zip.Dispose()
+}
 Rename-Item -Path $tempZip -NewName "$skillName.skill"
 Remove-Item $tempDir -Recurse -Force
 
