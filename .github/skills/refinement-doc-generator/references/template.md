@@ -13,9 +13,9 @@ Description:
 
 ### Content tab
 
-| Property Name | Property Type | Required | Translatable | Property/Validation Info | CMS Helper Text |
-|---------------|---------------|----------|--------------|--------------------------|-----------------|
-| [Field Name] | [Type, e.g. String, Basic Rich Text, Image Picker, Colour Picker] | Yes/No | Yes/No | [Constraints, accepted formats, min/max, allowed options, or **TBC**] | "[Editor-facing helper text, sentence case with full stop.]" |
+| Property Name | Property Type                                                     | Required | Translatable | Property/Validation Info                                              | CMS Helper Text                                              |
+| ------------- | ----------------------------------------------------------------- | -------- | ------------ | --------------------------------------------------------------------- | ------------------------------------------------------------ |
+| [Field Name]  | [Type, e.g. String, Basic Rich Text, Image Picker, Colour Picker] | Yes/No   | Yes/No       | [Constraints, accepted formats, min/max, allowed options, or **TBC**] | "[Editor-facing helper text, sentence case with full stop.]" |
 
 [Additional tabs — Settings tab, Styling tab — only if the feature genuinely needs them.]
 
@@ -40,11 +40,11 @@ Description:
 - Any features with auto play or moving animation should have an option to pause/stop.
 - Any auto-playing content/animations should only play when within the user's viewport.
 - All features should be error-free when WAVE Chrome extension tool is applied.
-- Any expandable elements should be decorated with an aria-expanded label that updates to true or false when open and closed.
-- Any elements that update their content without reloading the page should be decorated with an aria-live label.
-- aria-label, aria-labelledby & aria-describedby labels should be used to provide invisible labels where a visible label isn't present, e.g., on Icons or buttons.
+- Any expandable elements should be decorated with an `aria-expanded` label that updates to true or false when open and closed.
+- Any elements that update their content without reloading the page should be decorated with an `aria-live` label.
+- `aria-label`, `aria-labelledby` & `aria-describedby` labels should be used to provide invisible labels where a visible label isn't present, e.g., on Icons or buttons.
 - `<fieldset>` and `<legend>` should be used to group form controls, input fields and checkboxes.
-- Content that is not visible or shouldn't be read by a screen reader should be decorated with an aria-hidden label.
+- Content that is not visible or shouldn't be read by a screen reader should be decorated with an `aria-hidden` label.
 
 ## Questions:
 

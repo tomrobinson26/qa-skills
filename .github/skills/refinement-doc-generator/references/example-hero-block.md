@@ -11,8 +11,6 @@ A fully worked example of the output format. Note how:
 
 # [Component] Hero Block with Optional Video
 
-Signed off for development: @[Your Name] [Current Date]
-
 Description:
 A component that displays a hero section with an image or video, alongside text content. This block is designed to be visually impactful and introduce key content or messaging at the top of a page.
 
@@ -20,13 +18,13 @@ A component that displays a hero section with an image or video, alongside text 
 
 ### Content tab
 
-| Property Name | Property Type | Required | Property/Validation Info | CMS Helper Text |
-|---------------|---------------|----------|--------------------------|-----------------|
-| Heading | String | Yes | | "The main heading of the block." |
-| Subtext | Basic Rich Text | No | | "The optional subtext that displays below the Heading." |
-| Image | Image Picker | Yes | | "The background image for the hero block. Required even when using video as a fallback." |
-| Video URL | String | No | Must be a valid Vimeo URL | "Optional Vimeo video URL. If provided, will display instead of the image with a play button." |
-| Text Color | Color Picker | No | Default: [Site default] | "Select the color for the text content. If not selected, site default will be used." |
+| Property Name | Property Type   | Required | Property/Validation Info  | CMS Helper Text                                                                                |
+| ------------- | --------------- | -------- | ------------------------- | ---------------------------------------------------------------------------------------------- |
+| Heading       | String          | Yes      |                           | "The main heading of the block."                                                               |
+| Subtext       | Basic Rich Text | No       |                           | "The optional subtext that displays below the Heading."                                        |
+| Image         | Image Picker    | Yes      |                           | "The background image for the hero block. Required even when using video as a fallback."       |
+| Video URL     | String          | No       | Must be a valid Vimeo URL | "Optional Vimeo video URL. If provided, will display instead of the image with a play button." |
+| Text Color    | Color Picker    | No       | Default: [Site default]   | "Select the color for the text content. If not selected, site default will be used."           |
 
 ## Requirements:
 

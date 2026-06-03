@@ -13,8 +13,6 @@ Compare this with `example-hero-block.md` to see how the spec shape stays consta
 
 # [Component] Hero Block with Optional Video
 
-Signed off for development: @[Your Name] [Current Date]
-
 Description:
 A component that displays a hero section with an image or video, alongside text content. This block is designed to be visually impactful and introduce key content or messaging at the top of a page.
 
@@ -22,13 +20,13 @@ A component that displays a hero section with an image or video, alongside text 
 
 ### Content tab
 
-| Property Name | Property Type | Required | Property/Validation Info | CMS Helper Text |
-|---------------|---------------|----------|--------------------------|-----------------|
-| Heading | String | Yes | | "The main heading of the block." |
-| Body Text | Basic Rich Text | No | | "The optional body text that displays below the Heading." |
-| Image | Image Picker | Yes | JPEG, PNG | "The background image for the hero block. Required even when using video as a fallback." |
-| Video URL | String | No | Must be a valid Vimeo URL | "Optional Vimeo video URL. If provided, will display instead of the image with a play button." |
-| Text Area Color | Color Picker | Yes | Options: Pink 01 (#CE8EC0), Gold 01 (#CCA44F), Red 01 (#FF5835), Blue 01 (#708FFF), Green 01 (#46BB51) | "Select the background color for the text area. This color will be applied behind the text content." |
+| Property Name   | Property Type   | Required | Property/Validation Info                                                                               | CMS Helper Text                                                                                      |
+| --------------- | --------------- | -------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| Heading         | String          | Yes      |                                                                                                        | "The main heading of the block."                                                                     |
+| Body Text       | Basic Rich Text | No       |                                                                                                        | "The optional body text that displays below the Heading."                                            |
+| Image           | Image Picker    | Yes      | JPEG, PNG                                                                                              | "The background image for the hero block. Required even when using video as a fallback."             |
+| Video URL       | String          | No       | Must be a valid Vimeo URL                                                                              | "Optional Vimeo video URL. If provided, will display instead of the image with a play button."       |
+| Text Area Color | Color Picker    | Yes      | Options: Pink 01 (#CE8EC0), Gold 01 (#CCA44F), Red 01 (#FF5835), Blue 01 (#708FFF), Green 01 (#46BB51) | "Select the background color for the text area. This color will be applied behind the text content." |
 
 ## Requirements:
 

@@ -10,7 +10,7 @@ description: >
   Only use this skill when the user explicitly invokes it by name. Do not trigger automatically.
 metadata:
   author: "Tom Robinson - tom.robinson@msqdx.com"
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Refinement Doc Generator — Guided
@@ -52,12 +52,15 @@ Nothing is generated in this phase. The goal is to understand what the user has 
 > "Before we start building the doc, let's make sure we know what we're working with. The more context you can share, the less we'll need to assume — and Figma designs are most useful because they show what states exist even if they don't explain the behaviour. Share whatever you have and we'll work with it."
 
 **Question 1** — open text:
+
 > "What is this component or feature called? For example: Hero Banner, Contact Form, News Listing."
 
 **Question 2** — multi-select using `ask_user_input_v0`:
+
 > "What do you have to work from? Select everything that applies."
 
 Options:
+
 - **Figma designs** — Visual designs showing how the component should look
 - **User story** — A description of what a user needs and why
 - **Acceptance criteria** — A checklist of conditions the feature must meet
@@ -75,6 +78,7 @@ After getting the answers, ask the user to paste or share their input before mov
 > "The description is the first thing a developer reads. It should answer 'what is this and where does it live?' rather than list every feature — think of it as the one-paragraph pitch for the component."
 
 **Question 1** — open text:
+
 > "In one or two sentences, what does this component do and where does it appear on the page? For example: 'A banner that sits at the top of the homepage, displaying a headline, body text, and a call-to-action button.'"
 
 **Question 2** — single-select using `ask_user_input_v0`:
@@ -86,6 +90,7 @@ After getting the answers, ask the user to paste or share their input before mov
 > "Is this component always visible on the page, or does it only appear under certain conditions?"
 
 Options:
+
 - **Always visible** — It's always present when the page loads
 - **Conditionally shown** — It only appears when certain content is added or a setting is enabled
 - **Not sure** — We'll mark this as TBC
@@ -105,6 +110,7 @@ Options:
 > "Does this component connect to, or depend on, any external systems or data sources?"
 
 Options:
+
 - **CRM** — e.g. Salesforce, Microsoft Dynamics — typically for forms that submit lead or contact data
 - **PIM / Product data** — e.g. Akeneo, inRiver — product catalogues, descriptions, pricing
 - **External API** — a bespoke or third-party data feed not covered by other options
@@ -127,6 +133,7 @@ If one or more integrations are selected: for each one, ask the following three 
 > "For [system name] — what does this component do with it?"
 
 Options:
+
 - **Reads data from it** — the component displays information that lives in the external system (e.g. product name, price, user details)
 - **Writes data to it** — the component sends information to the external system (e.g. a form submission going into a CRM)
 - **Both** — the component reads from and writes to the system
@@ -141,6 +148,7 @@ Teaching note to include: "Knowing the direction of data flow determines which f
 > "What should the component do if [system name] is unavailable or slow to respond?"
 
 Options:
+
 - **Show a fallback / placeholder** — display static content or a 'content unavailable' message
 - **Hide the component entirely** — don't render anything if the data can't be loaded
 - **Show a loading state first, then error if it fails** — spinner or skeleton, then an error message
@@ -155,6 +163,7 @@ Teaching note to include: "External systems go down, time out, or return unexpec
 > "Does this integration already exist in the project, or does it need to be built?"
 
 Options:
+
 - **Already exists** — the connection to this system is already in place and we're building on top of it
 - **Needs to be built** — this is a new integration
 - **Not sure** — needs to be confirmed
@@ -171,7 +180,7 @@ Teaching note to include: "A new integration is a dependency that could block de
 - For each integration that **needs to be built**: add a question flagging it as a potential blocker and calling out that it needs to be confirmed before development starts.
 - If the integration is **new**: note in the Questions section that delivery timelines for the integration should be confirmed separately.
 
-Show a brief summary of what was captured before moving on — for example: *"Got it — this component reads product data from a PIM. I'll make sure we only create CMS properties for things the editor actually needs to provide, and flag the failure state and integration status in Questions."*
+Show a brief summary of what was captured before moving on — for example: _"Got it — this component reads product data from a PIM. I'll make sure we only create CMS properties for things the editor actually needs to provide, and flag the failure state and integration status in Questions."_
 
 ---
 
@@ -186,6 +195,7 @@ For each property, ask the following five questions in sequence:
 ---
 
 **Question 1** — open text:
+
 > "What is this field called? Use the name as it would appear in the CMS — for example: 'Headline', 'Background Image', 'Call-to-action Label'."
 
 ---
@@ -199,6 +209,7 @@ For each property, ask the following five questions in sequence:
 > "What kind of content does this field hold?"
 
 Options:
+
 - **Short text** — A single line: titles, labels, button text, URLs
 - **Rich text** — Paragraphs with formatting: bold, links, bullet points, headings
 - **Image** — A photo or graphic uploaded by the editor
@@ -219,6 +230,7 @@ Options:
 > "Can an editor leave this field blank, or is it always needed?"
 
 Options:
+
 - **Always required** — The component won't work or look right without it
 - **Optional** — The component should still work if the editor leaves it empty
 - **Not sure** — A stakeholder needs to decide — we'll mark this TBC
@@ -246,16 +258,18 @@ Options:
 ---
 
 After each property, use `ask_user_input_v0` to ask:
+
 > "Would you like to add another CMS property, or move on to Requirements?"
 
 Options:
+
 - **Add another property**
 - **Move on to Requirements**
 
 **After this phase**: generate the `## CMS Properties:` section as a markdown table. The table must have exactly these six columns in this order — do not merge, rename, or drop any of them:
 
 | Property Name | Property Type | Required | Translatable | Property/Validation Info | CMS Helper Text |
-|---------------|---------------|----------|--------------|--------------------------|-----------------|
+| ------------- | ------------- | -------- | ------------ | ------------------------ | --------------- |
 
 Map the wizard answers to columns as follows:
 
@@ -271,6 +285,7 @@ A correctly formed row looks like this:
 | Headline | String | Yes | Yes | Maximum 80 characters (**TBC**) | "Enter the main headline for the banner." |
 
 Common mistakes to avoid:
+
 - Do not create a "Description" column that merges Property Type, Validation Info, and Helper Text together
 - Do not put helper text inside the Validation Info column
 - Do not omit the Translatable column
@@ -307,6 +322,7 @@ Show the completed table in a markdown block before moving on.
 > "Do you have designs showing both desktop and mobile views?"
 
 Options:
+
 - **Yes, both** — I have designs for desktop and mobile
 - **Desktop only** — Only desktop designs were provided
 - **Mobile only** — Only mobile designs were provided
@@ -333,6 +349,7 @@ If the user has designs for multiple breakpoints, ask (open text): "How does the
 > "Are there any interactions in this component?"
 
 Options:
+
 - **No** — It's a static display component
 - **Yes** — There are clicks, animations, carousels, accordions, or similar
 - **Not sure**
@@ -358,6 +375,7 @@ Use `ask_user_input_v0`:
 > "Does this component contain any interactive elements — buttons, links, clickable cards, tabs, or similar?"
 
 Options:
+
 - **Yes** — there are interactive elements
 - **No** — it's purely display content with no clickable elements
 
@@ -372,7 +390,7 @@ Teaching note to include:
 After the answer:
 
 - For each state the user **can describe**: write it as a requirement.
-- For each state the designs **do not show**: mark as `**TBC**` and add a matching question in Phase 5 — e.g. *"The designs do not show a hover state for the CTA button — confirm the intended behaviour with design."*
+- For each state the designs **do not show**: mark as `**TBC**` and add a matching question in Phase 5 — e.g. _"The designs do not show a hover state for the CTA button — confirm the intended behaviour with design."_
 - Always auto-assert: all interactive elements must have a visible focus state consistent with the site's design system. This is non-negotiable and does not need to be asked.
 - If a disabled state is possible (e.g. a submit button before a form is valid): assert that disabled elements must be visually distinct and include `aria-disabled` — flag specifics as TBC if the designs don't show it.
 
@@ -387,6 +405,7 @@ After the answer:
 > "Are there any edge case states to consider?"
 
 Options:
+
 - **No** — The component always has content and works in one way
 - **Yes** — There are empty states, loading states, or error states
 - **Not sure**
@@ -400,9 +419,10 @@ If yes, ask (open text): "Describe the states — what triggers them and what sh
 Then immediately follow it with a **Plain English** note that explains any technical terms or auto-asserted requirements that appear. Format it like this:
 
 > **Plain English — what was added automatically and why:**
+>
 > - **`<h2>` tag** — This tells the browser that the headline is a second-level heading. There should only be one `<h1>` on a page (the main page title), so components sitting within a page use `<h2>` or lower.
 > - **`target="_blank"` and `rel="noopener noreferrer"`** — When a link opens in a new tab, `target="_blank"` does the opening, and `rel="noopener noreferrer"` is a security measure that prevents the new tab from being able to interact with the original page. Always added together.
-> *(and so on for any other terms that appear)*
+>   _(and so on for any other terms that appear)_
 
 Only include entries for terms that actually appear in the generated section. Do not list terms that weren't used.
 
@@ -419,14 +439,17 @@ Before asking anything, compile all `**TBC**` markers flagged during Phases 1–
 > A good Questions section is focused: it contains only things that genuinely need a stakeholder decision, not things that could have been worked out from the designs or sensible defaults."
 
 **Question 1** — open text:
+
 > "Here are the open questions identified so far: [list TBCs]. Do any of these look wrong or need rewording? Are there any to remove?"
 
 ---
 
 **Question 2** — single-select using `ask_user_input_v0`:
+
 > "Is there anything genuinely unknown about analytics, third-party integrations, or error handling for this component?"
 
 Options:
+
 - **No** — Nothing else needs flagging
 - **Yes** — There are unknowns to add
 - **Not sure**
@@ -450,14 +473,17 @@ If yes, ask (open text): "Describe what's unknown."
 ---
 
 **Question 1** — open text:
+
 > "Do you have a Figma link for this component? Paste it here if so — it will be included in the doc as a reference link. If you haven't already shared screenshots of the designs, please paste them into the chat now."
 
 ---
 
 **Question 2** — single-select using `ask_user_input_v0`:
+
 > "Are there any states or scenarios the designs don't show?"
 
 Options:
+
 - **No** — The designs cover all states
 - **Yes** — Some states or breakpoints are missing
 - **Not sure**
@@ -478,8 +504,6 @@ Once all phases are complete:
 
 ```
 # [Component/Feature Name]
-
-Signed off for development: @[Name] [Date]
 
 Description:
 [generated]
@@ -518,6 +542,7 @@ Use `ask_user_input_v0` to ask:
 > "That's your first draft. Before you take it in, is there anything in the document you'd like me to explain — why it's there, what it means, or how it was decided?"
 
 Options:
+
 - **Yes, I have questions** — I'd like to understand some of what was generated
 - **No, I'm happy with it** — The document makes sense to me
 
@@ -532,7 +557,7 @@ If they select **Yes**: invite them to ask freely:
 **How to answer questions in this phase:**
 
 - Answer in plain, jargon-free language. Assume no technical background.
-- Explain the *reason* behind the thing, not just what it is. "We added this requirement because..." is more useful than "This is a keyboard accessibility requirement."
+- Explain the _reason_ behind the thing, not just what it is. "We added this requirement because..." is more useful than "This is a keyboard accessibility requirement."
 - Use analogies where they help. For example: "Think of `aria-expanded` like a sign on a door — it tells screen reader users whether a drawer is open or closed, the same way a sighted user can just look."
 - Never make the user feel like their question was obvious. These are things that are non-obvious by design.
 - If the question is about something that was auto-asserted (keyboard behaviour, semantic HTML, ARIA, focus states), explain that these are engineering and accessibility standards that apply to all web components — they weren't invented for this component specifically, they're things developers expect to find in every spec.
@@ -540,16 +565,16 @@ If they select **Yes**: invite them to ask freely:
 
 **Common questions and how to handle them:**
 
-*"Why does it say `<h2>` — what does that mean?"*
+_"Why does it say `<h2>` — what does that mean?"_
 Explain that heading tags (`<h1>`, `<h2>`, etc.) tell browsers and screen readers what the structure of the page is. There should only be one `<h1>` on a page (usually the page title), so a component like a banner sitting in the middle of a page typically uses `<h2>`. Changing this is a one-line conversation with the developer if they disagree.
 
-*"What is the Accessibility Requirements section — did you write all of that?"*
+_"What is the Accessibility Requirements section — did you write all of that?"_
 Explain that this is a standard block that appears verbatim on every refinement doc. It covers the baseline accessibility standards the team commits to on every component — things like keyboard navigation, zoom levels, and screen reader support. It's not generated from their answers; it's a standing commitment.
 
-*"Why is something marked TBC?"*
+_"Why is something marked TBC?"_
 Explain that TBC means the team genuinely can't make that decision without input from a stakeholder — typically the client, a designer, or a product owner. It's deliberately kept short because every TBC means a question in the meeting.
 
-*"Why was [requirement X] added — I didn't mention that?"*
+_"Why was [requirement X] added — I didn't mention that?"_
 Explain that some requirements are added automatically because they apply to all web components regardless of the specific feature — keyboard focus behaviour, for example, or the rule about optional fields hiding cleanly. These are things developers expect to be specified even when nobody asks for them.
 
 After answering, always ask:
@@ -578,11 +603,11 @@ Include this block verbatim in every document, under `## Accessibility Requireme
 - Any features with auto play or moving animation should have an option to pause/stop.
 - Any auto-playing content/animations should only play when within the user's viewport.
 - All features should be error-free when WAVE Chrome extension tool is applied.
-- Any expandable elements should be decorated with an aria-expanded label that updates to true or false when open and closed.
-- Any elements that update their content without reloading the page should be decorated with an aria-live label.
-- aria-label, aria-labelledby & aria-describedby labels should be used to provide invisible labels where a visible label isn't present, e.g., on Icons or buttons.
+- Any expandable elements should be decorated with an `aria-expanded` label that updates to true or false when open and closed.
+- Any elements that update their content without reloading the page should be decorated with an `aria-live` label.
+- `aria-label`, `aria-labelledby` & `aria-describedby` labels should be used to provide invisible labels where a visible label isn't present, e.g., on Icons or buttons.
 - `<fieldset>` and `<legend>` should be used to group form controls, input fields and checkboxes.
-- Content that is not visible or shouldn't be read by a screen reader should be decorated with an aria-hidden label.
+- Content that is not visible or shouldn't be read by a screen reader should be decorated with an `aria-hidden` label.
 ```
 
 ---
@@ -594,7 +619,6 @@ Include this block verbatim in every document, under `## Accessibility Requireme
 - Technical language in the generated document — the doc is for developers.
 - Sentence case for requirement content; full stops at the end of each numbered item.
 - Double quotes for CMS helper text (consistent with the examples).
-- `Signed off for development` stays as `@[Name] [Date]` placeholder unless the user provides their name and date.
 
 ---
 
@@ -602,35 +626,35 @@ Include this block verbatim in every document, under `## Accessibility Requireme
 
 Use this when writing callout notes after generated sections. Only explain terms that actually appear in the generated content — do not list the full glossary unprompted.
 
-| Term | Plain-language explanation |
-|------|---------------------------|
-| `<h1>`, `<h2>`, `<h3>` etc. | Heading tags that tell browsers and screen readers the structure of a page. There should only be one `<h1>` per page (the main page title). Components within a page typically use `<h2>` or lower. |
-| `<section>`, `<article>`, `<nav>`, `<main>` | Semantic HTML tags that describe what a block of content *is*, not just how it looks. A `<nav>` tells assistive technology "this is navigation", a `<main>` marks the primary content area. Helps screen readers and search engines understand the page. |
-| `target="_blank"` | Makes a link open in a new browser tab instead of the current one. |
-| `rel="noopener noreferrer"` | A security measure always added alongside `target="_blank"`. Prevents the newly opened tab from being able to access or manipulate the original page. These two attributes always travel together. |
-| `aria-expanded` | An invisible label added to buttons that open or close something (accordions, dropdowns, menus). It updates to `true` when open and `false` when closed, so screen reader users know the current state without having to see it. |
-| `aria-label` | An invisible text label attached to an element that has no visible label — for example, an icon-only button. Screen readers read this label aloud so users understand what the element does. |
-| `aria-hidden` | Hides an element from screen readers entirely. Used for decorative content (like an icon that duplicates text already on screen) that would create noise if read aloud. |
-| `aria-live` | Marks a region of the page that updates dynamically — for example, a search results count, a notification, or a form error. Screen readers monitor it and announce changes automatically. |
-| `alt` text | A text description of an image, read aloud by screen readers to users who cannot see the image. Also displayed if the image fails to load. |
-| `rel="nofollow"` | Tells search engines not to follow or pass ranking credit to a linked page. Typically used on user-generated or sponsored links. |
-| `loading="lazy"` | Tells the browser not to load an image until it is about to come into view on screen. Speeds up initial page load by not downloading images the user hasn't scrolled to yet. |
-| Focus state / `:focus-visible` | The visible outline or highlight that appears around an element when it is selected via keyboard (Tab key). Required for keyboard-only users to know where they are on the page. |
-| Semantic HTML | Writing HTML using tags that describe the meaning of content, not just its appearance. `<button>` instead of `<div onclick>`, `<h2>` instead of `<p class="big-bold">`. Improves accessibility and search engine understanding. |
-| Content Area | A CMS field type that holds multiple content blocks — like a list of cards or a collection of items — rather than a single value. The editor can add, remove, and reorder items. |
-| Content Reference | A CMS field that links to another piece of content that already exists in the CMS, rather than duplicating its data. For example, a "Featured article" field that points to an existing article page. |
-| Basic Rich Text | A text field that allows limited formatting — typically bold and inline links only. No headings, no bullet points, no embedded media. |
-| Full Rich Text | A text field with full formatting options — headings, bullet points, bold, links, embedded images or media. |
-| `<fieldset>` and `<legend>` | HTML elements used to group related form fields together. The `<fieldset>` wraps the group, and the `<legend>` provides a label for the group. Required for radio buttons, checkboxes, and sets of related inputs so screen readers understand they belong together. |
-| Lazy loading | Deferring the loading of images or other media until the user is about to see them, rather than loading everything at once when the page first opens. Improves performance, especially on image-heavy pages. |
-| Viewport | The visible area of a web page within the browser window. Content "within the viewport" is what the user can currently see without scrolling. |
-| Breakpoint | A screen width at which the layout changes to suit a different device size — for example, 768px is a common point at which a desktop layout switches to a mobile layout. |
-| `poster` frame | The still image displayed on a video before the user plays it, or while it is loading. Set in the CMS so there is always something visible rather than a blank box. |
-| Hover state | The visual appearance of an interactive element when a user moves their cursor over it — for example, a button changing colour or a link gaining an underline. Only triggered by a mouse; touch and keyboard users never see hover states, so hover must never be the only way to communicate something. |
-| Focus state | The visible outline or highlight on an element that has been selected via keyboard (Tab key). Required for all interactive elements so keyboard-only users know where they are. Focus state design should match the site design system unless the designs specify otherwise. |
-| Active / pressed state | The visual appearance of an element at the exact moment it is clicked or activated — for example, a button appearing slightly depressed or darker. Typically brief but should be defined so there is visible feedback that the click registered. |
-| Disabled state | The visual appearance of an element that exists on the page but cannot currently be interacted with — for example, a submit button before a form is complete. Must be visually distinct from the default state and marked with `aria-disabled` so screen readers announce it correctly. |
-| `aria-disabled` | An attribute added to elements that are disabled but remain visible and focusable. Unlike the HTML `disabled` attribute, `aria-disabled` keeps the element in the keyboard tab order so screen reader users are aware it exists and understand why it cannot be activated. |
+| Term                                        | Plain-language explanation                                                                                                                                                                                                                                                                               |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<h1>`, `<h2>`, `<h3>` etc.                 | Heading tags that tell browsers and screen readers the structure of a page. There should only be one `<h1>` per page (the main page title). Components within a page typically use `<h2>` or lower.                                                                                                      |
+| `<section>`, `<article>`, `<nav>`, `<main>` | Semantic HTML tags that describe what a block of content _is_, not just how it looks. A `<nav>` tells assistive technology "this is navigation", a `<main>` marks the primary content area. Helps screen readers and search engines understand the page.                                                 |
+| `target="_blank"`                           | Makes a link open in a new browser tab instead of the current one.                                                                                                                                                                                                                                       |
+| `rel="noopener noreferrer"`                 | A security measure always added alongside `target="_blank"`. Prevents the newly opened tab from being able to access or manipulate the original page. These two attributes always travel together.                                                                                                       |
+| `aria-expanded`                             | An invisible label added to buttons that open or close something (accordions, dropdowns, menus). It updates to `true` when open and `false` when closed, so screen reader users know the current state without having to see it.                                                                         |
+| `aria-label`                                | An invisible text label attached to an element that has no visible label — for example, an icon-only button. Screen readers read this label aloud so users understand what the element does.                                                                                                             |
+| `aria-hidden`                               | Hides an element from screen readers entirely. Used for decorative content (like an icon that duplicates text already on screen) that would create noise if read aloud.                                                                                                                                  |
+| `aria-live`                                 | Marks a region of the page that updates dynamically — for example, a search results count, a notification, or a form error. Screen readers monitor it and announce changes automatically.                                                                                                                |
+| `alt` text                                  | A text description of an image, read aloud by screen readers to users who cannot see the image. Also displayed if the image fails to load.                                                                                                                                                               |
+| `rel="nofollow"`                            | Tells search engines not to follow or pass ranking credit to a linked page. Typically used on user-generated or sponsored links.                                                                                                                                                                         |
+| `loading="lazy"`                            | Tells the browser not to load an image until it is about to come into view on screen. Speeds up initial page load by not downloading images the user hasn't scrolled to yet.                                                                                                                             |
+| Focus state / `:focus-visible`              | The visible outline or highlight that appears around an element when it is selected via keyboard (Tab key). Required for keyboard-only users to know where they are on the page.                                                                                                                         |
+| Semantic HTML                               | Writing HTML using tags that describe the meaning of content, not just its appearance. `<button>` instead of `<div onclick>`, `<h2>` instead of `<p class="big-bold">`. Improves accessibility and search engine understanding.                                                                          |
+| Content Area                                | A CMS field type that holds multiple content blocks — like a list of cards or a collection of items — rather than a single value. The editor can add, remove, and reorder items.                                                                                                                         |
+| Content Reference                           | A CMS field that links to another piece of content that already exists in the CMS, rather than duplicating its data. For example, a "Featured article" field that points to an existing article page.                                                                                                    |
+| Basic Rich Text                             | A text field that allows limited formatting — typically bold and inline links only. No headings, no bullet points, no embedded media.                                                                                                                                                                    |
+| Full Rich Text                              | A text field with full formatting options — headings, bullet points, bold, links, embedded images or media.                                                                                                                                                                                              |
+| `<fieldset>` and `<legend>`                 | HTML elements used to group related form fields together. The `<fieldset>` wraps the group, and the `<legend>` provides a label for the group. Required for radio buttons, checkboxes, and sets of related inputs so screen readers understand they belong together.                                     |
+| Lazy loading                                | Deferring the loading of images or other media until the user is about to see them, rather than loading everything at once when the page first opens. Improves performance, especially on image-heavy pages.                                                                                             |
+| Viewport                                    | The visible area of a web page within the browser window. Content "within the viewport" is what the user can currently see without scrolling.                                                                                                                                                            |
+| Breakpoint                                  | A screen width at which the layout changes to suit a different device size — for example, 768px is a common point at which a desktop layout switches to a mobile layout.                                                                                                                                 |
+| `poster` frame                              | The still image displayed on a video before the user plays it, or while it is loading. Set in the CMS so there is always something visible rather than a blank box.                                                                                                                                      |
+| Hover state                                 | The visual appearance of an interactive element when a user moves their cursor over it — for example, a button changing colour or a link gaining an underline. Only triggered by a mouse; touch and keyboard users never see hover states, so hover must never be the only way to communicate something. |
+| Focus state                                 | The visible outline or highlight on an element that has been selected via keyboard (Tab key). Required for all interactive elements so keyboard-only users know where they are. Focus state design should match the site design system unless the designs specify otherwise.                             |
+| Active / pressed state                      | The visual appearance of an element at the exact moment it is clicked or activated — for example, a button appearing slightly depressed or darker. Typically brief but should be defined so there is visible feedback that the click registered.                                                         |
+| Disabled state                              | The visual appearance of an element that exists on the page but cannot currently be interacted with — for example, a submit button before a form is complete. Must be visually distinct from the default state and marked with `aria-disabled` so screen readers announce it correctly.                  |
+| `aria-disabled`                             | An attribute added to elements that are disabled but remain visible and focusable. Unlike the HTML `disabled` attribute, `aria-disabled` keeps the element in the keyboard tab order so screen reader users are aware it exists and understand why it cannot be activated.                               |
 
 ---
 

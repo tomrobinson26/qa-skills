@@ -3,6 +3,7 @@
 This example shows a complete guided session from start to finish — the question asked at each phase, a realistic answer from a non-technical team member, and the section that was generated as a result.
 
 Use this to understand:
+
 - What good answers look like at each phase
 - How answers directly shape the output
 - When to assert a default vs when to mark something TBC
@@ -20,7 +21,7 @@ Use this to understand:
 
 **Answer:** Figma designs and some notes from a meeting with the client.
 
-*The user shares screenshots of the designs in the chat.*
+_The user shares screenshots of the designs in the chat._
 
 ---
 
@@ -53,7 +54,7 @@ that links to an internal or external URL. It is always rendered when added to a
 
 ## Phase 2 — CMS Properties
 
-*The wizard loops through each property one at a time. This example shows all five.*
+_The wizard loops through each property one at a time. This example shows all five._
 
 ---
 
@@ -81,7 +82,7 @@ that links to an internal or external URL. It is always rendered when added to a
 
 **Answer:** The designs don't say, but I'd guess it shouldn't be too long.
 
-*Good answer. The user isn't sure, so we assert a sensible default (80 characters) and flag it in Questions.*
+_Good answer. The user isn't sure, so we assert a sensible default (80 characters) and flag it in Questions._
 
 > **Question:** What would you write next to this field to help a content editor use it correctly?
 
@@ -99,7 +100,7 @@ that links to an internal or external URL. It is always rendered when added to a
 
 **Answer:** A paragraph or two — just text, no special formatting needed.
 
-*"Just text, no special formatting" = Basic Rich Text. We assert this.*
+_"Just text, no special formatting" = Basic Rich Text. We assert this._
 
 > **Question:** Can an editor leave this field blank, or is it always needed?
 
@@ -125,7 +126,7 @@ that links to an internal or external URL. It is always rendered when added to a
 
 **Answer:** The editor picks from a list of brand colours — Navy, Teal, White, and Coral.
 
-*"Pick from a list" = Dropdown.*
+_"Pick from a list" = Dropdown._
 
 > **Question:** Can an editor leave this field blank, or is it always needed?
 
@@ -175,7 +176,7 @@ that links to an internal or external URL. It is always rendered when added to a
 
 **Answer:** A link to a page — could be internal or external.
 
-*A link field = String with URL validation.*
+_A link field = String with URL validation._
 
 > **Question:** Can an editor leave this field blank, or is it always needed?
 
@@ -231,7 +232,7 @@ that links to an internal or external URL. It is always rendered when added to a
 
 **Answer:** Desktop only — the mobile design wasn't in the Figma file.
 
-*Mobile is missing — we flag this in Questions and assert a sensible stacking default in Requirements.*
+_Mobile is missing — we flag this in Questions and assert a sensible stacking default in Requirements._
 
 > **Teaching note:** Every optional field needs a requirement describing what the component looks like without it.
 >
@@ -276,9 +277,10 @@ that links to an internal or external URL. It is always rendered when added to a
 
 ## Phase 4 — Questions
 
-*The wizard compiles TBCs from Phases 1–3 and presents them.*
+_The wizard compiles TBCs from Phases 1–3 and presents them._
 
 > Compiled TBCs:
+>
 > - Headline character limit (asserted 80 — confirm?)
 > - Text colour logic (white on dark, dark on light — confirm?)
 > - Mobile layout (asserted vertical stack — need designs to confirm)
@@ -341,8 +343,6 @@ that links to an internal or external URL. It is always rendered when added to a
 ```markdown
 # Call-to-Action Banner
 
-Signed off for development: @[Name] [Date]
-
 Description:
 A full-width promotional banner designed to sit between content sections on a page. The
 banner displays a headline, optional supporting text, and an optional call-to-action button
@@ -353,7 +353,7 @@ that links to an internal or external URL. It is always rendered when added to a
 ### Content tab
 
 | Property Name     | Property Type   | Required | Translatable | Property/Validation Info                 | CMS Helper Text                                                               |
-|-------------------|-----------------|----------|--------------|------------------------------------------|-------------------------------------------------------------------------------|
+| ----------------- | --------------- | -------- | ------------ | ---------------------------------------- | ----------------------------------------------------------------------------- |
 | Headline          | String          | Yes      | Yes          | Maximum 80 characters (**TBC**)          | "Enter the main headline for the banner."                                     |
 | Body Text         | Basic Rich Text | No       | Yes          |                                          | "Optional supporting text that displays below the headline."                  |
 | Background Colour | Dropdown        | Yes      | No           | Options: Navy, Teal, White, Coral        | "Select the background colour for the banner."                                |
@@ -405,5 +405,6 @@ that links to an internal or external URL. It is always rendered when added to a
 [Figma](https://www.figma.com/file/abc123/project-name?node-id=42)
 
 **Missing from designs:**
+
 - Mobile layout — flagged in Questions (Q3).
 ```

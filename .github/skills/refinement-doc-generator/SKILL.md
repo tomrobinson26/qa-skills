@@ -3,7 +3,7 @@ name: refinement-doc-generator
 description: Generate dev-ready refinement documents (functional requirements specs) for CMS-based web components. Produces a structured markdown artifact with Description, CMS Properties table, Requirements, Performance, a standard Accessibility block, Questions, and Designs sections. Only use this skill when the user explicitly invokes it by name — e.g. "use the refinement-doc-generator skill" or "run the refinement doc skill". Do not trigger automatically from topic alone.
 metadata:
   author: Tom Robinson - tom.robinson@msqdx.com
-  version: "1.0.1"
+  version: "1.0.2"
 ---
 
 # Refinement Doc Generator
@@ -45,8 +45,6 @@ Produce a single markdown artifact with this structure. The section order is fix
 ```markdown
 # [Component/Feature Name]
 
-Signed off for development: @[Name] [Date]
-
 Description:
 [1–2 paragraphs on what the component is and its purpose.]
 
@@ -54,9 +52,9 @@ Description:
 
 ### Content tab
 
-| Property Name | Property Type | Required | Property/Validation Info | CMS Helper Text |
-|---------------|---------------|----------|--------------------------|-----------------|
-| [Field] | [Type] | Yes/No | [Constraints or **TBC**] | "[Editor-facing helper text]" |
+| Property Name | Property Type | Required | Property/Validation Info | CMS Helper Text               |
+| ------------- | ------------- | -------- | ------------------------ | ----------------------------- |
+| [Field]       | [Type]        | Yes/No   | [Constraints or **TBC**] | "[Editor-facing helper text]" |
 
 [Add Settings tab, Styling tab, etc. only if the input suggests they're needed.]
 
@@ -102,11 +100,11 @@ This block is the same on every refinement doc. Include it exactly as written, u
 - Any features with auto play or moving animation should have an option to pause/stop.
 - Any auto-playing content/animations should only play when within the user's viewport.
 - All features should be error-free when WAVE Chrome extension tool is applied.
-- Any expandable elements should be decorated with an aria-expanded label that updates to true or false when open and closed.
-- Any elements that update their content without reloading the page should be decorated with an aria-live label.
-- aria-label, aria-labelledby & aria-describedby labels should be used to provide invisible labels where a visible label isn't present, e.g., on Icons or buttons.
+- Any expandable elements should be decorated with an `aria-expanded` label that updates to true or false when open and closed.
+- Any elements that update their content without reloading the page should be decorated with an `aria-live` label.
+- `aria-label`, `aria-labelledby` & `aria-describedby` labels should be used to provide invisible labels where a visible label isn't present, e.g., on Icons or buttons.
 - `<fieldset>` and `<legend>` should be used to group form controls, input fields and checkboxes.
-- Content that is not visible or shouldn't be read by a screen reader should be decorated with an aria-hidden label.
+- Content that is not visible or shouldn't be read by a screen reader should be decorated with an `aria-hidden` label.
 ```
 
 ## How to write good requirements
@@ -158,7 +156,6 @@ Every `**TBC**` marker in the body should have a matching question. The inverse 
 - Technical language is fine and expected. No explaining what an H1 tag is.
 - Sentence case for requirement content; full stops at the end of each numbered item.
 - Double quotes for CMS helper text (matches the examples).
-- The `Signed off for development` line stays as `@[Name] [Date]` unless the user provides their name or date — don't invent either.
 
 ## Before you finish
 
