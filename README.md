@@ -60,11 +60,11 @@ The workflow then appears under **Actions → Release Skills** and the `.skill` 
 
 To package a skill locally (for testing):
 
-```powershell
-.\package-skill.ps1 skills\<skill-name>
+```bash
+bash scripts/package-skill.sh skills/<skill-name>
 
 # Output to a specific directory
-.\package-skill.ps1 skills\<skill-name> -OutputDir C:\dist
+bash scripts/package-skill.sh skills/<skill-name> dist/
 ```
 
 This does not affect releases — releases always build from committed code in CI.

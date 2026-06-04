@@ -41,21 +41,8 @@ fi
 # 2. Regenerate marketplace.json
 # ---------------------------------------------------------------------------
 
-SCRIPT="$REPO_ROOT/scripts/generate-marketplace.ps1"
-
-if command -v pwsh >/dev/null 2>&1; then
-  PS_CMD="pwsh"
-elif command -v powershell >/dev/null 2>&1; then
-  PS_CMD="powershell"
-else
-  echo "WARNING: PowerShell not found — skipping marketplace.json regeneration." >&2
-  exit 0
-fi
-
-$PS_CMD -NonInteractive -NoProfile -ExecutionPolicy Bypass -File "$SCRIPT"
-
-if [ $? -ne 0 ]; then
-  echo "ERROR: generate-marketplace.ps1 failed. Commit aborted." >&2
+if ! bash "$REPO_ROOT/scripts/generate-marketplace.sh"; then
+  echo "ERROR: generate-marketplace.sh failed. Commit aborted." >&2
   exit 1
 fi
 

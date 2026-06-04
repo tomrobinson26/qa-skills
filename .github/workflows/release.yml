@@ -14,18 +14,15 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Package skills
-        shell: pwsh
         run: |
-          New-Item -ItemType Directory -Path dist -Force | Out-Null
-          Get-ChildItem skills -Directory | ForEach-Object {
-            $skill = $_
-            $skillMd = Join-Path $skill.FullName "SKILL.md"
-            if (Test-Path (Join-Path $skill.FullName ".distribute")) {
-              .\scripts\package-skill.ps1 $skill.FullName -OutputDir dist
-            } else {
-              Write-Host "Skipping $($skill.Name) (no .distribute file)"
-            }
-          }
+          mkdir -p dist
+          for skill_dir in skills/*/; do
+            if [[ -f "${skill_dir}.distribute" ]]; then
+              bash scripts/package-skill.sh "$skill_dir" dist
+            else
+              echo "Skipping $(basename "$skill_dir") (no .distribute file)"
+            fi
+          done
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
