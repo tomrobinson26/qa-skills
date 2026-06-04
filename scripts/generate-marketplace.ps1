@@ -258,5 +258,5 @@ if ($Check) {
 }
 
 # Write with a trailing newline
-[System.IO.File]::WriteAllText($marketplacePath, ($newJson + "`n"), [System.Text.Encoding]::UTF8)
+[System.IO.File]::WriteAllText($marketplacePath, ($newJson + "`n"), [System.Text.UTF8Encoding]::new($false))
 Write-Host "Updated marketplace.json with $($plugins.Count) plugins." -ForegroundColor Green
