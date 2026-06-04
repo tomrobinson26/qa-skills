@@ -3,7 +3,7 @@ name: refinement-doc-generator
 description: Generate dev-ready refinement documents (functional requirements specs) for CMS-based web components. Produces a structured markdown artifact with Description, CMS Properties table, Requirements, Performance, a standard Accessibility block, Questions, and Designs sections. Only use this skill when the user explicitly invokes it by name — e.g. "use the refinement-doc-generator skill" or "run the refinement doc skill". Do not trigger automatically from topic alone.
 metadata:
   author: Tom Robinson - tom.robinson@msqdx.com
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # Refinement Doc Generator
@@ -45,14 +45,15 @@ Produce a single markdown artifact with this structure. The section order is fix
 ```markdown
 # [Component/Feature Name]
 
-Description:
+## Description
+
 [1–2 paragraphs on what the component is and its purpose.]
 
 ## CMS Properties:
 
 ### Content tab
 
-| Property Name | Property Type | Required | Property/Validation Info | CMS Helper Text               |
+| **Property Name** | **Property Type** | **Required** | **Property/Validation Info** | **CMS Helper Text**               |
 | ------------- | ------------- | -------- | ------------------------ | ----------------------------- |
 | [Field]       | [Type]        | Yes/No   | [Constraints or **TBC**] | "[Editor-facing helper text]" |
 

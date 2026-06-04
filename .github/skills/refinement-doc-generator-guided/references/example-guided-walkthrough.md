@@ -42,7 +42,8 @@ _The user shares screenshots of the designs in the chat._
 **Generated section:**
 
 ```
-Description:
+## Description
+
 A full-width promotional banner designed to sit between content sections on a page. The
 banner displays a headline, optional supporting text, and an optional call-to-action button
 that links to an internal or external URL. It is always rendered when added to a page.
@@ -199,7 +200,7 @@ _A link field = String with URL validation._
 
 ### Content tab
 
-| Property Name    | Property Type    | Required | Translatable | Property/Validation Info                          | CMS Helper Text                                                                   |
+| **Property Name**    | **Property Type**    | **Required** | **Translatable** | **Property/Validation Info**                          | **CMS Helper Text**                                                                   |
 |------------------|------------------|----------|--------------|---------------------------------------------------|-----------------------------------------------------------------------------------|
 | Headline         | String           | Yes      | Yes          | Maximum 80 characters (**TBC**)                   | "Enter the main headline for the banner."                                         |
 | Body Text        | Basic Rich Text  | No       | Yes          |                                                   | "Optional supporting text that displays below the headline."                      |
@@ -343,7 +344,8 @@ _The wizard compiles TBCs from Phases 1–3 and presents them._
 ```markdown
 # Call-to-Action Banner
 
-Description:
+## Description
+
 A full-width promotional banner designed to sit between content sections on a page. The
 banner displays a headline, optional supporting text, and an optional call-to-action button
 that links to an internal or external URL. It is always rendered when added to a page.
@@ -352,7 +354,7 @@ that links to an internal or external URL. It is always rendered when added to a
 
 ### Content tab
 
-| Property Name     | Property Type   | Required | Translatable | Property/Validation Info                 | CMS Helper Text                                                               |
+| **Property Name**     | **Property Type**   | **Required** | **Translatable** | **Property/Validation Info**                 | **CMS Helper Text**                                                               |
 | ----------------- | --------------- | -------- | ------------ | ---------------------------------------- | ----------------------------------------------------------------------------- |
 | Headline          | String          | Yes      | Yes          | Maximum 80 characters (**TBC**)          | "Enter the main headline for the banner."                                     |
 | Body Text         | Basic Rich Text | No       | Yes          |                                          | "Optional supporting text that displays below the headline."                  |

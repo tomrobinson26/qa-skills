@@ -11,14 +11,15 @@ A fully worked example of the output format. Note how:
 
 # [Component] Hero Block with Optional Video
 
-Description:
+## Description
+
 A component that displays a hero section with an image or video, alongside text content. This block is designed to be visually impactful and introduce key content or messaging at the top of a page.
 
 ## CMS Properties:
 
 ### Content tab
 
-| Property Name | Property Type   | Required | Property/Validation Info  | CMS Helper Text                                                                                |
+| **Property Name** | **Property Type**   | **Required** | **Property/Validation Info**  | **CMS Helper Text**                                                                                |
 | ------------- | --------------- | -------- | ------------------------- | ---------------------------------------------------------------------------------------------- |
 | Heading       | String          | Yes      |                           | "The main heading of the block."                                                               |
 | Subtext       | Basic Rich Text | No       |                           | "The optional subtext that displays below the Heading."                                        |

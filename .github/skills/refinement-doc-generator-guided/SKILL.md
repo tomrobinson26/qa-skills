@@ -10,7 +10,7 @@ description: >
   Only use this skill when the user explicitly invokes it by name. Do not trigger automatically.
 metadata:
   author: "Tom Robinson - tom.robinson@msqdx.com"
-  version: "1.0.2"
+  version: "1.0.3"
 ---
 
 # Refinement Doc Generator — Guided
@@ -95,7 +95,7 @@ Options:
 - **Conditionally shown** — It only appears when certain content is added or a setting is enabled
 - **Not sure** — We'll mark this as TBC
 
-**After this phase**: generate the `Description:` section and show it in a markdown block before moving on.
+**After this phase**: generate the `## Description` section and show it in a markdown block before moving on.
 
 ---
 
@@ -268,7 +268,7 @@ Options:
 
 **After this phase**: generate the `## CMS Properties:` section as a markdown table. The table must have exactly these six columns in this order — do not merge, rename, or drop any of them:
 
-| Property Name | Property Type | Required | Translatable | Property/Validation Info | CMS Helper Text |
+| **Property Name** | **Property Type** | **Required** | **Translatable** | **Property/Validation Info** | **CMS Helper Text** |
 | ------------- | ------------- | -------- | ------------ | ------------------------ | --------------- |
 
 Map the wizard answers to columns as follows:
@@ -505,7 +505,8 @@ Once all phases are complete:
 ```
 # [Component/Feature Name]
 
-Description:
+## Description
+
 [generated]
 
 ## CMS Properties:

@@ -13,14 +13,15 @@ Compare this with `example-hero-block.md` to see how the spec shape stays consta
 
 # [Component] Hero Block with Optional Video
 
-Description:
+## Description
+
 A component that displays a hero section with an image or video, alongside text content. This block is designed to be visually impactful and introduce key content or messaging at the top of a page.
 
 ## CMS Properties:
 
 ### Content tab
 
-| Property Name   | Property Type   | Required | Property/Validation Info                                                                               | CMS Helper Text                                                                                      |
+| **Property Name**   | **Property Type**   | **Required** | **Property/Validation Info**                                                                               | **CMS Helper Text**                                                                                      |
 | --------------- | --------------- | -------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
 | Heading         | String          | Yes      |                                                                                                        | "The main heading of the block."                                                                     |
 | Body Text       | Basic Rich Text | No       |                                                                                                        | "The optional body text that displays below the Heading."                                            |

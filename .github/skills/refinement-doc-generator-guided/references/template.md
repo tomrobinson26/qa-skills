@@ -6,14 +6,15 @@ This is the blank, canonical template. Match this section order, heading hierarc
 
 # [Component/Feature Name]
 
-Description:
+## Description
+
 [1–2 paragraph overview of what this component/feature is and its purpose.]
 
 ## CMS Properties:
 
 ### Content tab
 
-| Property Name | Property Type                                                     | Required | Translatable | Property/Validation Info                                              | CMS Helper Text                                              |
+| **Property Name** | **Property Type**                                                     | **Required** | **Translatable** | **Property/Validation Info**                                              | **CMS Helper Text**                                              |
 | ------------- | ----------------------------------------------------------------- | -------- | ------------ | --------------------------------------------------------------------- | ------------------------------------------------------------ |
 | [Field Name]  | [Type, e.g. String, Basic Rich Text, Image Picker, Colour Picker] | Yes/No   | Yes/No       | [Constraints, accepted formats, min/max, allowed options, or **TBC**] | "[Editor-facing helper text, sentence case with full stop.]" |
 
