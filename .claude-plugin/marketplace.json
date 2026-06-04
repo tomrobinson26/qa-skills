@@ -4,7 +4,6 @@
     "name": "Tom Robinson",
     "email": "tom.robinson@msqdx.com"
   },
-  "metadata": null,
   "plugins": [
     {
       "name": "content-model-test-data",
@@ -161,7 +160,7 @@
     },
     {
       "name": "testmo-run-report",
-      "description": "Convert a Testmo test run CSV export into a stakeholder-friendly report showing each test\u0027s current and previous status, comments, and linked issues.",
+      "description": "Convert a Testmo test run CSV export into a stakeholder-friendly report showing each test's current and previous status, comments, and linked issues.",
       "source": "./skills/testmo-run-report",
       "strict": false,
       "version": "1.0.1",
