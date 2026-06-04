@@ -21,7 +21,7 @@ jobs:
             $skill = $_
             $skillMd = Join-Path $skill.FullName "SKILL.md"
             if (Test-Path (Join-Path $skill.FullName ".distribute")) {
-              .\package-skill.ps1 $skill.FullName -OutputDir dist
+              .\scripts\package-skill.ps1 $skill.FullName -OutputDir dist
             } else {
               Write-Host "Skipping $($skill.Name) (no .distribute file)"
             }

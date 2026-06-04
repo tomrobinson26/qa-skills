@@ -1,0 +1,191 @@
+﻿{
+  "name": "msqdx-qa-skills",
+  "owner": {
+    "name": "Tom Robinson",
+    "email": "tom.robinson@msqdx.com"
+  },
+  "metadata": null,
+  "plugins": [
+    {
+      "name": "content-model-test-data",
+      "description": "Generate schema-aware JSON test data from a provided content model.",
+      "source": "./skills/content-model-test-data",
+      "strict": false,
+      "version": "1.0.1",
+      "keywords": [
+        "test-data",
+        "json",
+        "schema",
+        "cms",
+        "automation"
+      ]
+    },
+    {
+      "name": "jira-bug-batch-creator",
+      "description": "Batch-create Jira bug tickets from a plain-English list, with expanded descriptions, STR steps, current/expected behaviour, and Figma references.",
+      "source": "./skills/jira-bug-batch-creator",
+      "strict": false,
+      "version": "1.0.1",
+      "keywords": [
+        "jira",
+        "bugs",
+        "tickets",
+        "atlassian",
+        "batch"
+      ]
+    },
+    {
+      "name": "optimizely-content-modelling",
+      "description": "Produces a structured content model table for Optimizely blocks, pages, or components from a design screenshot, wireframe, or bullet-point brief.",
+      "source": "./skills/optimizely-content-modelling",
+      "strict": false,
+      "version": "1.0.1",
+      "keywords": [
+        "optimizely",
+        "cms",
+        "content-model",
+        "paas",
+        "saas"
+      ]
+    },
+    {
+      "name": "playwright-best-practices",
+      "description": "Comprehensive guidance for all aspects of Playwright test development, from writing new tests to debugging and maintaining existing test suites.",
+      "source": "./skills/playwright-best-practices",
+      "strict": false,
+      "version": "1.1",
+      "keywords": [
+        "playwright",
+        "testing",
+        "e2e",
+        "accessibility",
+        "ci-cd"
+      ]
+    },
+    {
+      "name": "playwright-cli",
+      "description": "Automate browser interactions, test web pages and work with Playwright tests.",
+      "source": "./skills/playwright-cli",
+      "strict": false,
+      "version": "1.0.2",
+      "keywords": [
+        "playwright",
+        "browser",
+        "automation",
+        "cli"
+      ]
+    },
+    {
+      "name": "playwright-test-gen",
+      "description": "Converts Given/When/Then manual test cases in CSV format into Playwright TypeScript tests using the Page Object Model.",
+      "source": "./skills/playwright-test-gen",
+      "strict": false,
+      "version": "1.0.1",
+      "keywords": [
+        "playwright",
+        "test-generation",
+        "typescript",
+        "csv",
+        "pom"
+      ]
+    },
+    {
+      "name": "playwright-test-setup",
+      "description": "Set up and scaffold a Playwright TypeScript test framework for web applications.",
+      "source": "./skills/playwright-test-setup",
+      "strict": false,
+      "version": "1.0.1",
+      "keywords": [
+        "playwright",
+        "setup",
+        "typescript",
+        "scaffold",
+        "framework"
+      ]
+    },
+    {
+      "name": "qa-test-script-generator",
+      "description": "Generates structured QA test scripts in CSV format from functional requirements, following the Given/When/Then format.",
+      "source": "./skills/qa-test-script-generator",
+      "strict": false,
+      "version": "1.0.1",
+      "keywords": [
+        "testing",
+        "csv",
+        "test-scripts",
+        "given-when-then",
+        "cms"
+      ]
+    },
+    {
+      "name": "refinement-doc-generator",
+      "description": "Generate dev-ready refinement documents (functional requirements specs) for CMS-based web components.",
+      "source": "./skills/refinement-doc-generator",
+      "strict": false,
+      "version": "1.0.3",
+      "keywords": [
+        "refinement",
+        "requirements",
+        "cms",
+        "spec",
+        "markdown"
+      ]
+    },
+    {
+      "name": "refinement-doc-generator-guided",
+      "description": "A guided, step-by-step wizard for producing a functional requirements spec for a CMS-based web component or feature.",
+      "source": "./skills/refinement-doc-generator-guided",
+      "strict": false,
+      "version": "1.0.3",
+      "keywords": [
+        "refinement",
+        "requirements",
+        "cms",
+        "guided",
+        "wizard"
+      ]
+    },
+    {
+      "name": "screen-reader-testing-v2",
+      "description": "Conduct comprehensive screen reader testing for website features.",
+      "source": "./skills/screen-reader-testing-v2",
+      "strict": false,
+      "version": "1.0.1",
+      "keywords": [
+        "accessibility",
+        "screen-reader",
+        "a11y",
+        "axe-core",
+        "nvda"
+      ]
+    },
+    {
+      "name": "testmo-run-report",
+      "description": "Convert a Testmo test run CSV export into a stakeholder-friendly report showing each test\u0027s current and previous status, comments, and linked issues.",
+      "source": "./skills/testmo-run-report",
+      "strict": false,
+      "version": "1.0.1",
+      "keywords": [
+        "testmo",
+        "reporting",
+        "test-results",
+        "html",
+        "csv"
+      ]
+    },
+    {
+      "name": "verify-figma-design",
+      "description": "Validate that a deployed website matches its source Figma design.",
+      "source": "./skills/verify-figma-design",
+      "strict": false,
+      "version": "1.0.1",
+      "keywords": [
+        "figma",
+        "design",
+        "visual",
+        "qa",
+        "regression"
+      ]
+    }
+  ]
+}
