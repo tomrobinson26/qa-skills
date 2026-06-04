@@ -3,7 +3,7 @@ name: Release Skills
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 jobs:
   release:
@@ -17,7 +17,7 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Path dist -Force | Out-Null
-          Get-ChildItem .github/skills -Directory | ForEach-Object {
+          Get-ChildItem skills -Directory | ForEach-Object {
             $skill = $_
             $skillMd = Join-Path $skill.FullName "SKILL.md"
             if (Test-Path (Join-Path $skill.FullName ".distribute")) {

@@ -4,16 +4,16 @@ A collection of AI skills for QA workflows — test generation, refinement docs,
 
 Skills come in two flavours:
 
-| Type | Description | Released as `.skill`? |
-|---|---|---|
-| **Distributable** | Web-based skills for Claude.ai | Yes |
-| **IDE-only** | Skills for GitHub Copilot or local development use | No |
+| Type              | Description                                        | Released as `.skill`? |
+| ----------------- | -------------------------------------------------- | --------------------- |
+| **Distributable** | Web-based skills for Claude.ai                     | Yes                   |
+| **IDE-only**      | Skills for GitHub Copilot or local development use | No                    |
 
 ---
 
 ## Skill structure
 
-Each skill lives in `.github/skills/<skill-name>/` and must contain a `SKILL.md` with YAML frontmatter:
+Each skill lives in `skills/<skill-name>/` and must contain a `SKILL.md` with YAML frontmatter:
 
 ```yaml
 ---
@@ -25,7 +25,7 @@ description: When and how to use this skill.
 To mark a skill as distributable, add an empty `.distribute` file to its folder:
 
 ```
-.github/skills/my-skill/
+skills/my-skill/
 ├── SKILL.md
 ├── .distribute       ← presence of this file triggers packaging
 └── ...
@@ -50,7 +50,7 @@ The workflow then appears under **Actions → Release Skills** and the `.skill` 
 
 ## Adding a skill to claude.ai (Claude for Web)
 
-1. Download the relevant skills from the [latest release](https://github.com/tomrobinson26/qa-skills/releases). 
+1. Download the relevant skills from the [latest release](https://github.com/tomrobinson26/qa-skills/releases).
 2. Go to [skills in Claude.ai](https://claude.ai/customize/skills)
 3. Upload the .skill file
 
@@ -61,10 +61,10 @@ The workflow then appears under **Actions → Release Skills** and the `.skill` 
 To package a skill locally (for testing):
 
 ```powershell
-.\package-skill.ps1 .github\skills\<skill-name>
+.\package-skill.ps1 skills\<skill-name>
 
 # Output to a specific directory
-.\package-skill.ps1 .github\skills\<skill-name> -OutputDir C:\dist
+.\package-skill.ps1 skills\<skill-name> -OutputDir C:\dist
 ```
 
 This does not affect releases — releases always build from committed code in CI.
@@ -73,7 +73,7 @@ This does not affect releases — releases always build from committed code in C
 
 ## Adding a new skill
 
-1. Create a folder under `.github/skills/<skill-name>/`
+1. Create a folder under `skills/<skill-name>/`
 2. Add a `SKILL.md` with the required frontmatter
 3. Add an empty `.distribute` file to the folder if it should be included in releases
 4. Commit and push — tag a new version when ready to release
