@@ -6,6 +6,14 @@
   },
   "plugins": [
     {
+      "name": "ado-bug-batch-creator",
+      "description": "Batch-create Azure DevOps work items (Bugs or Tasks) from a plain-English list, expanding each into a structured body with STR steps, current/expected",
+      "source": "./skills/ado-bug-batch-creator",
+      "strict": false,
+      "version": "1.0.0",
+      "keywords": []
+    },
+    {
       "name": "content-model-test-data",
       "description": "Generate schema-aware JSON test data from a provided content model.",
       "source": "./skills/content-model-test-data",
@@ -117,20 +125,6 @@
       ]
     },
     {
-      "name": "refinement-doc-generator",
-      "description": "Generate dev-ready refinement documents (functional requirements specs) for CMS-based web components.",
-      "source": "./skills/refinement-doc-generator",
-      "strict": false,
-      "version": "1.0.3",
-      "keywords": [
-        "refinement",
-        "requirements",
-        "cms",
-        "spec",
-        "markdown"
-      ]
-    },
-    {
       "name": "refinement-doc-generator-guided",
       "description": "A guided, step-by-step wizard for producing a functional requirements spec for a CMS-based web component or feature.",
       "source": "./skills/refinement-doc-generator-guided",
@@ -142,6 +136,20 @@
         "cms",
         "guided",
         "wizard"
+      ]
+    },
+    {
+      "name": "refinement-doc-generator",
+      "description": "Generate dev-ready refinement documents (functional requirements specs) for CMS-based web components.",
+      "source": "./skills/refinement-doc-generator",
+      "strict": false,
+      "version": "1.0.3",
+      "keywords": [
+        "refinement",
+        "requirements",
+        "cms",
+        "spec",
+        "markdown"
       ]
     },
     {
