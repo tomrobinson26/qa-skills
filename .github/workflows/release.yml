@@ -29,3 +29,24 @@ jobs:
         with:
           files: dist/*.skill
           generate_release_notes: true
+
+      - name: Regenerate marketplace file
+        run: bash scripts/generate-marketplace.sh
+
+      - name: Commit marketplace file to main
+        run: |
+          if git diff --quiet -- .claude-plugin/marketplace.json; then
+            echo "marketplace.json is up to date"
+            exit 0
+          fi
+          cp .claude-plugin/marketplace.json /tmp/marketplace.json
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git checkout -B main origin/main
+          cp /tmp/marketplace.json .claude-plugin/marketplace.json
+
+          git add .claude-plugin/marketplace.json
+          git commit -m "chore: regenerate marketplace.json for ${GITHUB_REF_NAME}"
+          git push origin main
