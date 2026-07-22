@@ -37,7 +37,7 @@ Skills without a `.distribute` file are ignored during packaging. The `.distribu
 
 ## Releases
 
-Releases are created by pushing a version tag. The GitHub Actions workflow checks out the committed code, packages every distributable skill into a `.skill` file (a zip with a `.skill` extension), and attaches them to a GitHub Release.
+Releases are created by pushing a version tag. The GitHub Actions workflow checks out the committed code, packages every distributable skill into a `.skill` file (a zip with a `.skill` extension), and attaches them to a GitHub Release. The release pipeline also handles regeneration of the marketplace index file.
 
 ```bash
 git tag v1.0.0
