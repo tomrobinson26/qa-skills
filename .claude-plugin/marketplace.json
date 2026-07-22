@@ -111,6 +111,14 @@
       ]
     },
     {
+      "name": "playwright-test-writer",
+      "description": "Write Playwright tests for a new component, block, page, or feature by building its Page Object Model (POM) class first, then its spec file, following one",
+      "source": "./skills/playwright-test-writer",
+      "strict": false,
+      "version": "1.0.0",
+      "keywords": []
+    },
+    {
       "name": "qa-test-script-generator",
       "description": "Generates structured QA test scripts in CSV format from functional requirements, following the Given/When/Then format.",
       "source": "./skills/qa-test-script-generator",
